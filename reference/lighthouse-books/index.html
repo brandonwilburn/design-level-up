@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lighthouse Books — an independent bookshop in the Old Port, Portland, Maine. New and used books, signed first editions, monthly reading groups, and author readings. 50 Exchange Street, Portland, Maine." />
+  <meta name="theme-color" content="#f7f3e8" />
+  <title>Lighthouse Books — An independent bookshop · Portland, Maine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23f7f3e8'/><path d='M30 14 L34 14 L34 46 L36 50 L28 50 L30 46 Z' fill='%231a2a44'/><circle cx='32' cy='22' r='3' fill='%23b8924a'/><line x1='30' y1='30' x2='34' y2='30' stroke='%23f7f3e8' stroke-width='1'/><line x1='30' y1='36' x2='34' y2='36' stroke='%23f7f3e8' stroke-width='1'/></svg>" />
+
+  <meta property="og:title" content="Lighthouse Books" />
+  <meta property="og:description" content="An independent bookshop in Portland, Maine." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-row">
+      <a class="brand" href="#top" aria-label="Lighthouse Books, home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Lighthouse mark -->
+          <svg viewBox="0 0 36 36" width="30" height="30" role="img" aria-label="Lighthouse Books mark">
+            <path d="M14 8 L22 8 L21 14 L23 14 L24 28 L26 30 L10 30 L12 28 L13 14 L15 14 Z"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="14" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="1" opacity=".5"/>
+            <circle cx="18" cy="22" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Lighthouse Books</span>
+          <span class="brand-tag">Portland, Maine · since 2014</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list" role="list">
+          <li><a href="#shop"     class="nav-link" data-section="shop">The Shop</a></li>
+          <li><a href="#picks"    class="nav-link" data-section="picks">Staff Picks</a></li>
+          <li><a href="#events"   class="nav-link" data-section="events">Events</a></li>
+          <li><a href="#journal"  class="nav-link" data-section="journal">Journal</a></li>
+          <li><a href="#visit"    class="nav-link" data-section="visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-meta">
+        <span class="hours-pill" aria-label="Open today">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="hours-text">Open · M–Sa 10–7</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== HERO =================== -->
+    <section class="hero" id="top" aria-label="Lighthouse Books">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow hero-eyebrow">
+            <span>Est. 2014</span>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>50 Exchange Street, in the Old Port</span>
+          </p>
+          <h1 class="hero-title">
+            An independent<br />
+            <em>bookshop,</em><br />
+            on a Maine harbor.
+          </h1>
+          <p class="hero-lede">
+            A bookshop in two rooms of an old brick
+            building on the waterfront. New books,
+            used books, signed first editions, and a
+            small press section that we've been told
+            is the best in New England. We host
+            roughly forty author events a year.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#picks">See this month's staff picks</a>
+            <a class="btn btn-ghost" href="#events">Upcoming events</a>
+          </div>
+          <dl class="hero-meta" aria-label="At a glance">
+            <div><dt>Books in stock</dt><dd>11,400</dd></div>
+            <div><dt>Authors hosted</dt><dd>187</dd></div>
+            <div><dt>Years on Exchange</dt><dd>11</dd></div>
+            <div><dt>Reading groups</dt><dd>6</dd></div>
+          </dl>
+        </div>
+
+        <aside class="hero-art" aria-label="A stack of books, hand-drawn">
+          <svg viewBox="0 0 360 460" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">A stack of books, hand-drawn.</title>
+            <defs>
+              <pattern id="l-grain" width="3" height="3" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.4" fill="#1a2a44" opacity=".05"/>
+              </pattern>
+            </defs>
+            <rect width="360" height="460" fill="#f7f3e8"/>
+            <rect width="360" height="460" fill="url(#l-grain)" opacity=".5"/>
+
+            <!-- The stack of books, drawn in single ink line. -->
+            <g transform="translate(60, 80)">
+              <!-- book 1 (bottom) — wide, navy -->
+              <rect x="0" y="200" width="240" height="32"
+                    fill="#1a2a44" stroke="#1a2a44" stroke-width="1"/>
+              <line x1="14" y1="216" x2="180" y2="216" stroke="#b8924a" stroke-width="1.5"/>
+              <line x1="14" y1="222" x2="120" y2="222" stroke="#f7f3e8" stroke-width="0.6" opacity=".5"/>
+
+              <!-- book 2 — slightly narrower, gold -->
+              <rect x="20" y="160" width="200" height="36"
+                    fill="#b8924a" stroke="#1a2a44" stroke-width="1"/>
+              <line x1="30" y1="178" x2="180" y2="178" stroke="#1a2a44" stroke-width="1.2"/>
+              <circle cx="38" cy="178" r="2" fill="#1a2a44"/>
+
+              <!-- book 3 — narrower, cream -->
+              <rect x="40" y="124" width="180" height="32"
+                    fill="#ede5d3" stroke="#1a2a44" stroke-width="1"/>
+              <line x1="50" y1="140" x2="200" y2="140" stroke="#1a2a44" stroke-width="1"/>
+              <text x="120" y="146" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="#1a2a44">a novel</text>
+
+              <!-- book 4 — even narrower, navy again -->
+              <rect x="60" y="92" width="160" height="28"
+                    fill="#1a2a44" stroke="#1a2a44" stroke-width="1"/>
+              <line x1="70" y1="106" x2="200" y2="106" stroke="#b8924a" stroke-width="1"/>
+
+              <!-- book 5 (top) — vertical standing, with title -->
+              <rect x="120" y="0" width="32" height="88"
+                    fill="#b8924a" stroke="#1a2a44" stroke-width="1"/>
+              <text x="136" y="20" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-size="7"
+                    fill="#1a2a44" transform="rotate(0 136 20)">LIGHTHOUSE</text>
+              <text x="136" y="32" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-size="6"
+                    fill="#1a2a44" transform="rotate(0 136 32)">BOOKS</text>
+              <line x1="124" y1="44" x2="148" y2="44" stroke="#1a2a44" stroke-width="0.5"/>
+              <text x="136" y="56" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-style="italic" font-size="6"
+                    fill="#1a2a44">since 2014</text>
+            </g>
+
+            <!-- A small reading lamp suggested by an arc -->
+            <path d="M280 60 L320 30" stroke="#1a2a44" stroke-width="1.5" fill="none"/>
+            <path d="M315 25 L335 25 L335 35 L325 35 Z" fill="none" stroke="#1a2a44" stroke-width="1.5"/>
+            <line x1="280" y1="60" x2="280" y2="380" stroke="#1a2a44" stroke-width="1" opacity=".4"/>
+
+            <!-- caption -->
+            <text x="180" y="420" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif" font-style="italic"
+                  font-size="12" fill="#1a2a44" opacity=".7">
+              The view from the front counter, on a Tuesday.
+            </text>
+            <text x="180" y="438" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif"
+                  font-size="9" fill="#1a2a44" opacity=".4" letter-spacing="1.5">
+              DRAWN FOR THIS PAGE · 2026
+            </text>
+          </svg>
+        </aside>
+      </div>
+
+      <!-- A "currently reading" line under the hero -->
+      <div class="hero-rail">
+        <span class="rail-label"><span class="eyebrow eyebrow--small">Henry is reading</span></span>
+        <span class="rail-item">"Late September" by Helen Vasquez.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">A new poetry collection.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">On the front table, signed.</span>
+      </div>
+    </section>
+
+    <!-- =================== THE SHOP =================== -->
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">A bookshop, in two rooms</p>
+          <h2 class="section-title" id="shop-title">
+            The building is from 1843.<br />
+            <em>The bookshop is from 2014.</em>
+          </h2>
+        </header>
+
+        <div class="prose-grid">
+          <article class="prose hang-punct">
+            <p class="lead">
+              Henry opened the bookshop in the front room
+              of an old brick building on Exchange Street
+              in October 2014. He had three hundred and
+              twelve used books, a card table, and a coffee
+              maker that he had borrowed from his mother.
+              The first customer bought a paperback copy
+              of "The Shipping News" for four dollars.
+              Henry remembers this.
+            </p>
+
+            <aside class="margin-note">
+              The front room is the new books and the
+              signed first editions. The back room is the
+              used books, the poetry, and the small press.
+              The back room is also where the reading
+              groups meet, on a long oak table that
+              predates the bookshop by about a hundred
+              and twenty years.
+            </aside>
+
+            <p>
+              The bookshop is small by the standards of
+              chain stores and by the standards of any
+              reasonable business model. We carry about
+              eleven thousand four hundred titles at any
+              given time, which is a fraction of what a
+              Barnes &amp; Noble carries in a single
+              store. We think the constraint is a feature.
+              Every book on these shelves is a book that
+              one of us has read, and one of us has
+              argued about, and one of us has decided
+              belongs here.
+            </p>
+
+            <p>
+              We don't have a recommendation algorithm.
+              We have four people who work here, and they
+              all read different things, and they all
+              argue about books, and the arguing is the
+              point. If you walk in and ask for a book,
+              you will get a book. If you walk in and
+              don't know what you want, you will get a
+              book and a five-minute conversation about
+              it. This is the entire business model.
+            </p>
+
+            <blockquote class="pullquote">
+              A bookshop is a<br />
+              recommendation engine<br />
+              that runs on coffee<br />
+              and disagreement.
+              <cite>— Henry, on opening day</cite>
+            </blockquote>
+
+            <p>
+              We host about forty author events a year.
+              Most of them are in the back room, around
+              the oak table, with about thirty people.
+              Some of them are in the front room, with
+              about eighty. The authors who come to
+              Lighthouse tend to come back. We have a
+              small blackboard in the front window that
+              lists the next four events, in chalk, in
+              Henry's handwriting.
+            </p>
+
+            <p class="post-script">
+              <strong>P.S.</strong> &mdash; We are closed
+              on Christmas Day, Thanksgiving, and the
+              first Wednesday of every month. The
+              Wednesday closing is so the four of us can
+              go for a walk. The walk is not optional.
+            </p>
+          </article>
+
+          <aside class="pitch-side" aria-label="Shop details">
+            <div class="side-card">
+              <p class="eyebrow eyebrow--small">The bookshop, in numbers</p>
+              <dl class="prose-numerals">
+                <div><dt>Books in stock</dt><dd>11,400</dd></div>
+                <div><dt>Used vs. new</dt><dd>38 / 62</dd></div>
+                <div><dt>Authors hosted to date</dt><dd>187</dd></div>
+                <div><dt>Reading groups</dt><dd>6</dd></div>
+                <div><dt>Years on Exchange</dt><dd>11</dd></div>
+                <div><dt>Coffee, daily</dt><dd>yes</dd></div>
+              </dl>
+            </div>
+            <div class="side-card side-card--quiet">
+              <p class="eyebrow eyebrow--small">A few things we don't do</p>
+              <ul class="quirk-list" role="list">
+                <li>Sell books we haven't read.</li>
+                <li>Run a loyalty program.</li>
+                <li>Have a clearance table.</li>
+                <li>Open before 10am. Ever.</li>
+                <li>Take Amazon returns.</li>
+                <li>Stock anything by a living politician.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== STAFF PICKS =================== -->
+    <section class="picks" id="picks" aria-labelledby="picks-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">Six books, four booksellers</p>
+          <h2 class="section-title" id="picks-title">
+            What we're<br /><em>hand-selling</em><br />
+            this month.
+          </h2>
+          <p class="section-sub">
+            Six books from the four people who work here.
+            Each pick has a one-paragraph reason from the
+            bookseller, and the ISBN, so you can find it
+            at your library if you'd rather.
+          </p>
+        </header>
+
+        <ul class="picks-grid" role="list">
+          <li class="pick">
+            <p class="pick-cat">Fiction · First novel</p>
+            <h3 class="pick-title">The Lighthouse Keeper's Daughter</h3>
+            <p class="pick-author">by Margaret O'Connell</p>
+            <p class="pick-blurb">
+              "A first novel about a woman who inherits a
+              decommissioned lighthouse in County Clare and
+              finds, in the keeper's logbook, a story about
+              her own grandmother. O'Connell writes the
+              Atlantic the way Annie Dillard wrote the
+              Pacific — patient, close, unafraid of the
+              slow." &mdash; Henry
+            </p>
+            <p class="pick-meta prose-numerals">Hardcover · 312 pp · $28</p>
+          </li>
+
+          <li class="pick pick--feature">
+            <p class="pick-cat">Translated fiction · Polish</p>
+            <h3 class="pick-title">The Cartographer's Notebook</h3>
+            <p class="pick-author">by Anna Brzeska · trans. by Lillian Stone</p>
+            <p class="pick-blurb">
+              "A novel in fragments about a Polish
+              cartographer in the 1920s who maps the same
+              patch of forest for forty years. The
+              fragments get stranger as the book goes on.
+              I have not been this moved by a translated
+              novel since Krasznahorkai." &mdash; Joan
+            </p>
+            <p class="pick-meta prose-numerals">Paperback · 248 pp · $18</p>
+          </li>
+
+          <li class="pick">
+            <p class="pick-cat">Poetry</p>
+            <h3 class="pick-title">Late September</h3>
+            <p class="pick-author">by Helen Vasquez</p>
+            <p class="pick-blurb">
+              "A third collection from a poet whose first
+              book I read twelve years ago and have been
+              waiting on a third from since. The waiting
+              was worth it. The book is mostly about a
+              sister who died. It is unsentimental in
+              exactly the right way." &mdash; Henry
+            </p>
+            <p class="pick-meta prose-numerals">Paperback · 96 pp · $16</p>
+          </li>
+
+          <li class="pick">
+            <p class="pick-cat">Memoir</p>
+            <h3 class="pick-title">The Field Notes</h3>
+            <p class="pick-author">by M. T. Allen</p>
+            <p class="pick-blurb">
+              "A naturalist's memoir about thirty years
+              of working the same forty acres of coastal
+              Maine. Allen is a careful writer; she never
+              says more than the land says, and the land
+              says a lot." &mdash; Dan
+            </p>
+            <p class="pick-meta prose-numerals">Hardcover · 384 pp · $32</p>
+          </li>
+
+          <li class="pick">
+            <p class="pick-cat">History · Local</p>
+            <h3 class="pick-title">A History of Maine Lighthouses</h3>
+            <p class="pick-author">by Robert Eldridge</p>
+            <p class="pick-blurb">
+              "I have been waiting for this book. The
+              definitive, illustrated history of every
+              Maine light from West Quoddy to the
+              Kennebunkport. The bibliography is a gift."
+              &mdash; Joan
+            </p>
+            <p class="pick-meta prose-numerals">Hardcover · 412 pp · $48</p>
+          </li>
+
+          <li class="pick">
+            <p class="pick-cat">Children's · Picture book</p>
+            <h3 class="pick-title">The Owl Who Was Afraid of the Dark</h3>
+            <p class="pick-author">by Jill Tomlinson · illus. by Paul Howard</p>
+            <p class="pick-blurb">
+              "A reissue of a 1968 book I loved as a kid.
+              The new edition has Paul Howard
+              illustrations, which are, frankly, perfect.
+              It is, more than almost any picture book
+              I know, about being brave enough to be
+              afraid." &mdash; Dan
+            </p>
+            <p class="pick-meta prose-numerals">Hardcover · 112 pp · $22</p>
+          </li>
+        </ul>
+
+        <p class="picks-footnote">
+          Six books this month. The list rotates. If you
+          want a book recommended, call the shop and ask
+          whoever answers. We will pick one for you, in
+          about ninety seconds. &mdash; <em>P.P.S.</em>
+          The Vasquez is signed. We have thirty copies.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== EVENTS =================== -->
+    <section class="events" id="events" aria-labelledby="events-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">Forty events a year, in two rooms</p>
+          <h2 class="section-title" id="events-title">
+            What's<br /><em>coming up</em><br />
+            at Lighthouse.
+          </h2>
+          <p class="section-sub">
+            Author readings, book launches, monthly reading
+            groups, and the occasional Thursday night poetry
+            reading. Free to attend, unless noted. RSVP by
+            email if you'd like a seat at the oak table.
+          </p>
+        </header>
+
+        <ul class="events-list" role="list">
+          <li class="event">
+            <p class="event-date prose-numerals">
+              <span class="event-month">Sep</span>
+              <span class="event-day">12</span>
+            </p>
+            <div class="event-body">
+              <p class="event-cat">Author reading · Free</p>
+              <h3 class="event-title">Margaret O'Connell reads from "The Lighthouse Keeper's Daughter"</h3>
+              <p class="event-meta prose-numerals">Friday · 7pm · back room · 30 seats</p>
+              <p class="event-desc">
+                O'Connell's first novel, in the room with
+                the most books. The reading will run about
+                forty-five minutes; the Q&amp;A will run
+                until everyone has had a turn. Signed
+                copies available.
+              </p>
+            </div>
+          </li>
+
+          <li class="event">
+            <p class="event-date prose-numerals">
+              <span class="event-month">Sep</span>
+              <span class="event-day">19</span>
+            </p>
+            <div class="event-body">
+              <p class="event-cat">Reading group · Fiction</p>
+              <h3 class="event-title">The September group: "The Cartographer's Notebook"</h3>
+              <p class="event-meta prose-numerals">Friday · 6:30pm · back room, oak table · 12 seats</p>
+              <p class="event-desc">
+                The fiction reading group meets on the
+                third Friday of every month. We pick the
+                book together at the previous meeting. We
+                eat cheese. We argue. New members welcome.
+              </p>
+            </div>
+          </li>
+
+          <li class="event">
+            <p class="event-date prose-numerals">
+              <span class="event-month">Sep</span>
+              <span class="event-day">26</span>
+            </p>
+            <div class="event-body">
+              <p class="event-cat">Poetry night · Free</p>
+              <h3 class="event-title">Thursday Night Poetry: an open mic for Portland poets</h3>
+              <p class="event-meta prose-numerals">Thursday · 7pm · back room · 30 seats</p>
+              <p class="event-desc">
+                The fourth Thursday of every month. Sign
+                up at the counter from 6:30. Five minutes
+                per poet. The host is the poet laureate of
+                Cumberland County, who is, as of last
+                spring, also the host's mother.
+              </p>
+            </div>
+          </li>
+
+          <li class="event">
+            <p class="event-date prose-numerals">
+              <span class="event-month">Oct</span>
+              <span class="event-day">03</span>
+            </p>
+            <div class="event-body">
+              <p class="event-cat">Book launch · Ticketed $10</p>
+              <h3 class="event-title">Robert Eldridge launches "A History of Maine Lighthouses"</h3>
+              <p class="event-meta prose-numerals">Friday · 7pm · front room · 80 seats</p>
+              <p class="event-desc">
+                The book fifteen years in the making. The
+                bookshop is hosting the launch; tickets
+                include a signed copy and a glass of
+                something. Half of the ticket price goes
+                to the Maine Lighthouse Foundation.
+              </p>
+            </div>
+          </li>
+
+          <li class="event">
+            <p class="event-date prose-numerals">
+              <span class="event-month">Oct</span>
+              <span class="event-day">17</span>
+            </p>
+            <div class="event-body">
+              <p class="event-cat">Reading group · Poetry</p>
+              <h3 class="event-title">The poetry group: "Late September" by Helen Vasquez</h3>
+              <p class="event-meta prose-numerals">Friday · 6:30pm · back room, oak table · 12 seats</p>
+              <p class="event-desc">
+                The poetry group has been meeting on the
+                third Friday for six years. We have read
+                a lot of books. We have, occasionally, had
+                to read a book twice. Vasquez, we suspect,
+                will not require a second reading.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================== JOURNAL =================== -->
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">From the front counter</p>
+          <h2 class="section-title" id="journal-title">
+            Notes from<br /><em>the bookshop.</em>
+          </h2>
+          <p class="section-sub">
+            Henry writes a short piece every month or so.
+            No email list, no schedule, no SEO. Just a
+            paragraph or two about whatever book is on his
+            mind at the moment.
+          </p>
+        </header>
+
+        <div class="journal-grid">
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 09 · August 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On the difference between a bookshop and a bookstore.
+            </h3>
+            <p class="journal-byline prose-numerals">By Henry Ashby</p>
+
+            <p>
+              A bookshop is run by a person who has
+              opinions about books. A bookstore is run
+              by a person who has opinions about
+              inventory. I have thought about this for
+              eleven years, and I have not changed my
+              mind. The opinions are the product. The
+              inventory is the substrate. If you remove
+              the opinions, you have a warehouse with
+              better lighting.
+            </p>
+            <p>
+              The way you can tell, walking in, is the
+              front table. A bookshop's front table
+              changes every Tuesday, sometimes twice a
+              week. A bookstore's front table changes
+              on a corporate schedule, with seasonal
+              resets. The front table of a bookshop is
+              the bookseller's weekly essay about what
+              they want the reader to read next. The
+              front table of a bookstore is a list of
+              books the chain has been told to push.
+            </p>
+            <p>
+              We put seven books on our front table this
+              week. I am, at this moment, willing to
+              argue that any one of them is the most
+              important book on the table. This is,
+              perhaps, an argument for staffing a
+              bookshop with people who read.
+            </p>
+          </article>
+
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 08 · June 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On the reading groups, and on the oak table.
+            </h3>
+            <p class="journal-byline prose-numerals">By Henry Ashby</p>
+
+            <p>
+              We have six reading groups. They meet on
+              alternating Fridays, around an oak table
+              in the back room that I bought from a
+              woman in Yarmouth in 2015, for four
+              hundred dollars. The table seats twelve
+              and is older than the building. It came
+              out of a schoolhouse, which is the right
+              provenance for a table around which people
+              are trying to learn things.
+            </p>
+            <p>
+              The reading groups have been meeting for
+              most of the bookshop's life. The longest-
+              running one, the Tuesday night fiction
+              group, has been going since 2014. People
+              have come and gone, but the table has not.
+              The Tuesday group has read, by my count,
+              about ninety books. They have agreed about
+              maybe eleven of them. This is, I think, a
+              good ratio.
+            </p>
+            <p>
+              The hardest thing about hosting a reading
+              group is not picking the books. It is
+              keeping the table from being a place where
+              everyone is polite. The point of a reading
+              group is to argue about a book, in the
+              company of people who have also read the
+              book. The argument is the work. The book
+              is the excuse.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== VISIT =================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The bookshop, on Exchange Street</p>
+          <h2 class="section-title" id="visit-title">
+            Come up.<br /><em>Bring a friend.</em>
+          </h2>
+        </header>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <address class="visit-address">
+              <p class="visit-line visit-line--big">
+                50 Exchange Street<br />
+                Portland, Maine 04101
+              </p>
+              <p class="visit-line">
+                Two blocks from the harbor,<br />
+                ground floor of an 1843 brick building.
+              </p>
+            </address>
+
+            <dl class="visit-hours prose-numerals">
+              <div><dt>Monday</dt><dd>10 to 7</dd></div>
+              <div><dt>Tuesday</dt><dd>10 to 7</dd></div>
+              <div><dt>Wednesday</dt><dd>10 to 7</dd></div>
+              <div><dt>Thursday</dt><dd>10 to 8</dd></div>
+              <div><dt>Friday</dt><dd>10 to 8</dd></div>
+              <div><dt>Saturday</dt><dd>10 to 8</dd></div>
+              <div><dt>Sunday</dt><dd>11 to 5</dd></div>
+            </dl>
+
+            <ul class="visit-contact" role="list">
+              <li>(207) 555-0142</li>
+              <li><a href="mailto:hello@lighthousebooks.shop">hello@lighthousebooks.shop</a></li>
+            </ul>
+
+            <p class="visit-quirk">
+              <span class="eyebrow eyebrow--small">A note</span>
+              The back room, where the used books and the
+              poetry live, is also where the reading
+              groups meet. If you want to be alone with
+              the books, ask us to put the lights on in
+              the back; the front room is louder in the
+              late afternoon.
+            </p>
+
+            <p class="visit-postscript">
+              <strong>P.S.</strong> &mdash; Walk to the
+              harbor after. The view from the east side
+              of the Custom House, in late afternoon,
+              is one of the better ones in New England.
+              We are, in this regard, very lucky people.
+            </p>
+          </div>
+
+          <figure class="visit-map" aria-label="Lighthouse Books on Google Maps, 50 Exchange Street, Portland, Maine">
+            <iframe
+              src="https://www.google.com/maps?q=50+Exchange+Street,+Portland,+ME+04101&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Lighthouse Books on Google Maps"></iframe>
+            <figcaption class="map-caption">
+              <span class="eyebrow eyebrow--small">The bookshop, in maps</span>
+              50 Exchange Street, in the Old Port.
+              Two-hour street parking is plentiful before
+              11am and impossible after.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <p class="footer-wordmark">Lighthouse Books</p>
+          <p class="footer-tagline">
+            An independent bookshop,<br />
+            50 Exchange Street,<br />
+            Portland, Maine 04101.
+          </p>
+          <p class="footer-quirk">
+            <em>P.S.</em> We don't have an algorithm. We
+            have four people who work here, and they all
+            read different things, and they all argue
+            about books, and the arguing is the point.
+          </p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The bookshop</p>
+          <ul role="list">
+            <li><a href="#shop">The shop</a></li>
+            <li><a href="#picks">Staff picks</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">Visit</p>
+          <ul role="list">
+            <li>M–W 10 to 7</li>
+            <li>Th–Sa 10 to 8</li>
+            <li>Su 11 to 5</li>
+            <li>(207) 555-0142</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The journal</p>
+          <ul role="list">
+            <li>No. 09 · Aug 2026</li>
+            <li>No. 08 · Jun 2026</li>
+            <li>No. 07 · Apr 2026</li>
+            <li><a href="#journal">All issues</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>
+          &copy; 2014–2026 Lighthouse Books. A bookshop
+          in two rooms, in a brick building from 1843.
+        </p>
+        <p class="footer-mark">
+          <span class="footer-mark-glyph" aria-hidden="true">LB</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Petal & Stem — a small flower shop in Williamsburg, Brooklyn. Seasonal arrangements, weddings, and weekly deliveries. 218 Wythe Avenue, Brooklyn, New York." />
+  <meta name="theme-color" content="#faf7f0" />
+  <title>Petal & Stem — Seasonal flowers, Brooklyn, New York</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23faf7f0'/><path d='M32 16 Q40 24 40 32 Q40 40 32 48 Q24 40 24 32 Q24 24 32 16 Z' fill='%237d8a6b'/><circle cx='32' cy='32' r='4' fill='%23e8b4a8'/></svg>" />
+
+  <meta property="og:title" content="Petal & Stem" />
+  <meta property="og:description" content="Seasonal flowers, weddings, weekly arrangements. Brooklyn, NY." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-row">
+      <a class="brand" href="#top" aria-label="Petal & Stem, home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Hand-drawn-feeling petal mark -->
+          <svg viewBox="0 0 36 36" width="32" height="32" role="img" aria-label="Petal & Stem mark">
+            <path d="M18 6 Q26 12 26 20 Q26 28 18 32 Q10 28 10 20 Q10 12 18 6 Z"
+                  fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M18 12 Q22 16 22 20 Q22 24 18 26 Q14 24 14 20 Q14 16 18 12 Z"
+                  fill="none" stroke="currentColor" stroke-width="1" opacity=".6"/>
+            <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Petal &amp; Stem</span>
+          <span class="brand-tag">Williamsburg, Brooklyn</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list" role="list">
+          <li><a href="#today"    class="nav-link" data-section="today">This Week</a></li>
+          <li><a href="#flowers"  class="nav-link" data-section="flowers">The Flowers</a></li>
+          <li><a href="#weddings" class="nav-link" data-section="weddings">Weddings</a></li>
+          <li><a href="#journal"  class="nav-link" data-section="journal">Journal</a></li>
+          <li><a href="#visit"    class="nav-link" data-section="visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-meta">
+        <span class="season-pill" aria-label="Currently in season">
+          <span class="season-dot" aria-hidden="true"></span>
+          Late summer · dahlia season
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== HERO =================== -->
+    <section class="hero" id="top" aria-label="Petal & Stem">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow hero-eyebrow">
+            <span>Est. 2019</span>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>218 Wythe Avenue, Brooklyn, New York</span>
+          </p>
+          <h1 class="hero-title">
+            Flowers,<br />
+            <em>in season.</em>
+          </h1>
+          <p class="hero-lede">
+            A small shop in Williamsburg. We work with
+            what's blooming this week — dahlias in
+            September, ranunculus in April, hellebore in
+            February. The arrangements change with the
+            calendar. The shop never does.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#today">See this week's arrangements</a>
+            <a class="btn btn-ghost" href="#visit">Visit the shop</a>
+          </div>
+          <dl class="hero-meta" aria-label="At a glance">
+            <div><dt>Local growers</dt><dd>12</dd></div>
+            <div><dt>Weddings a year</dt><dd>38</dd></div>
+            <div><dt>Years on Wythe</dt><dd>6</dd></div>
+            <div><dt>Arrangements weekly</dt><dd>64</dd></div>
+          </dl>
+        </div>
+
+        <aside class="hero-art" aria-label="A hand-drawn bouquet in a glass jar">
+          <!-- A custom botanical SVG: a bouquet in a glass jar. -->
+          <svg viewBox="0 0 360 460" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">A hand-drawn bouquet in a glass jar.</title>
+            <defs>
+              <pattern id="p-grain" width="3" height="3" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.4" fill="#1a2a18" opacity=".06"/>
+              </pattern>
+            </defs>
+            <rect width="360" height="460" fill="#faf7f0"/>
+            <rect width="360" height="460" fill="url(#p-grain)" opacity=".5"/>
+
+            <!-- stems -->
+            <g stroke="#7d8a6b" stroke-width="1.5" fill="none" stroke-linecap="round">
+              <path d="M180 260 Q176 200 160 130"/>
+              <path d="M180 260 Q180 200 180 110"/>
+              <path d="M180 260 Q184 200 200 140"/>
+              <path d="M180 260 Q170 210 140 160"/>
+              <path d="M180 260 Q190 210 220 150"/>
+              <path d="M180 260 Q175 215 155 180"/>
+              <path d="M180 260 Q186 215 205 175"/>
+            </g>
+
+            <!-- leaves -->
+            <g fill="#7d8a6b" opacity=".7">
+              <ellipse cx="150" cy="190" rx="10" ry="4" transform="rotate(-30 150 190)"/>
+              <ellipse cx="210" cy="195" rx="10" ry="4" transform="rotate(30 210 195)"/>
+              <ellipse cx="170" cy="220" rx="8" ry="3" transform="rotate(-20 170 220)"/>
+              <ellipse cx="195" cy="225" rx="8" ry="3" transform="rotate(20 195 225)"/>
+            </g>
+
+            <!-- blooms (dahlia-like) -->
+            <g>
+              <circle cx="180" cy="110" r="22" fill="#e8b4a8"/>
+              <circle cx="180" cy="110" r="14" fill="none" stroke="#7d8a6b" stroke-width="0.8"/>
+              <circle cx="180" cy="110" r="6" fill="#7d8a6b"/>
+              <circle cx="160" cy="130" r="16" fill="#e8b4a8" opacity=".8"/>
+              <circle cx="160" cy="130" r="10" fill="none" stroke="#7d8a6b" stroke-width="0.6"/>
+              <circle cx="200" cy="140" r="18" fill="#e8b4a8" opacity=".9"/>
+              <circle cx="200" cy="140" r="11" fill="none" stroke="#7d8a6b" stroke-width="0.6"/>
+              <circle cx="140" cy="160" r="12" fill="#e8b4a8" opacity=".7"/>
+              <circle cx="220" cy="150" r="14" fill="#e8b4a8" opacity=".8"/>
+              <circle cx="155" cy="180" r="10" fill="#e8b4a8" opacity=".6"/>
+              <circle cx="205" cy="175" r="11" fill="#e8b4a8" opacity=".7"/>
+            </g>
+
+            <!-- jar -->
+            <g transform="translate(140, 260)">
+              <rect x="0" y="0" width="80" height="100" rx="3"
+                    fill="none" stroke="#1a2a18" stroke-width="1.5"/>
+              <line x1="0" y1="20" x2="80" y2="20" stroke="#1a2a18" stroke-width="0.8" opacity=".5"/>
+              <ellipse cx="40" cy="0" rx="40" ry="6"
+                       fill="none" stroke="#1a2a18" stroke-width="1.5"/>
+              <line x1="20" y1="50" x2="60" y2="50" stroke="#1a2a18" stroke-width=".5" opacity=".3"/>
+            </g>
+
+            <!-- caption -->
+            <text x="180" y="420" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif" font-style="italic"
+                  font-size="13" fill="#1a2a18" opacity=".7">
+              Dahlias, late August
+            </text>
+            <text x="180" y="438" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif"
+                  font-size="9" fill="#1a2a18" opacity=".4" letter-spacing="1.5">
+              DRAWN FOR THIS PAGE · 2026
+            </text>
+          </svg>
+        </aside>
+      </div>
+
+      <!-- A small "in season" banner under the hero -->
+      <div class="hero-banner">
+        <span class="banner-eyebrow">In the cooler this week</span>
+        <span class="banner-text">
+          Cafe au lait dahlias &middot; zinnias &middot; cosmos
+          &middot; late sunflowers &middot; the last of the
+          garden roses &middot; eucalyptus &middot; ninebark
+        </span>
+      </div>
+    </section>
+
+    <!-- =================== THIS WEEK'S ARRANGEMENTS =================== -->
+    <section class="today" id="today" aria-labelledby="today-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">What's on the table</p>
+          <h2 class="section-title" id="today-title">
+            This week's<br /><em>arrangements.</em>
+          </h2>
+          <p class="section-sub">
+            Three signature arrangements on the floor this
+            week. Each one is in stock until it sells out,
+            which is usually Friday.
+          </p>
+        </header>
+
+        <div class="today-grid">
+          <article class="arrangement arrangement--feature">
+            <div class="arrangement-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: The Wednesday">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="arrangement-no">No. 14</p>
+            <h3 class="arrangement-name">The Wednesday</h3>
+            <p class="arrangement-desc">
+              Cafe au lait dahlias, blush zinnias, white
+              cosmos, the last of the garden roses, trailing
+              eucalyptus, ninebark foliage. Loose, low,
+              and meant to last ten days.
+            </p>
+            <p class="arrangement-meta">$85 · 14 stems · 12" wide</p>
+            <p class="arrangement-note">
+              "The arrangement we'd put on our own kitchen
+              table, on a Wednesday." &mdash; Maya
+            </p>
+          </article>
+
+          <article class="arrangement">
+            <div class="arrangement-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: The Low Bowl">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="arrangement-no">No. 15</p>
+            <h3 class="arrangement-name">The Low Bowl</h3>
+            <p class="arrangement-desc">
+              White ranunculus, pink lisianthus, garden
+              roses, scabiosa, hypericum berries, in a low
+              footed compote. The kind of arrangement that
+              anchors a dinner table.
+            </p>
+            <p class="arrangement-meta">$140 · 18 stems · 16" wide</p>
+          </article>
+
+          <article class="arrangement">
+            <div class="arrangement-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: The Brunch Jar">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="arrangement-no">No. 16</p>
+            <h3 class="arrangement-name">The Brunch Jar</h3>
+            <p class="arrangement-desc">
+              Late sunflowers, peach zinnias, sweet
+              william, bupleurum, in a wide-mouth Ball
+              jar. For the host who is hosting brunch
+              tomorrow and forgot to think about flowers.
+            </p>
+            <p class="arrangement-meta">$48 · 8 stems · 6" wide</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== THE FLOWERS (seasonal catalog) =================== -->
+    <section class="flowers" id="flowers" aria-labelledby="flowers-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">By season, in order</p>
+          <h2 class="section-title" id="flowers-title">
+            What's blooming,<br /><em>and when.</em>
+          </h2>
+          <p class="section-sub">
+            We don't ship flowers. We don't stock flowers
+            out of season. The calendar below is the
+            calendar we work from, give or take a week
+            for the weather.
+          </p>
+        </header>
+
+        <div class="season-grid">
+          <article class="season-card">
+            <p class="season-no">I</p>
+            <h3 class="season-name">Spring</h3>
+            <p class="season-months">March · April · May</p>
+            <ul class="season-list" role="list">
+              <li>Ranunculus</li>
+              <li>Peonies (May only)</li>
+              <li>Anemones</li>
+              <li>Tulips (April only)</li>
+              <li>Sweet peas</li>
+              <li>Lily of the valley</li>
+            </ul>
+          </article>
+          <article class="season-card">
+            <p class="season-no">II</p>
+            <h3 class="season-name">Summer</h3>
+            <p class="season-months">June · July · August</p>
+            <ul class="season-list" role="list">
+              <li>Garden roses</li>
+              <li>Snapdragons</li>
+              <li>Cosmos</li>
+              <li>Zinnias</li>
+              <li>Sunflowers</li>
+              <li>Lisianthus</li>
+            </ul>
+          </article>
+          <article class="season-card season-card--current">
+            <p class="season-no">III</p>
+            <h3 class="season-name">Late Summer</h3>
+            <p class="season-months">August · September</p>
+            <ul class="season-list" role="list">
+              <li>Dahlias (the main event)</li>
+              <li>Late sunflowers</li>
+              <li>Amaranth</li>
+              <li>Scabiosa</li>
+              <li>Asters</li>
+              <li>Black-eyed susans</li>
+            </ul>
+            <p class="season-current">← We are here.</p>
+          </article>
+          <article class="season-card">
+            <p class="season-no">IV</p>
+            <h3 class="season-name">Autumn</h3>
+            <p class="season-months">October · November</p>
+            <ul class="season-list" role="list">
+              <li>Chrysanthemums</li>
+              <li>Dahlias (the last of)</li>
+              <li>Cockscomb</li>
+              <li>Marigolds</li>
+              <li>Heirloom pumpkins (yes, in arrangements)</li>
+              <li>Smokebush</li>
+            </ul>
+          </article>
+          <article class="season-card">
+            <p class="season-no">V</p>
+            <h3 class="season-name">Winter</h3>
+            <p class="season-months">December · January · February</p>
+            <ul class="season-list" role="list">
+              <li>Hellebore (January only)</li>
+              <li>Paperwhites</li>
+              <li>Amaryllis</li>
+              <li>Winterberry</li>
+              <li>Pine, cedar, juniper</li>
+              <li>Dried flowers from earlier in the year</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="flowers-footnote">
+          This list is the source of truth for what we can
+          buy from our growers in any given week. The shop
+          does not stock roses in February. &mdash;
+          <em>P.P.S.</em> The hellebore window is six weeks
+          long, and they are the best flowers of the year.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== WEDDINGS =================== -->
+    <section class="weddings" id="weddings" aria-labelledby="weddings-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The bigger work</p>
+          <h2 class="section-title" id="weddings-title">
+            We do about<br /><em>thirty-eight weddings a year.</em>
+          </h2>
+          <p class="section-sub">
+            We take a small number of weddings. Each one
+            gets a single designer from the shop, working
+            with the couple directly, from the first call
+            to the day itself.
+          </p>
+        </header>
+
+        <div class="wedding-grid">
+          <article class="wedding-card wedding-card--lead">
+            <p class="wedding-cat">June 2026 · Hudson Valley</p>
+            <h3 class="wedding-name">Ada &amp; Mira's wedding</h3>
+            <p class="wedding-stats prose-numerals">240 stems &middot; 14 centerpieces &middot; 1 ceremony arch</p>
+            <p class="wedding-story">
+              Two bridal bouquets (one peony, one ranunculus),
+              fourteen low centerpieces of white anemones and
+              sweet peas, a ceremony arch of trailing jasmine
+              and ivy, and a hundred and twenty bud vases for
+              the long table. The whole thing came in at about
+              half of what the bigger shops quoted, and the
+              flowers lasted the full weekend.
+            </p>
+            <blockquote class="wedding-quote">
+              "We emailed Maya on a Tuesday. She called us
+              back on a Wednesday. We booked her on a Friday.
+              She did our flowers, our mothers' flowers, and
+              the table for my grandmother's 80th the next
+              day. I cannot recommend her enough."
+              <cite>— Ada, on a Sunday in late June</cite>
+            </blockquote>
+          </article>
+
+          <article class="wedding-card">
+            <p class="wedding-cat">September 2025 · Brooklyn</p>
+            <h3 class="wedding-name">Ravi &amp; June's wedding</h3>
+            <p class="wedding-stats prose-numerals">180 stems &middot; 10 centerpieces &middot; 1 mandap garland</p>
+            <p class="wedding-story">
+              Cafe au lait dahlias (September's main event),
+              marigolds, jasmine, a marigold-and-jasmine
+              garland for the mandap, ten low centerpieces
+              with brass vessels, a single bridal bouquet
+              tied with silk ribbon the color of butter.
+            </p>
+          </article>
+
+          <article class="wedding-card">
+            <p class="wedding-cat">May 2026 · Catskills</p>
+            <h3 class="wedding-name">Henry &amp; Tess's wedding</h3>
+            <p class="wedding-stats prose-numerals">310 stems &middot; 22 centerpieces &middot; 1 garden arch</p>
+            <p class="wedding-story">
+              The whole wedding was held in Tess's mother's
+              garden. We worked around what was already
+              blooming — iris, allium, the first climbing
+              roses — and added white peonies, foxglove,
+              and sweet peas for the bridal pieces.
+            </p>
+          </article>
+        </div>
+
+        <p class="wedding-cta">
+          <a class="btn btn-primary" href="mailto:maya@petalandstem.shop">Inquire about a wedding</a>
+          <span class="wedding-cta-note">
+            We take weddings 6 to 18 months out. We take
+            about 38 a year. The list for 2027 is currently
+            <em>closed</em>. The list for 2028 opens in
+            November.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== JOURNAL =================== -->
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">From the back of the shop</p>
+          <h2 class="section-title" id="journal-title">
+            Notes from<br /><em>the cooler.</em>
+          </h2>
+          <p class="section-sub">
+            Maya writes a short piece when the season
+            turns. Six pieces a year, on average. No
+            schedule, no email list — just posts, when
+            there's something to say.
+          </p>
+        </header>
+
+        <div class="journal-grid">
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 06 · Late August 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On dahlias, and on the long week they begin.
+            </h3>
+            <p class="journal-byline prose-numerals">By Maya Castillo</p>
+
+            <p>
+              The first cafe au lait dahlias of the season
+              arrived on a Tuesday in the second week of
+              August. They came from a grower in Orange
+              County, NY — a woman named Sara who has been
+              growing them for twenty-three years. The
+              boxes were cold and the stems were long and
+              the blooms were so pale they looked like
+              they had been dipped in milk.
+            </p>
+            <p>
+              I called two of my regulars. The first said
+              "yes, immediately, send me six." The second
+              said "are you sure? in August?" The second
+              regular is a smart woman. Cafe au lait
+              dahlias in August are an exercise in
+              controlled chaos. They open fast. They
+              bruise if you look at them wrong. They
+              drink water like they are trying to fill
+              a swimming pool.
+            </p>
+            <p>
+              They are also the most beautiful flowers
+              we sell. The color is impossible to describe.
+              It is somewhere between cream and blush and
+              a color that has no name. The center of
+              the bloom is a soft green, like new
+              lettuce. They last, in a vase, for about
+              nine days, if you change the water and
+              trim the stems every other day.
+            </p>
+            <p>
+              This is, more or less, what the shop is
+              about. The flowers that are difficult.
+              The flowers that teach you how to take
+              care of them. The flowers that, in three
+              weeks, will be gone, and we'll spend
+              the rest of the year remembering them.
+            </p>
+          </article>
+
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 05 · Mid-July 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On the growers, and on the drive.
+            </h3>
+            <p class="journal-byline prose-numerals">By Maya Castillo</p>
+
+            <p>
+              We buy from twelve growers within a hundred
+              and twenty miles of the shop. Most of them
+              are within sixty. The farthest, Sara in
+              Orange County, is two and a half hours each
+              way. I drive up twice a season to pick up
+              the dahlias in person. The other eleven
+              growers deliver to a warehouse in Long
+              Island City where we pick up on Tuesdays
+              and Fridays at 6:30am.
+            </p>
+            <p>
+              I have been to nine of the twelve farms
+              personally. The other three are on the
+              list for this fall. When I visit, I bring
+              coffee and I stay for lunch. I have seen
+              the greenhouses. I have met the dogs. I
+              know the names of two of the growers'
+              children.
+            </p>
+            <p>
+              This is, I think, the difference between
+              a flower shop and a flower store. A
+              flower store buys from a wholesaler in
+              the city. A flower shop knows the
+              person who grew the flowers. The flowers
+              in the cooler are not anonymous. They
+              are Sara's dahlias, and Joe's zinnias,
+              and Tom's cosmos. They came in on a
+              truck, from a person, from a field, an
+              hour and a half north of here.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== VISIT =================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The shop, in Williamsburg</p>
+          <h2 class="section-title" id="visit-title">
+            Come up.<br /><em>Bring a friend.</em>
+          </h2>
+        </header>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <address class="visit-address">
+              <p class="visit-line visit-line--big">
+                218 Wythe Avenue<br />
+                Brooklyn, New York 11249
+              </p>
+              <p class="visit-line">
+                Between the Wythe Hotel and the<br />
+                old paint factory, ground floor.
+              </p>
+            </address>
+
+            <dl class="visit-hours prose-numerals">
+              <div><dt>Monday</dt><dd>10 to 6</dd></div>
+              <div><dt>Tuesday</dt><dd>10 to 6</dd></div>
+              <div><dt>Wednesday</dt><dd>10 to 6</dd></div>
+              <div><dt>Thursday</dt><dd>10 to 7</dd></div>
+              <div><dt>Friday</dt><dd>10 to 7</dd></div>
+              <div><dt>Saturday</dt><dd>9 to 6</dd></div>
+              <div><dt>Sunday</dt><dd>10 to 4</dd></div>
+            </dl>
+
+            <ul class="visit-contact" role="list">
+              <li>(718) 555-0142</li>
+              <li><a href="mailto:hello@petalandstem.shop">hello@petalandstem.shop</a></li>
+            </ul>
+
+            <p class="visit-quirk">
+              <span class="eyebrow eyebrow--small">A note</span>
+              The shop smells like whatever is in the
+              cooler, which changes every Tuesday. Last
+              week it was eucalyptus. This week it is
+              dahlias and lemon balm.
+            </p>
+
+            <p class="visit-postscript">
+              <strong>P.S.</strong> &mdash; Walk along
+              the Williamsburg waterfront after. The
+              light at 6pm, in late August, on the
+              Manhattan side of the river, is
+              unreasonably beautiful.
+            </p>
+          </div>
+
+          <figure class="visit-map" aria-label="Petal & Stem on Google Maps, 218 Wythe Avenue, Brooklyn, New York">
+            <iframe
+              src="https://www.google.com/maps?q=218+Wythe+Avenue,+Brooklyn,+NY+11249&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Petal &amp; Stem on Google Maps"></iframe>
+            <figcaption class="map-caption">
+              <span class="eyebrow eyebrow--small">The shop, in maps</span>
+              218 Wythe Avenue, between the Wythe Hotel
+              and the old paint factory. The subway is
+              the L train to Bedford Ave.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <p class="footer-wordmark">Petal &amp; Stem</p>
+          <p class="footer-tagline">
+            Seasonal flowers, weddings,<br />
+            weekly arrangements.<br />
+            218 Wythe Avenue, Brooklyn, NY 11249.
+          </p>
+          <p class="footer-quirk">
+            <em>P.S.</em> We don't do same-day delivery.
+            We don't do roses in February. We do
+            flowers that are blooming now, from
+            growers we've visited personally.
+          </p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The shop</p>
+          <ul role="list">
+            <li><a href="#today">This week</a></li>
+            <li><a href="#flowers">The flowers</a></li>
+            <li><a href="#weddings">Weddings</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">Visit</p>
+          <ul role="list">
+            <li>M–W 10 to 6</li>
+            <li>Th–F 10 to 7</li>
+            <li>Sa 9 to 6</li>
+            <li>Su 10 to 4</li>
+            <li>(718) 555-0142</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The journal</p>
+          <ul role="list">
+            <li>No. 06 · Late Aug 2026</li>
+            <li>No. 05 · Mid Jul 2026</li>
+            <li>No. 04 · Late May 2026</li>
+            <li><a href="#journal">All issues</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>
+          &copy; 2019–2026 Petal &amp; Stem. A small
+          shop in Williamsburg, working with what's
+          blooming now.
+        </p>
+        <p class="footer-mark">
+          <span class="footer-mark-glyph" aria-hidden="true">P&amp;S</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

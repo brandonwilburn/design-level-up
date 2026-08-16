@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Driftwood Coffee Roasters — hand-roasted single-origin coffees, roasted on Tuesdays, shipped on Wednesdays. 47 Lexington Avenue, Asheville, North Carolina." />
+  <meta name="theme-color" content="#f4ead8" />
+  <title>Driftwood Coffee Roasters — Hand-roasted, Asheville, North Carolina</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Caveat:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23f4ead8'/><text x='50%25' y='62%25' font-family='Georgia,serif' font-size='36' font-style='italic' font-weight='500' text-anchor='middle' fill='%23c87434'>d</text></svg>" />
+
+  <meta property="og:title" content="Driftwood Coffee Roasters" />
+  <meta property="og:description" content="Hand-roasted single-origin coffees. Asheville, North Carolina." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-row">
+      <a class="brand" href="#top" aria-label="Driftwood Coffee Roasters, home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Hand-drawn-feeling coffee bean mark -->
+          <svg viewBox="0 0 36 36" width="32" height="32" role="img" aria-label="Driftwood mark">
+            <ellipse cx="18" cy="18" rx="10" ry="14" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(-15 18 18)"/>
+            <path d="M14 8 Q18 18 14 28" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(-15 18 18)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Driftwood</span>
+          <span class="brand-tag">Coffee Roasters · Asheville, NC</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list" role="list">
+          <li><a href="#roaster" class="nav-link" data-section="roaster">The Roaster</a></li>
+          <li><a href="#beans"    class="nav-link" data-section="beans">The Beans</a></li>
+          <li><a href="#brew"     class="nav-link" data-section="brew">The Brew</a></li>
+          <li><a href="#journal"  class="nav-link" data-section="journal">Journal</a></li>
+          <li><a href="#visit"    class="nav-link" data-section="visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-meta">
+        <span class="hours-pill hours-pill--amber" aria-label="Open today">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="hours-text">Open · Tu–Sa 7–5</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== HERO (asymmetric, with "now roasting" badge) =================== -->
+    <section class="hero" id="top" aria-label="Driftwood Coffee Roasters">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow hero-eyebrow hand">
+            <span>Est. 2017</span>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>On Lexington Ave, downtown Asheville</span>
+          </p>
+          <h1 class="hero-title">
+            Coffee, <em>hand-roasted</em><br />
+            on Tuesdays.
+          </h1>
+          <p class="hero-lede hand">
+            Single-origin coffees from farms we've visited
+            twice. Roasted in five-pound batches on a 1958
+            Probat. Brewed, weighed, and walked out the
+            door every Wednesday.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#beans">See this week's roasts</a>
+            <a class="btn btn-ghost" href="#visit">Visit the shop</a>
+          </div>
+          <dl class="hero-meta" aria-label="At a glance">
+            <div><dt>Roasts a week</dt><dd>2</dd></div>
+            <div><dt>Farms visited</dt><dd>14</dd></div>
+            <div><dt>Years on Lexington</dt><dd>9</dd></div>
+            <div><dt>Roaster's age</dt><dd>43</dd></div>
+          </dl>
+        </div>
+
+        <aside class="hero-art" aria-label="A hand-drawn coffee bean and a steaming cup">
+          <!-- A custom hand-drawn-feeling SVG: a steaming pour-over cup.
+               No stock photo. Made for this merchant. -->
+          <svg viewBox="0 0 360 420" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">A pour-over cup, hand-drawn, with steam rising.</title>
+            <defs>
+              <pattern id="d-grain" width="3" height="3" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.4" fill="#2d1f14" opacity=".07"/>
+              </pattern>
+            </defs>
+
+            <!-- background paper -->
+            <rect width="360" height="420" fill="#f4ead8"/>
+            <rect width="360" height="420" fill="url(#d-grain)" opacity=".6"/>
+
+            <!-- steam -->
+            <g opacity=".6" stroke="#2d1f14" stroke-width="1.2" fill="none" stroke-linecap="round">
+              <path d="M170 70 Q160 90 170 110 Q180 130 170 150"/>
+              <path d="M190 60 Q200 80 190 100 Q180 120 190 140"/>
+              <path d="M210 70 Q220 90 210 110 Q200 130 210 150"/>
+            </g>
+
+            <!-- pour-over dripper -->
+            <g transform="translate(110, 150)">
+              <path d="M0 30 L140 30 L120 100 L20 100 Z"
+                    fill="none" stroke="#2d1f14" stroke-width="1.5" stroke-linejoin="round"/>
+              <line x1="10" y1="40" x2="130" y2="40" stroke="#2d1f14" stroke-width="1" opacity=".5"/>
+              <line x1="20" y1="50" x2="120" y2="50" stroke="#2d1f14" stroke-width="1" opacity=".3"/>
+            </g>
+
+            <!-- carafe -->
+            <g transform="translate(135, 250)">
+              <path d="M0 0 L90 0 L84 100 L6 100 Z"
+                    fill="none" stroke="#2d1f14" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M0 0 L0 -8 L18 -8" fill="none" stroke="#2d1f14" stroke-width="1.5"/>
+              <path d="M90 0 L90 -8 L72 -8" fill="none" stroke="#2d1f14" stroke-width="1.5"/>
+              <line x1="6" y1="50" x2="84" y2="50" stroke="#2d1f14" stroke-width="1" opacity=".4"/>
+            </g>
+
+            <!-- handwritten label -->
+            <text x="180" y="380" text-anchor="middle"
+                  font-family="Caveat, Fraunces, Georgia, serif" font-size="22"
+                  fill="#2d1f14" font-weight="500" opacity=".75">
+              this morning's roast
+            </text>
+            <text x="180" y="402" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif" font-style="italic"
+                  font-size="10" fill="#2d1f14" opacity=".5" letter-spacing="1.5">
+              DRAWN FOR THIS PAGE · 2026
+            </text>
+          </svg>
+        </aside>
+      </div>
+
+      <!-- A handwritten "now roasting" note pinned under the hero -->
+      <div class="hero-note">
+        <span class="hand">Now roasting &mdash;</span>
+        <span class="hero-note-bean">Guatemala, Huehuetenango</span>
+        <span class="hand"> · 5lb batch · on the Probat at 6:14am.</span>
+      </div>
+    </section>
+
+    <!-- =================== THE ROASTER (about Pete) =================== -->
+    <section class="roaster" id="roaster" aria-labelledby="roaster-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow hand">The person behind the roaster</p>
+          <h2 class="section-title" id="roaster-title">
+            Pete's been<br /><em>roasting nineteen years.</em><br />
+            The shop is six.
+          </h2>
+        </header>
+
+        <div class="prose-grid">
+          <article class="prose hang-punct">
+            <p class="lead">
+              Pete trained at a roastery in San Francisco in
+              2007, then ran a 60kg Loring for eight years at
+              a shop in Burlington, Vermont. He moved to
+              Asheville in 2016, bought a 1958 Probat from a
+              retiring roaster in Portland for fourteen hundred
+              dollars, and opened Driftwood in 2017 on
+              Lexington Avenue. The Probat is the same one. The
+              sidewalk is the same one. Pete is roughly the
+              same, but with a daughter now.
+            </p>
+
+            <aside class="margin-note">
+              Asheville had fourteen coffee roasters when
+              Pete opened. It has thirty-eight now. The
+              number of farms he's visited personally has
+              stayed at fourteen. He drives to the green
+              bean warehouse himself.
+            </aside>
+
+            <p>
+              The Probat is rated for a fifteen-kilo batch.
+              Pete never roasts more than five. He learned
+              this the hard way, twice, both times in 2018.
+              Smaller batches let the drum turn more
+              consistently, give the beans a more even
+              development, and let Pete catch the first
+              crack by ear. He catches it by ear. There
+              is no computer profile.
+            </p>
+
+            <blockquote class="pullquote">
+              The coffee tells you<br />
+              when it's done. You<br />
+              just have to listen.
+              <cite>— Pete, on a Tuesday morning</cite>
+            </blockquote>
+
+            <p>
+              Driftwood is not a brand. There is no
+              subscription funnel, no loyalty program, no
+              "story" copy on the bags. The bags are kraft
+              paper with a hand-stamped label and a roast
+              date. The roast date is a real date, written
+              in ballpoint by Pete. If you email the shop
+              asking about flavor notes, Pete writes back
+              the same day.
+            </p>
+
+            <p class="post-script">
+              <strong>P.S.</strong> &mdash; The Probat needs
+              a new gas valve sometime this year. Pete is
+              saving up. He refuses to put it on a
+              GoFundMe. The savings are at about $1,400,
+              which is, of course, what the Probat cost
+              in the first place.
+            </p>
+          </article>
+
+          <aside class="pitch-side" aria-label="Roaster details">
+            <div class="side-card">
+              <p class="eyebrow eyebrow--small">The roaster, in numbers</p>
+              <dl class="prose-numerals">
+                <div><dt>Years roasting</dt><dd>19</dd></div>
+                <div><dt>Years at Driftwood</dt><dd>9</dd></div>
+                <div><dt>Roast batches a week</dt><dd>2</dd></div>
+                <div><dt>Max batch size</dt><dd>5 lb</dd></div>
+                <div><dt>Roast day</dt><dd>Tuesday</dd></div>
+                <div><dt>Probat year</dt><dd>1958</dd></div>
+              </dl>
+            </div>
+            <div class="side-card side-card--quiet">
+              <p class="eyebrow eyebrow--small">A few things Pete won't do</p>
+              <ul class="quirk-list" role="list">
+                <li>Roast on Sundays.</li>
+                <li>Open a second location.</li>
+                <li>Put a QR code on the bag.</li>
+                <li>Use the word "artisan" in any copy.</li>
+                <li>Ship before the Wednesday after a roast.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== THE BEANS (single-origins) =================== -->
+    <section class="beans" id="beans" aria-labelledby="beans-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow hand">On the shelf this week</p>
+          <h2 class="section-title" id="beans-title">
+            Six coffees,<br /><em>one Tuesday at a time.</em>
+          </h2>
+          <p class="section-sub">
+            Origin, process, and a one-line flavor note written
+            by Pete. Prices are per 12oz bag, whole bean or
+            ground to your spec.
+          </p>
+        </header>
+
+        <ul class="bean-grid" role="list">
+          <li class="bean-card bean-card--feature">
+            <div class="bean-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: Guatemala, Huehuetenango">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="bean-cat hand">No. 01 · This week</p>
+            <h3 class="bean-name">Guatemala, Huehuetenango</h3>
+            <p class="bean-process">Washed · Bourbon &amp; Caturra · 1,650m</p>
+            <p class="bean-notes hand">
+              "Brown sugar, baking apple, a long cocoa finish.
+              Brews like a sweater — warm and easy to be
+              around."
+            </p>
+            <p class="bean-meta prose-numerals">$22 · 12oz · roasted 08/12</p>
+          </li>
+
+          <li class="bean-card">
+            <div class="bean-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: Ethiopia, Yirgacheffe">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="bean-cat hand">No. 02</p>
+            <h3 class="bean-name">Ethiopia, Yirgacheffe</h3>
+            <p class="bean-process">Natural · Heirloom · 2,050m</p>
+            <p class="bean-notes hand">
+              "Jasmine, ripe stone fruit, a clean bergamot
+              finish. The kind of coffee that asks you to
+              pay attention."
+            </p>
+            <p class="bean-meta prose-numerals">$24 · 12oz</p>
+          </li>
+
+          <li class="bean-card">
+            <div class="bean-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: Colombia, Huila">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="bean-cat hand">No. 03</p>
+            <h3 class="bean-name">Colombia, Huila</h3>
+            <p class="bean-process">Washed · Caturra · 1,750m</p>
+            <p class="bean-notes hand">
+              "Toffee, dried cherry, a soft citrus rind. The
+              coffee Pete drinks at home when no one is
+              watching."
+            </p>
+            <p class="bean-meta prose-numerals">$20 · 12oz</p>
+          </li>
+
+          <li class="bean-card">
+            <div class="bean-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: Kenya, Nyeri">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="bean-cat hand">No. 04</p>
+            <h3 class="bean-name">Kenya, Nyeri</h3>
+            <p class="bean-process">Washed · SL28 &amp; SL34 · 1,800m</p>
+            <p class="bean-notes hand">
+              "Black currant, tomato leaf, bright and a little
+              bit bossy. The most popular coffee at the cupping
+              table."
+            </p>
+            <p class="bean-meta prose-numerals">$26 · 12oz</p>
+          </li>
+
+          <li class="bean-card">
+            <div class="bean-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: Sumatra, Mandheling">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="bean-cat hand">No. 05</p>
+            <h3 class="bean-name">Sumatra, Mandheling</h3>
+            <p class="bean-process">Wet-hulled · Typica · 1,400m</p>
+            <p class="bean-notes hand">
+              "Cedar, dark chocolate, a deep earthy body.
+              The coffee Pete drinks at home when it is very
+              cold and the wood stove is going."
+            </p>
+            <p class="bean-meta prose-numerals">$22 · 12oz</p>
+          </li>
+
+          <li class="bean-card bean-card--blend">
+            <div class="bean-art" aria-hidden="true">
+              <div class="placeholder-photo" aria-label="Photo placeholder: The House Blend">
+                <span>PHOTO</span>
+              </div>
+            </div>
+            <p class="bean-cat hand">No. 06 · The blend</p>
+            <h3 class="bean-name">The House Blend</h3>
+            <p class="bean-process">3-origin · 60% Guatemala, 25% Colombia, 15% Ethiopia</p>
+            <p class="bean-notes hand">
+              "The coffee we drink all day at the shop. The
+              ratio hasn't changed in six years. The beans
+              behind it rotate. The flavor does not."
+            </p>
+            <p class="bean-meta prose-numerals">$20 · 12oz</p>
+          </li>
+        </ul>
+
+        <p class="bean-footnote hand">
+          Six coffees, rotated every two weeks. When a coffee
+          runs out, it's gone — we don't re-stock the same lot.
+          The next one might be different, and that's the
+          point. &mdash; <em>P.P.S.</em> The Kenya is almost out.
+          It will be gone by Friday. Don't wait.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== THE BREW (a small guide) =================== -->
+    <section class="brew" id="brew" aria-labelledby="brew-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow hand">A short guide, in five lines</p>
+          <h2 class="section-title" id="brew-title">
+            How to <em>brew</em><br />
+            a Driftwood coffee at home.
+          </h2>
+        </header>
+
+        <ol class="brew-list" role="list">
+          <li class="brew-step">
+            <p class="brew-num prose-numerals">01</p>
+            <h3 class="brew-step-title">Grind fresh. Every time.</h3>
+            <p class="brew-step-body">
+              Buy whole bean. Grind what you need, right
+              before you brew. A burr grinder, set to
+              medium-fine for pour-over, medium for
+              French press. The grind is the single biggest
+              variable in the cup. It is more important than
+              the kettle.
+            </p>
+          </li>
+          <li class="brew-step">
+            <p class="brew-num prose-numerals">02</p>
+            <h3 class="brew-step-title">Weigh the water. And the coffee.</h3>
+            <p class="brew-step-body">
+              A 1:16 ratio by weight. Twenty-two grams of
+              coffee, three hundred and fifty grams of
+              water. A scale costs twenty dollars. It is
+              the second-most-important thing you can buy
+              for your kitchen.
+            </p>
+          </li>
+          <li class="brew-step">
+            <p class="brew-num prose-numerals">03</p>
+            <h3 class="brew-step-title">Water at 205°F. Yes, really.</h3>
+            <p class="brew-step-body">
+              Just off the boil. If your kettle doesn't have
+              a thermometer, bring it to a boil, then wait
+              thirty seconds. Filtered water if your tap is
+              hard. Pete uses the town's spring water,
+              unfiltered, because it is excellent.
+            </p>
+          </li>
+          <li class="brew-step">
+            <p class="brew-num prose-numerals">04</p>
+            <h3 class="brew-step-title">Bloom for 30 seconds. Then pour.</h3>
+            <p class="brew-step-body">
+              Wet all the grounds, then stop. The bloom is
+              CO₂ escaping; it should bubble and dome. After
+              thirty seconds, pour in slow concentric
+              circles, keeping the water level constant,
+              until you reach three hundred and fifty grams.
+              Total brew time: about three and a half
+              minutes.
+            </p>
+          </li>
+          <li class="brew-step">
+            <p class="brew-num prose-numerals">05</p>
+            <h3 class="brew-step-title">Drink it. Within twenty minutes.</h3>
+            <p class="brew-step-body">
+              The coffee is at its best between eleven and
+              twenty minutes after the pour finishes. After
+              that it cools, oxidizes, and becomes a
+              different drink. Make what you'll drink.
+              Don't make what you'll save.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =================== THE JOURNAL =================== -->
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow hand">The journal</p>
+          <h2 class="section-title" id="journal-title">
+            Notes from the<br /><em>back of the roastery.</em>
+          </h2>
+          <p class="section-sub">
+            Pete writes a short piece every other month. No
+            schedule, no theme, no SEO. Just whatever he is
+            thinking about coffee, in the moment.
+          </p>
+        </header>
+
+        <div class="journal-grid">
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 07 · August 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On roasting five pounds at a time.
+            </h3>
+            <p class="journal-byline prose-numerals">By Pete Holloway</p>
+
+            <p>
+              The Probat will hold fifteen. For two years
+              I roasted ten. The roasts were okay. Not
+              bad. Not remarkable. The kind of coffee
+              you'd drink at a conference and forget by
+              the elevator. I think it was the batch size.
+              Ten pounds in a fifteen-pound drum is hard
+              to land. The air flow changes. The beans on
+              the outside of the drum develop faster
+              than the ones in the middle. The first
+              crack happens at different times in
+              different places.
+            </p>
+            <p>
+              I dropped to seven. That was better. Then
+              five. Five is the number. The Probat
+              sounds different at five — you can hear
+              the beans tumbling against each other,
+              the way a creek sounds. You can hear
+              first crack without a thermometer. You
+              can hear when the roast is done. It
+              sounds like a small sigh.
+            </p>
+            <p>
+              Five pounds is half the revenue of ten.
+              It also costs twice the time. The math
+              does not work on paper. The math is
+              not the point. The point is the cup.
+              I would rather sell forty pounds of
+              excellent coffee a week than eighty
+              pounds of forgettable coffee. The shop
+              is small enough that this is a
+              decision I get to make.
+            </p>
+            <p class="post-script">
+              <strong>P.P.S.</strong> &mdash; If you visit
+              on a Tuesday morning, you can hear the
+              Probat from the sidewalk. It starts at
+              6:14am. The first batch is always the
+              Guatemala.
+            </p>
+          </article>
+
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 06 · June 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On the cupping table, and on being wrong.
+            </h3>
+            <p class="journal-byline prose-numerals">By Pete Holloway</p>
+
+            <p>
+              Every Tuesday at noon I cup the next
+              week's roasts. Six cups, side by side,
+              slurped with a silver spoon, ranked.
+              I write the rankings on a legal pad. I
+              have been doing this for nineteen years.
+              I am wrong about a third of the time.
+              The customer disagrees with me about
+              another third. The coffee disagrees with
+              both of us about the rest.
+            </p>
+            <p>
+              The customer is not always right. The
+              roaster is not always right. The cup
+              is occasionally, magnificently wrong.
+              A coffee that scored a 91 on Monday
+              can taste like cardboard by Wednesday.
+              A coffee that tasted like cardboard on
+              Monday can taste like the best thing
+              you've ever brewed by Friday. The cup
+              does not owe you consistency.
+            </p>
+            <p>
+              The honest thing to do is tell you this.
+              Buy the coffee because you want to
+              try it. Drink it while it's fresh. If
+              you don't like it, tell me. I will drink
+              a cup with you and we will figure out
+              what went sideways. This is, more or
+              less, the entire business model of
+              Driftwood.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== VISIT (Google Maps embed) =================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow hand">The shop, on Lexington</p>
+          <h2 class="section-title" id="visit-title">
+            Come up.<br /><em>Bring a friend.</em>
+          </h2>
+        </header>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <address class="visit-address">
+              <p class="visit-line visit-line--big">
+                47 Lexington Avenue<br />
+                Asheville, North Carolina 28801
+              </p>
+              <p class="visit-line hand">
+                Two doors down from the old bookshop,<br />
+                across the street from the dog park.
+              </p>
+            </address>
+
+            <dl class="visit-hours prose-numerals">
+              <div><dt>Monday</dt><dd>closed</dd></div>
+              <div><dt>Tuesday</dt><dd>7 to 5</dd></div>
+              <div><dt>Wednesday</dt><dd>7 to 5</dd></div>
+              <div><dt>Thursday</dt><dd>7 to 5</dd></div>
+              <div><dt>Friday</dt><dd>7 to 6</dd></div>
+              <div><dt>Saturday</dt><dd>8 to 6</dd></div>
+              <div><dt>Sunday</dt><dd>8 to 2</dd></div>
+            </dl>
+
+            <ul class="visit-contact" role="list">
+              <li>(828) 555-0142</li>
+              <li><a href="mailto:hello@driftwoodcoffee.shop">hello@driftwoodcoffee.shop</a></li>
+            </ul>
+
+            <p class="visit-quirk">
+              <span class="eyebrow eyebrow--small">A note</span>
+              Tuesday is roast day. The shop opens at 7 but
+              the Probat starts at 6:14. The smell on the
+              sidewalk is, frankly, ridiculous.
+            </p>
+
+            <p class="visit-postscript hand">
+              <strong>P.S.</strong> &mdash; Walk to the
+              river after. The path behind the dog park
+              is the best morning walk in Asheville.
+            </p>
+          </div>
+
+          <figure class="visit-map" aria-label="Driftwood Coffee Roasters on Google Maps, 47 Lexington Avenue, Asheville, North Carolina">
+            <iframe
+              src="https://www.google.com/maps?q=47+Lexington+Avenue,+Asheville,+NC+28801&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Driftwood on Google Maps"></iframe>
+            <figcaption class="map-caption">
+              <span class="eyebrow eyebrow--small">The shop, in maps</span>
+              47 Lexington Avenue, near the dog park. Street
+              parking is decent before 9am, impossible after.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <p class="footer-wordmark">Driftwood</p>
+          <p class="footer-tagline">
+            Hand-roasted single-origin coffees.<br />
+            47 Lexington Avenue,<br />
+            Asheville, North Carolina 28801.
+          </p>
+          <p class="footer-quirk hand">
+            <em>P.S.</em> We don't have a marketing team.
+            We have Pete, who roasts on Tuesdays and
+            answers email on Wednesdays.
+          </p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The shop</p>
+          <ul role="list">
+            <li><a href="#roaster">The roaster</a></li>
+            <li><a href="#beans">The beans</a></li>
+            <li><a href="#brew">The brew</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">Visit</p>
+          <ul role="list">
+            <li>Tu–Th 7 to 5</li>
+            <li>F–Sa 7 to 6</li>
+            <li>Su 8 to 2</li>
+            <li>Mo closed</li>
+            <li>(828) 555-0142</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The journal</p>
+          <ul role="list">
+            <li>No. 07 · Aug 2026</li>
+            <li>No. 06 · Jun 2026</li>
+            <li>No. 05 · Apr 2026</li>
+            <li><a href="#journal">All issues</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p class="prose-numerals">
+          &copy; 2017–2026 Driftwood Coffee Roasters. Roasted
+          in Asheville on a 1958 Probat.
+        </p>
+        <p class="footer-mark">
+          <span class="footer-mark-glyph hand" aria-hidden="true">d.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
