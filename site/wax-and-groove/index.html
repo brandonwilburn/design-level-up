@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wax & Groove — a record store in Midtown Detroit. New and used vinyl, jazz, soul, hip-hop, Detroit techno, and house. Listening parties on Saturdays. 410 W Warren Ave, Detroit, Michigan." />
+  <meta name="theme-color" content="#0a0a12" />
+  <title>Wax &amp; Groove — A record store · Detroit, Michigan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Bebas+Neue&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%231a1815'/><circle cx='32' cy='32' r='22' fill='none' stroke='%23d4652a' stroke-width='1.5'/><circle cx='32' cy='32' r='4' fill='%23d4652a'/></svg>" />
+
+  <meta property="og:title" content="Wax & Groove" />
+  <meta property="og:description" content="A record store in Midtown Detroit." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-row">
+      <a class="brand" href="#top" aria-label="Wax & Groove, home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- A record-on-a-spindle mark -->
+          <svg viewBox="0 0 36 36" width="30" height="30" role="img" aria-label="Wax & Groove mark">
+            <circle cx="18" cy="18" r="14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="18" cy="18" r="10" fill="none" stroke="currentColor" stroke-width="0.6" opacity=".5"/>
+            <circle cx="18" cy="18" r="6" fill="none" stroke="currentColor" stroke-width="0.6" opacity=".5"/>
+            <circle cx="18" cy="18" r="2.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Wax &amp; Groove</span>
+          <span class="brand-tag">Midtown · Detroit, MI</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list" role="list">
+          <li><a href="#new"       class="nav-link" data-section="new">New Arrivals</a></li>
+          <li><a href="#backstock" class="nav-link" data-section="backstock">Backstock</a></li>
+          <li><a href="#sessions"  class="nav-link" data-section="sessions">Sessions</a></li>
+          <li><a href="#journal"   class="nav-link" data-section="journal">Journal</a></li>
+          <li><a href="#visit"     class="nav-link" data-section="visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-meta">
+        <span class="hours-pill" aria-label="Open today">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="hours-text">Open · Tu–Su 12–8</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== HERO =================== -->
+    <section class="hero" id="top" aria-label="Wax & Groove">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow hero-eyebrow">
+            <span>Est. 2016</span>
+            <span class="eyebrow-sep" aria-hidden="true">/</span>
+            <span>410 W Warren Ave, Midtown Detroit</span>
+          </p>
+          <h1 class="hero-title">
+            Vinyl,<br />
+            <em>on Cass Ave.</em>
+          </h1>
+          <p class="hero-lede">
+            A record store in a former barber shop on
+            Warren Ave, between Wayne State and the
+            old temple. Used jazz, soul, hip-hop, house,
+            and techno. New releases on Fridays.
+            Listening parties on Saturday afternoons.
+            We have a cat named Carl.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#new">This week's new arrivals</a>
+            <a class="btn btn-ghost" href="#visit">Visit the shop</a>
+          </div>
+          <dl class="hero-meta" aria-label="At a glance">
+            <div><dt>Records in stock</dt><dd>8,200</dd></div>
+            <div><dt>New this week</dt><dd>34</dd></div>
+            <div><dt>Years on Warren</dt><dd>9</dd></div>
+            <div><dt>Listening parties a year</dt><dd>52</dd></div>
+          </dl>
+        </div>
+
+        <aside class="hero-art" aria-label="A hand-drawn turntable with a record on the platter">
+          <svg viewBox="0 0 360 460" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">A turntable with a record on the platter.</title>
+            <defs>
+              <pattern id="w-grain" width="3" height="3" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.4" fill="#e8e0d0" opacity=".05"/>
+              </pattern>
+            </defs>
+            <rect width="360" height="460" fill="#0a0a12"/>
+            <rect width="360" height="460" fill="url(#w-grain)" opacity=".5"/>
+
+            <!-- The turntable base -->
+            <rect x="40" y="200" width="280" height="200" rx="6"
+                  fill="#1a1a26" stroke="#ff2e7e" stroke-width="1.2"/>
+            <rect x="40" y="200" width="280" height="200" rx="6"
+                  fill="none" stroke="#ff2e7e" stroke-width="0.5" opacity=".4" transform="translate(2 2)"/>
+
+            <!-- The platter -->
+            <circle cx="160" cy="280" r="80" fill="#0a0a12"
+                    stroke="#ff2e7e" stroke-width="1.2"/>
+            <circle cx="160" cy="280" r="78" fill="none"
+                    stroke="#ff2e7e" stroke-width="0.3" opacity=".4"/>
+            <circle cx="160" cy="280" r="64" fill="none"
+                    stroke="#ff2e7e" stroke-width="0.3" opacity=".4"/>
+            <circle cx="160" cy="280" r="50" fill="none"
+                    stroke="#ff2e7e" stroke-width="0.3" opacity=".4"/>
+            <circle cx="160" cy="280" r="36" fill="none"
+                    stroke="#ff2e7e" stroke-width="0.3" opacity=".4"/>
+
+            <!-- The label -->
+            <circle cx="160" cy="280" r="22" fill="#ff2e7e"/>
+            <text x="160" y="278" text-anchor="middle"
+                  font-family="Bebas Neue, Fraunces, sans-serif" font-size="9"
+                  fill="#0a0a12" letter-spacing="0.5">WAX &amp;</text>
+            <text x="160" y="290" text-anchor="middle"
+                  font-family="Bebas Neue, Fraunces, sans-serif" font-size="9"
+                  fill="#0a0a12" letter-spacing="0.5">GROOVE</text>
+
+            <!-- The spindle -->
+            <circle cx="160" cy="280" r="2" fill="#e8e0d0"/>
+
+            <!-- The tonearm -->
+            <g stroke="#e8e0d0" stroke-width="1.5" fill="none">
+              <circle cx="280" cy="220" r="6" fill="#0a0a12"/>
+              <line x1="280" y1="220" x2="240" y2="270"/>
+              <rect x="232" y="265" width="14" height="10" fill="#ff2e7e" stroke="none"/>
+            </g>
+
+            <!-- Speed/pitch controls -->
+            <circle cx="80" cy="370" r="8" fill="none" stroke="#ff2e7e" stroke-width="1"/>
+            <circle cx="80" cy="370" r="3" fill="#ff2e7e"/>
+            <text x="80" y="395" text-anchor="middle"
+                  font-family="Bebas Neue, sans-serif" font-size="6"
+                  fill="#ff2e7e" letter-spacing="1">33⅓</text>
+            <circle cx="240" cy="370" r="8" fill="none" stroke="#ff2e7e" stroke-width="1"/>
+            <circle cx="240" cy="370" r="3" fill="#ff2e7e"/>
+            <text x="240" y="395" text-anchor="middle"
+                  font-family="Bebas Neue, sans-serif" font-size="6"
+                  fill="#ff2e7e" letter-spacing="1">45</text>
+
+            <!-- caption -->
+            <text x="180" y="430" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif" font-style="italic"
+                  font-size="11" fill="#e8e0d0" opacity=".7">
+              On the platter right now.
+            </text>
+          </svg>
+        </aside>
+      </div>
+
+      <!-- "Now playing" rail under the hero -->
+      <div class="hero-rail">
+        <span class="rail-label"><span class="eyebrow eyebrow--small">On the speakers</span></span>
+        <span class="rail-item">Model 500 — "Starlight" (UR, 1995)</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">side A, second track.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">Come in, it's on.</span>
+      </div>
+    </section>
+
+    <!-- =================== NEW ARRIVALS =================== -->
+    <section class="new" id="new" aria-labelledby="new-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">Friday crates, this week</p>
+          <h2 class="section-title" id="new-title">
+            New<br /><em>arrivals.</em>
+          </h2>
+          <p class="section-sub">
+            We get new vinyl on Fridays. The list below is
+            what came in this week. When we run out of a
+            record, we don't reorder it. Friday's list is
+            a one-shot.
+          </p>
+        </header>
+
+        <ul class="new-grid" role="list">
+          <li class="record record--feature">
+            <div class="record-art" aria-hidden="true">
+              <img src="img/store.jpg" alt="Model 500, Starlight" loading="lazy" decoding="async" />
+            </div>
+            <p class="record-cat">No. 01 · Reissue</p>
+            <h3 class="record-title">Starlight</h3>
+            <p class="record-artist">Model 500</p>
+            <p class="record-label prose-numerals">UR · 1995 · 12" reissue · $24</p>
+            <p class="record-blurb">
+              The Detroit techno classic, reissued on
+              translucent wax. Juan Atkins under his
+              Model 500 alias. This is the version the
+              serious collectors have been waiting for.
+              We have forty copies.
+            </p>
+            <p class="record-tag">— Otis's pick this week</p>
+          </li>
+
+          <li class="record">
+            <div class="record-art" aria-hidden="true">
+              <img src="img/turntable.jpg" alt="Donuts, J Dilla" loading="lazy" decoding="async" />
+            </div>
+            <p class="record-cat">No. 02 · Reissue</p>
+            <h3 class="record-title">Donuts</h3>
+            <p class="record-artist">J Dilla</p>
+            <p class="record-label prose-numerals">Stones Throw · 2006 · 2LP · $32</p>
+            <p class="record-blurb">
+              The forty-five track, forty-three minute
+              beat tape J Dilla made from his hospital
+              bed in February 2006, released three
+              days before he died. The new pressing
+              has a tip-on sleeve and a poster.
+            </p>
+          </li>
+
+          <li class="record">
+            <div class="record-art" aria-hidden="true">
+              <img src="img/bin.jpg" alt="A Love Supreme, Coltrane" loading="lazy" decoding="async" />
+            </div>
+            <p class="record-cat">No. 03 · Reissue</p>
+            <h3 class="record-title">A Love Supreme</h3>
+            <p class="record-artist">John Coltrane Quartet</p>
+            <p class="record-label prose-numerals">Impulse! · 1965 · 180g reissue · $36</p>
+            <p class="record-blurb">
+              The 1965 recording in a new 180-gram
+              pressing, mastered from the original
+              analog tapes. If you have one copy of
+              one jazz record, this is the one to
+              have.
+            </p>
+          </li>
+
+          <li class="record">
+            <div class="record-art" aria-hidden="true">
+              <img src="img/cover.jpg" alt="The Miseducation, Lauryn Hill" loading="lazy" decoding="async" />
+            </div>
+            <p class="record-cat">No. 04 · Reissue</p>
+            <h3 class="record-title">The Miseducation of Lauryn Hill</h3>
+            <p class="record-artist">Lauryn Hill</p>
+            <p class="record-label prose-numerals">Columbia · 1998 · 2LP reissue · $38</p>
+            <p class="record-blurb">
+              The first hip-hop album to win the Album
+              of the Year Grammy. The reissue is on
+              180-gram wax in a gatefold sleeve with
+              the lyrics printed inside. Twenty-six
+              years old and it has not aged a day.
+            </p>
+          </li>
+
+          <li class="record">
+            <div class="record-art" aria-hidden="true">
+              <img src="img/crate.jpg" alt="Voodoo, D'Angelo" loading="lazy" decoding="async" />
+            </div>
+            <p class="record-cat">No. 05 · Used · $VG+</p>
+            <h3 class="record-title">Voodoo</h3>
+            <p class="record-artist">D'Angelo</p>
+            <p class="record-label prose-numerals">Virgin · 2000 · 2LP · $48</p>
+            <p class="record-blurb">
+              A used copy, light surface marks, plays
+              clean. The ?uestlove drums on this record
+              are, in our opinion, the most important
+              drumming in any R&amp;B record of the
+              last thirty years. We have one copy.
+            </p>
+          </li>
+
+          <li class="record">
+            <div class="record-art" aria-hidden="true">
+              <img src="img/stacks.jpg" alt="Selected Ambient Works, Aphex Twin" loading="lazy" decoding="async" />
+            </div>
+            <p class="record-cat">No. 06 · Reissue</p>
+            <h3 class="record-title">Selected Ambient Works 85–92</h3>
+            <p class="record-artist">Aphex Twin</p>
+            <p class="record-label prose-numerals">R&amp;S · 1992 · 2LP reissue · $42</p>
+            <p class="record-blurb">
+              The album that made ambient music
+              something you could dance to. The new
+              pressing is on heavyweight wax, with the
+              original artwork. Twenty-five copies.
+            </p>
+          </li>
+        </ul>
+
+        <p class="new-footnote">
+          Six records this week. The new arrivals shelf
+          turns over on Fridays. The used copies above
+          are one-of-ones &mdash; when they're gone,
+          they're gone. &mdash; <em>P.P.S.</em> We
+          have a Dilla test pressing under the counter.
+          Three copies. Cash only. Don't ask.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== BACKSTOCK =================== -->
+    <section class="backstock" id="backstock" aria-labelledby="backstock-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">Used vinyl, organized by what we like</p>
+          <h2 class="section-title" id="backstock-title">
+            The<br /><em>backstock.</em>
+          </h2>
+          <p class="section-sub">
+            We organize the used section by what we
+            like, not alphabetically. A jazz bin, a
+            soul bin, a hip-hop bin, a Detroit bin,
+            a house bin, a "weird" bin, and a $5 bin.
+            The $5 bin is the second-most-popular
+            section of the shop.
+          </p>
+        </header>
+
+        <div class="backstock-grid">
+          <article class="bin">
+            <p class="bin-no">I</p>
+            <h3 class="bin-name">The Jazz Bin</h3>
+            <p class="bin-count">About 1,400 records</p>
+            <p class="bin-desc">
+              Hard bop, post-bop, spiritual, free. Blue
+              Note, Prestige, Impulse!, Riverside, ESP.
+              We dig through estate sales on the east
+              side. The Coltrane section is the deepest
+              in the shop.
+            </p>
+            <p class="bin-quote">
+              "If you want to learn jazz, start in the
+              middle of the Coltrane section and read
+              every album from left to right." &mdash;
+              Otis
+            </p>
+          </article>
+
+          <article class="bin">
+            <p class="bin-no">II</p>
+            <h3 class="bin-name">The Soul Bin</h3>
+            <p class="bin-count">About 900 records</p>
+            <p class="bin-desc">
+              Northern soul, deep soul, Memphis soul,
+              Motown. The 45s section is, if we do say
+              so ourselves, the best in Detroit. We have
+              a 45 of "Tainted Love" by Gloria Jones on
+              the original UK pressing.
+            </p>
+          </article>
+
+          <article class="bin">
+            <p class="bin-no">III</p>
+            <h3 class="bin-name">The Hip-Hop Bin</h3>
+            <p class="bin-count">About 1,100 records</p>
+            <p class="bin-desc">
+              Golden age, underground, Detroit-specific
+              (yes, we have a J Dilla sub-bin, obviously).
+              The original pressing of "Paul's Boutique"
+              goes for about $120 these days. We have two.
+            </p>
+          </article>
+
+          <article class="bin bin--highlight">
+            <p class="bin-no">IV</p>
+            <h3 class="bin-name">The Detroit Bin</h3>
+            <p class="bin-count">About 600 records</p>
+            <p class="bin-desc">
+              Techno, house, and the more experimental
+              end of the Detroit electronic scene. UR,
+              Metroplex, Transmat, Planet E, KMS. This
+              bin is the reason the shop exists.
+            </p>
+            <p class="bin-quote">
+              "Detroit techno is the local music. We
+              are a Detroit record store. This bin is
+              the most important bin we have."
+            </p>
+          </article>
+
+          <article class="bin">
+            <p class="bin-no">V</p>
+            <h3 class="bin-name">The House Bin</h3>
+            <p class="bin-count">About 500 records</p>
+            <p class="bin-desc">
+              Chicago, New York, Detroit, London, Berlin.
+              Deep house, acid, garage. We have a 12"
+              of "Can You Feel It" on the original
+              pressing. We will probably never sell it.
+            </p>
+          </article>
+
+          <article class="bin">
+            <p class="bin-no">VI</p>
+            <h3 class="bin-name">The Weird Bin</h3>
+            <p class="bin-count">About 300 records</p>
+            <p class="bin-desc">
+              We don't really know how to categorize
+              this bin. It is mostly ambient, some
+              library music, some soundtrack, a
+              surprising amount of Ethiopian jazz.
+            </p>
+          </article>
+
+          <article class="bin bin--five">
+            <p class="bin-no">VII</p>
+            <h3 class="bin-name">The $5 Bin</h3>
+            <p class="bin-count">About 1,200 records</p>
+            <p class="bin-desc">
+              The second-most popular section of the
+              shop. Records that came in with light
+              wear, records that have been here too
+              long, records we accidentally bought
+              two of. All $5. None over $5. Ever.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SESSIONS (events) =================== -->
+    <section class="sessions" id="sessions" aria-labelledby="sessions-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">Fifty-two Saturdays a year</p>
+          <h2 class="section-title" id="sessions-title">
+            Listening<br /><em>sessions.</em>
+          </h2>
+          <p class="section-sub">
+            Every Saturday at 2pm we put a record on the
+            shop turntable and listen to the whole thing,
+            start to finish, with whoever is in the shop.
+            Free. Coffee from the cafe next door.
+          </p>
+        </header>
+
+        <ul class="sessions-list" role="list">
+          <li class="session">
+            <p class="session-date">
+              <span class="session-month">Sep</span>
+              <span class="session-day">14</span>
+            </p>
+            <div class="session-body">
+              <p class="session-cat">Listening session · Free</p>
+              <h3 class="session-title">"Donuts" by J Dilla, in full</h3>
+              <p class="session-host">Hosted by Otis</p>
+              <p class="session-desc">
+                The whole forty-three minutes, on the
+                shop turntable. No skipping, no talking
+                over the quiet parts. Coffee and donuts,
+                obviously. We will probably cry.
+              </p>
+            </div>
+          </li>
+
+          <li class="session">
+            <p class="session-date">
+              <span class="session-month">Sep</span>
+              <span class="session-day">21</span>
+            </p>
+            <div class="session-body">
+              <p class="session-cat">Listening session · Free</p>
+              <h3 class="session-title">"Bitches Brew" by Miles Davis, in full</h3>
+              <p class="session-host">Hosted by Maya (from the cafe next door)</p>
+              <p class="session-desc">
+                The 1970 double album, the entire hour
+                and forty-five minutes. This is a long
+                one. Bring water. Bring a snack. Plan
+                to stay.
+              </p>
+            </div>
+          </li>
+
+          <li class="session">
+            <p class="session-date">
+              <span class="session-month">Sep</span>
+              <span class="session-day">28</span>
+            </p>
+            <div class="session-body">
+              <p class="session-cat">DJ night · $5 cover</p>
+              <h3 class="session-title">DJ Night: Detroit techno, all night</h3>
+              <p class="session-host">DJing by Otis and friends</p>
+              <p class="session-desc">
+                A monthly DJ night in the back of the
+                shop, the last Saturday of every month.
+                Detroit techno only, from the early
+                stuff (1985–1995) to the new stuff.
+                Cover goes to the artist.
+              </p>
+            </div>
+          </li>
+
+          <li class="session">
+            <p class="session-date">
+              <span class="session-month">Oct</span>
+              <span class="session-day">05</span>
+            </p>
+            <div class="session-body">
+              <p class="session-cat">Listening session · Free</p>
+              <h3 class="session-title">"Songs in the Key of Life" by Stevie Wonder, in full</h3>
+              <p class="session-host">Hosted by Otis</p>
+              <p class="session-desc">
+                The 1976 double album, the whole
+                eighty-seven minutes. Stevie at the
+                absolute peak. The best record ever
+                made. We will argue about this in
+                the shop. Come argue with us.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================== JOURNAL =================== -->
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">From behind the counter</p>
+          <h2 class="section-title" id="journal-title">
+            Notes from<br /><em>the shop floor.</em>
+          </h2>
+          <p class="section-sub">
+            Otis writes a short piece every month or
+            so, on whatever record is on his mind.
+            No email list, no schedule. Just a paragraph
+            or two, when there's something to say.
+          </p>
+        </header>
+
+        <div class="journal-grid">
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 11 · August 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On the Dilla reissue, and on what we owe the records.
+            </h3>
+            <p class="journal-byline prose-numerals">By Otis Reed</p>
+
+            <p>
+              The new "Donuts" reissue came in last
+              Friday. The heavyweight pressing, the
+              tip-on sleeve, the poster. We sold
+              nineteen copies over the weekend, which
+              is a lot for a record that came out in
+              2006. Most of the people who bought it
+              already own the old one. Some of them
+              owned two old ones. They bought the
+              reissue because it is a better pressing,
+              and because they want the record to
+              last.
+            </p>
+            <p>
+              This is, I think, the right way to think
+              about vinyl. The record is a thing that
+              exists in the world. The thing can be
+              better or worse, depending on the
+              quality of the pressing, the quality of
+              the mastering, the quality of the
+              sleeve. Buying the better version is
+              not buying the same thing twice. It is
+              supporting the people who care enough
+              to make the record the best version of
+              itself.
+            </p>
+            <p>
+              The same is true of all the reissues
+              we stock. A 180-gram Blue Note is not
+              the same as the 1965 original. The
+              1965 original is the document; the
+              reissue is the better way to hear it,
+              now, on a system that did not exist
+              in 1965. The record continues. The
+              pressing is the next chapter.
+            </p>
+          </article>
+
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 10 · June 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On the Detroit bin, and on what the bin is for.
+            </h3>
+            <p class="journal-byline prose-numerals">By Otis Reed</p>
+
+            <p>
+              The Detroit bin is, for us, the most
+              important bin in the shop. It is also
+              the smallest, because the records are
+              harder to find. The original Transmat
+              pressings from 1986 to 1991 are not in
+              estate sales in Cleveland. They are in
+              basements in Detroit, in the houses of
+              the people who bought them new.
+            </p>
+            <p>
+              We buy from those people, when we can.
+              We drive to the houses. We pay cash.
+              We do not lowball. The bin is small
+              because the supply is small. The
+              supply is small because the records
+              were not, in the 1980s, considered
+              collectible. They were considered
+              dance music. They were bought by
+              people who were going to play them
+              for other people, in rooms with a
+              sound system.
+            </p>
+            <p>
+              The records survived because they
+              were played. They were not put on
+              a shelf to be saved. They were
+              played, and they were passed around,
+              and they were played more. The fact
+              that they exist at all, in 2026, is
+              because the people who owned them
+              loved them. The bin is, in some
+              sense, the result of that love. We
+              are trying to be good stewards of it.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== VISIT =================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The shop, on Warren</p>
+          <h2 class="section-title" id="visit-title">
+            Come up.<br /><em>Bring a friend.</em>
+          </h2>
+        </header>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <address class="visit-address">
+              <p class="visit-line visit-line--big">
+                410 W Warren Avenue<br />
+                Detroit, Michigan 48201
+              </p>
+              <p class="visit-line">
+                A block west of Wayne State,<br />
+                in the old barber shop on the corner.
+              </p>
+            </address>
+
+            <dl class="visit-hours prose-numerals">
+              <div><dt>Monday</dt><dd>closed</dd></div>
+              <div><dt>Tuesday</dt><dd>12 to 8</dd></div>
+              <div><dt>Wednesday</dt><dd>12 to 8</dd></div>
+              <div><dt>Thursday</dt><dd>12 to 8</dd></div>
+              <div><dt>Friday</dt><dd>12 to 9</dd></div>
+              <div><dt>Saturday</dt><dd>11 to 9</dd></div>
+              <div><dt>Sunday</dt><dd>12 to 6</dd></div>
+            </dl>
+
+            <ul class="visit-contact" role="list">
+              <li>(313) 555-0142</li>
+              <li><a href="mailto:hello@waxandgroove.shop">hello@waxandgroove.shop</a></li>
+            </ul>
+
+            <p class="visit-quirk">
+              <span class="eyebrow eyebrow--small">A note</span>
+              The shop has a cat. His name is Carl.
+              Carl has been here since 2017. Carl
+              has opinions about the music and will,
+              occasionally, sit on the record you
+              are trying to listen to. This is
+              Carl's shop too.
+            </p>
+
+            <p class="visit-postscript">
+              <strong>P.S.</strong> &mdash; Walk to
+              the Old Miami after, on the east side.
+              It's a bar in a former church. The
+              jukebox is excellent. The bartender
+              will tell you about Detroit techno for
+              an hour if you let her.
+            </p>
+          </div>
+
+          <figure class="visit-map" aria-label="Wax & Groove on Google Maps, 410 W Warren Avenue, Detroit, Michigan">
+            <iframe
+              src="https://www.google.com/maps?q=410+W+Warren+Avenue,+Detroit,+MI+48201&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Wax &amp; Groove on Google Maps"></iframe>
+            <figcaption class="map-caption">
+              <span class="eyebrow eyebrow--small">The shop, in maps</span>
+              410 W Warren Avenue, between Wayne State
+              and the old temple. Street parking is
+              decent; the lot behind the cafe is reliable.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <p class="footer-wordmark">Wax &amp; Groove</p>
+          <p class="footer-tagline">
+            A record store in Midtown,<br />
+            410 W Warren Avenue,<br />
+            Detroit, Michigan 48201.
+          </p>
+          <p class="footer-quirk">
+            <em>P.S.</em> We don't have a marketing team.
+            We have Otis, who works the counter, and
+            Carl, who sits on it. We buy from estate
+            sales, from other record stores, and from
+            the people who originally bought the
+            records in 1986.
+          </p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The shop</p>
+          <ul role="list">
+            <li><a href="#new">New arrivals</a></li>
+            <li><a href="#backstock">Backstock</a></li>
+            <li><a href="#sessions">Sessions</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">Visit</p>
+          <ul role="list">
+            <li>Tu–Th 12 to 8</li>
+            <li>F–Sa 12 to 9</li>
+            <li>Su 12 to 6</li>
+            <li>Mo closed</li>
+            <li>(313) 555-0142</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The journal</p>
+          <ul role="list">
+            <li>No. 11 · Aug 2026</li>
+            <li>No. 10 · Jun 2026</li>
+            <li>No. 09 · Apr 2026</li>
+            <li><a href="#journal">All issues</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>
+          &copy; 2016–2026 Wax &amp; Groove. A record
+          store on Cass Ave, with a cat named Carl.
+        </p>
+        <p class="footer-mark">
+          <span class="footer-mark-glyph" aria-hidden="true">W&amp;G</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
