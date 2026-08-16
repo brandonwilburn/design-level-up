@@ -1,0 +1,15 @@
+# OS / editor cruft — this repo is plain HTML/CSS/JS, no build artifacts.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+*.local

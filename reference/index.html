@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yard & Larder — honest goods for the well-kept home. Hand-poured candles, milled soap, locally-roasted coffee, and pantry staples from twenty-three makers within a hundred miles of the shop. 115 East Stephen Foster Ave, Bardstown, Kentucky." />
+  <meta name="theme-color" content="#f6efe1" />
+  <title>Yard & Larder — Honest goods for the well-kept home · Bardstown, Kentucky</title>
+
+  <!-- Preconnect for the one display face (Fraunces) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon: hand-cut ink mark, inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23f6efe1'/><text x='50%25' y='58%25' font-family='Georgia,serif' font-size='42' font-weight='500' text-anchor='middle' fill='%237d2e26'>Y</text></svg>" />
+
+  <meta property="og:title" content="Yard & Larder" />
+  <meta property="og:description" content="Honest goods for the well-kept home. Bardstown, Kentucky." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-row">
+      <a class="brand" href="#top" aria-label="Yard & Larder, home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Custom SVG mark: an apothecary jar -->
+          <svg viewBox="0 0 36 36" width="32" height="32" role="img" aria-label="Yard & Larder mark">
+            <path d="M12 6h12v3l-2 1v3a8 8 0 0 1 6 7v9a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4v-9a8 8 0 0 1 6-7v-3l-2-1z"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="13" y1="6" x2="23" y2="6" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="14" y1="13" x2="22" y2="13" stroke="currentColor" stroke-width="1" opacity=".6"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Yard &amp; Larder</span>
+          <span class="brand-tag">Bardstown, Kentucky</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list" role="list">
+          <li><a href="#shelves" class="nav-link" data-section="shelves">The Shelves</a></li>
+          <li><a href="#makers"  class="nav-link" data-section="makers">The Makers</a></li>
+          <li><a href="#journal" class="nav-link" data-section="journal">Journal</a></li>
+          <li><a href="#visit"   class="nav-link" data-section="visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-meta">
+        <span class="hours-pill" aria-label="Open today, 9 to 6">
+          <span class="dot" aria-hidden="true"></span>
+          Open · M–Sa 9–6
+        </span>
+      </div>
+    </div>
+    <div class="nav-rule" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== HERO (asymmetric) =================== -->
+    <section class="hero" id="top" aria-label="Yard & Larder">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow hero-eyebrow">
+            <span>Est. 2018</span>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>On the square, Bardstown, Kentucky</span>
+          </p>
+          <h1 class="hero-title">
+            Honest goods for the<br />
+            <em>well-kept</em> home.
+          </h1>
+          <p class="hero-lede">
+            Hand-poured candles, milled soap, locally-roasted
+            coffee, and pantry staples from twenty-three makers
+            within a hundred miles of the shop. Curated by a
+            four-person team, none of whom work in marketing.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#visit">Visit the shop</a>
+            <a class="btn btn-ghost" href="#shelves">Read the shelves</a>
+          </div>
+          <dl class="hero-meta prose-numerals" aria-label="At a glance">
+            <div><dt>Makers stocked</dt><dd>23</dd></div>
+            <div><dt>Mile radius</dt><dd>100</dd></div>
+            <div><dt>Years on the square</dt><dd>7</dd></div>
+            <div><dt>Sarah's candle recipe</dt><dd>unchanged</dd></div>
+          </dl>
+        </div>
+
+        <aside class="hero-art" aria-label="A small vitrine of items from the shop">
+          <!-- Custom SVG: a styled still life of the shop's signature items.
+               No stock photo. Made for this merchant. -->
+          <svg viewBox="0 0 360 480" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">A candle, a tin of coffee, a bar of soap, drawn in a single ink line.</title>
+            <defs>
+              <pattern id="grain" width="3" height="3" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.4" fill="#1a1612" opacity=".06"/>
+              </pattern>
+            </defs>
+
+            <!-- shelf line -->
+            <line x1="20" y1="380" x2="340" y2="380" stroke="currentColor" stroke-width="1" opacity=".4"/>
+            <line x1="20" y1="60"  x2="340" y2="60"  stroke="currentColor" stroke-width="1" opacity=".25"/>
+
+            <!-- The candle (left) -->
+            <g transform="translate(78, 180)">
+              <rect x="0" y="0" width="48" height="180" rx="3"
+                    fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="0"  y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="1"/>
+              <line x1="24" y1="0"  x2="24" y2="-12" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M22 -12 Q24 -22 26 -12" fill="none" stroke="currentColor" stroke-width="1"/>
+              <text x="24" y="98" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="currentColor" opacity=".7">No. 3</text>
+            </g>
+
+            <!-- The coffee tin (center) -->
+            <g transform="translate(160, 200)">
+              <ellipse cx="36" cy="6"  rx="36" ry="6"
+                       fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M0 6 L0 156 a36 6 0 0 0 72 0 L72 6"
+                    fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <ellipse cx="36" cy="6" rx="36" ry="6"
+                       fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="0" y1="40" x2="72" y2="40" stroke="currentColor" stroke-width="1" opacity=".5"/>
+              <line x1="0" y1="100" x2="72" y2="100" stroke="currentColor" stroke-width="1" opacity=".5"/>
+              <text x="36" y="76" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif"
+                    font-size="11" fill="currentColor">Limestone</text>
+              <text x="36" y="92" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="currentColor" opacity=".7">single origin</text>
+            </g>
+
+            <!-- The bar of soap (right) -->
+            <g transform="translate(260, 280)">
+              <rect x="0" y="0" width="70" height="44" rx="3"
+                    fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="14" x2="64" y2="14" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              <line x1="6" y1="30" x2="64" y2="30" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              <text x="35" y="26" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="currentColor" opacity=".7">castile · 5oz</text>
+            </g>
+
+            <!-- Caption / credit under the still life -->
+            <text x="180" y="450" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif" font-style="italic"
+                  font-size="11" fill="currentColor" opacity=".6">
+              A still life of three items from the shelf.
+            </text>
+            <text x="180" y="466" text-anchor="middle"
+                  font-family="Fraunces, Georgia, serif"
+                  font-size="9" fill="currentColor" opacity=".45"
+                  letter-spacing="1.2">
+              DRAWN FOR THIS PAGE · AUG 2026
+            </text>
+
+            <!-- Paper grain overlay -->
+            <rect x="0" y="0" width="360" height="480" fill="url(#grain)" opacity=".5"/>
+          </svg>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =================== THE PITCH (long-form, editorial) =================== -->
+    <section class="pitch" id="pitch" aria-labelledby="pitch-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">What we stock &amp; why</p>
+          <h2 class="section-title" id="pitch-title">
+            We sell what we'd<br /><em>use ourselves.</em>
+          </h2>
+        </header>
+
+        <div class="prose-grid">
+          <article class="prose hang-punct">
+            <p class="lead">
+              That's been the rule since we opened. If Sarah
+              wouldn't hand it to a friend, it doesn't make the
+              shelf. Same rule applies to the coffee, the soap,
+              the candles, the cast iron. Every item in the shop
+              is something a person on the team actually uses
+              at home, every week, and has used for at least a
+              year before we agreed to stock it.
+            </p>
+
+            <aside class="margin-note">
+              Bardstown's been on the bourbon map since 1775.
+              We opened on the square in 2018, the same year a
+              new distillery did. Felt right.
+            </aside>
+
+            <p>
+              We started with eleven items. Seven years later we
+              stock two hundred and forty, sourced from
+              twenty-three makers. The list grew because the
+              people on the team kept finding things they liked,
+              and the makers kept getting better. The Hoffmeisters
+              in Shelbyville, who weave our kitchen towels on a
+              shuttle loom from 1908, started sending us two
+              patterns a year. We now stock four.
+            </p>
+
+            <p>
+              The list did not grow because we took meetings
+              with sales reps. It grew because Mary, who
+              works Saturdays, found a Mennonite family in
+              Bloomfield putting up the best pickled okra she'd
+              eaten since her grandmother's. She brought a
+              jar to the next team meeting. We called the
+              family that afternoon. That jar is now No. 87
+              on the shelf.
+            </p>
+
+            <blockquote class="pullquote">
+              If it isn't something we'd hand a friend,<br />
+              it doesn't make the shelf.
+              <cite>— Sarah, on opening day</cite>
+            </blockquote>
+
+            <p>
+              We are not a brand. We do not have a brand book.
+              We do not run a loyalty program, a mailing list
+              with drip campaigns, or a TikTok. We do not
+              advertise beyond a single blackboard on the
+              square and a quarterly journal that costs us
+              more to print than we make back. We are open
+              six days a week, we pour the candles ourselves,
+              and we know the names of most of our regulars.
+              If you come in on a Saturday, Mary will probably
+              be the one to hand you your bag.
+            </p>
+          </article>
+
+          <aside class="pitch-side" aria-label="Quick facts">
+            <div class="side-card">
+              <p class="eyebrow eyebrow--small">By the numbers</p>
+              <dl class="prose-numerals">
+                <div><dt>Items in stock</dt><dd>240</dd></div>
+                <div><dt>Makers stocked</dt><dd>23</dd></div>
+                <div><dt>Mean distance to maker</dt><dd>42 mi</dd></div>
+                <div><dt>Candles poured in-house</dt><dd>1,140 / yr</dd></div>
+                <div><dt>Years Sarah has worked the counter</dt><dd>7</dd></div>
+                <div><dt>Hours open, weekly</dt><dd>54</dd></div>
+              </dl>
+            </div>
+            <div class="side-card side-card--quiet">
+              <p class="eyebrow eyebrow--small">What's not here</p>
+              <p>
+                No candles from a factory. No coffee that has
+                traveled more than a hundred miles to reach
+                us. No soap with a fragrance you can't
+                pronounce. No kitchen tool we wouldn't use
+                ourselves. No gift sets.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== THE SHELVES (asymmetric product grid) =================== -->
+    <section class="shelves" id="shelves" aria-labelledby="shelves-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">A few of the two hundred and forty</p>
+          <h2 class="section-title" id="shelves-title">
+            On the shelves,<br /><em>this week.</em>
+          </h2>
+          <p class="section-sub">
+            Prices in USD. We restock Tuesday and Friday. Click
+            any item to see who made it, and where.
+          </p>
+        </header>
+
+        <ul class="shelf-grid" role="list">
+
+          <li class="shelf-item shelf-item--feature">
+            <div class="shelf-art shelf-art--candle" aria-hidden="true">
+              <svg viewBox="0 0 100 140" role="img" aria-label="Hand-poured candle">
+                <rect x="32" y="30" width="36" height="100" rx="2"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="32" y1="40" x2="68" y2="40" stroke="currentColor" stroke-width="1"/>
+                <line x1="50" y1="30" x2="50" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M48 22 Q50 14 52 22" fill="none" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 03 · Apothecary</p>
+            <h3 class="shelf-name">Beeswax taper, pair</h3>
+            <p class="shelf-desc">
+              Hand-rolled in our back room. 7 inches, 4-hour
+              burn, drip-less if you keep them out of drafts.
+              Unscented, because the wax has its own smell.
+            </p>
+            <p class="shelf-meta prose-numerals">$14 · made in-house</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--tin" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Coffee tin">
+                <ellipse cx="50" cy="14" rx="34" ry="6"
+                         fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 14 L16 86 a34 6 0 0 0 68 0 L84 14"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="16" y1="40" x2="84" y2="40" stroke="currentColor" stroke-width=".6" opacity=".4"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 12 · Pantry</p>
+            <h3 class="shelf-name">Limestone coffee, 12oz</h3>
+            <p class="shelf-desc">
+              Roasted Tuesday and Friday at Limestone Coffee,
+              14 miles east. Single-origin from a farm we've
+              visited twice. Brews a clean, low-acid cup.
+            </p>
+            <p class="shelf-meta prose-numerals">$18 · Bloomfield, 14 mi</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--soap" aria-hidden="true">
+              <svg viewBox="0 0 100 70" role="img" aria-label="Bar of soap">
+                <rect x="14" y="14" width="72" height="42" rx="2"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="18" y1="24" x2="82" y2="24" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+                <line x1="18" y1="46" x2="82" y2="46" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 27 · Apothecary</p>
+            <h3 class="shelf-name">Castile bar soap, 5oz</h3>
+            <p class="shelf-desc">
+              Olive oil, coconut oil, lye, water. That's the
+              list. Cut in 5oz bars and cured four weeks at
+              Tom's Pantry.
+            </p>
+            <p class="shelf-meta prose-numerals">$9 · Bloomfield, 18 mi</p>
+          </li>
+
+          <li class="shelf-item shelf-item--tall">
+            <div class="shelf-art shelf-art--iron" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Cast iron skillet">
+                <ellipse cx="50" cy="50" rx="32" ry="32"
+                         fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <ellipse cx="50" cy="50" rx="22" ry="22"
+                         fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+                <line x1="82" y1="50" x2="98" y2="50" stroke="currentColor" stroke-width="2"/>
+                <line x1="14" y1="50" x2="18" y2="50" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 41 · Kitchen</p>
+            <h3 class="shelf-name">Cast iron skillet, 10"</h3>
+            <p class="shelf-desc">
+              Vintage Griswold, found in an estate sale outside
+              Lebanon. Restored in our basement — wire-wheeled,
+              re-seasoned three times, ready to cook on.
+            </p>
+            <p class="shelf-meta prose-numerals">$48 · restored in-house</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--towel" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Woven kitchen towel">
+                <rect x="20" y="20" width="60" height="60"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="20" y1="32" x2="80" y2="32" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+                <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+                <line x1="20" y1="68" x2="80" y2="68" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 58 · Linens</p>
+            <h3 class="shelf-name">Cotton kitchen towel</h3>
+            <p class="shelf-desc">
+              Woven on a 1908 shuttle loom by the Hoffmeisters
+              in Shelbyville. 18x26, two panels, gets softer
+              with every wash. We've been using ours for three
+              years.
+            </p>
+            <p class="shelf-meta prose-numerals">$22 · Shelbyville, 42 mi</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--jar" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Jar of pickled okra">
+                <rect x="32" y="20" width="36" height="68" rx="2"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="28" y="14" width="44" height="10" rx="1"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="36" y1="50" x2="64" y2="50" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+                <line x1="36" y1="68" x2="64" y2="68" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 87 · Pantry</p>
+            <h3 class="shelf-name">Pickled okra, 16oz</h3>
+            <p class="shelf-desc">
+              From a Mennonite family in Bloomfield, 18 miles
+              east. Garlic, dill, three-day brine. Mary found
+              them at a yard sale. Best okra we'd eaten.
+            </p>
+            <p class="shelf-meta prose-numerals">$11 · Bloomfield, 18 mi</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--wrap" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Beeswax wraps">
+                <rect x="20" y="20" width="60" height="60" rx="2"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="32" y="32" width="36" height="36" rx="1"
+                      fill="none" stroke="currentColor" stroke-width="1" opacity=".6"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 92 · Kitchen</p>
+            <h3 class="shelf-name">Beeswax wrap, set of 3</h3>
+            <p class="shelf-desc">
+              Organic cotton, beeswax, jojoba, tree resin.
+              Replaces about a year of plastic wrap. Wash in
+              cool water, hang to dry. Lasts twelve months
+              with normal use.
+            </p>
+            <p class="shelf-meta prose-numerals">$24 · Bardstown, in-house</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--honey" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Comb honey">
+                <path d="M30 30 L70 30 L70 80 L50 90 L30 80 Z"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="34" y1="46" x2="66" y2="46" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+                <line x1="34" y1="62" x2="66" y2="62" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 103 · Pantry</p>
+            <h3 class="shelf-name">Hand-cut comb honey, 8oz</h3>
+            <p class="shelf-desc">
+              From hives behind the Baptist church on 3rd. The
+              beekeeper is a regular; she brings us comb in
+              the cutest hex-section jars.
+            </p>
+            <p class="shelf-meta prose-numerals">$16 · Bardstown, 0.7 mi</p>
+          </li>
+
+          <li class="shelf-item">
+            <div class="shelf-art shelf-art--candle-small" aria-hidden="true">
+              <svg viewBox="0 0 100 100" role="img" aria-label="Small lavender candle">
+                <rect x="36" y="34" width="28" height="50" rx="2"
+                      fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="50" y1="34" x2="50" y2="28" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M48 28 Q50 22 52 28" fill="none" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
+            <p class="shelf-cat">No. 118 · Apothecary</p>
+            <h3 class="shelf-name">Lavender votive, 3oz</h3>
+            <p class="shelf-desc">
+              Sarah's recipe. Lavender we dry in the back
+              room each August. 18-hour cure. Smells like the
+              first week of September.
+            </p>
+            <p class="shelf-meta prose-numerals">$10 · made in-house</p>
+          </li>
+
+        </ul>
+
+        <p class="shelf-footnote prose-numerals">
+          These are nine of the two hundred and forty. The full
+          shelf is on the floor and online. We add roughly two
+          new items a month and retire about the same.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== THE MAKERS (asymmetric) =================== -->
+    <section class="makers" id="makers" aria-labelledby="makers-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The people on the label</p>
+          <h2 class="section-title" id="makers-title">
+            We stock the maker,<br /><em>not the SKU.</em>
+          </h2>
+          <p class="section-sub">
+            Every item in the shop can be traced to a person and
+            a place. We visit the makers. We have a file with
+            their kids' names in it. Three of the makers below
+            were here on opening day.
+          </p>
+        </header>
+
+        <ul class="maker-list" role="list">
+          <li class="maker maker--lead">
+            <p class="maker-no prose-numerals">No. 01</p>
+            <h3 class="maker-name">Sarah Holcomb</h3>
+            <p class="maker-place prose-numerals">Bardstown, Kentucky · 0.2 mi</p>
+            <p class="maker-since prose-numerals">With us since 2018</p>
+            <p class="maker-story">
+              Pouring candles and working the counter since
+              opening day. Seven years, same recipe, three
+              wicks. Sarah trained with a perfumer in
+              Louisville for a winter before she joined us.
+              The candles are hers; the shop is partly hers.
+            </p>
+            <p class="maker-on-shelf">
+              On the shelf as: <em>No. 03 Beeswax taper</em>,
+              <em>No. 118 Lavender votive</em>,
+              <em>No. 122 Cedar &amp; moss votive</em>.
+            </p>
+          </li>
+
+          <li class="maker">
+            <p class="maker-no prose-numerals">No. 02</p>
+            <h3 class="maker-name">Tom, Mary &amp; the boys at Tom's Pantry</h3>
+            <p class="maker-place prose-numerals">Bloomfield, Kentucky · 18 mi east</p>
+            <p class="maker-since prose-numerals">With us since 2019</p>
+            <p class="maker-story">
+              Pressing olive oil, milling soap, putting up
+              preserves. The soap cure is four weeks; we
+              wait. Mary hand-cuts every bar. The boys are
+              in high school now and they still deliver on
+              Saturdays.
+            </p>
+            <p class="maker-on-shelf">
+              On the shelf as: <em>No. 27 Castile soap</em>,
+              <em>No. 64 Olive oil, 16oz</em>,
+              <em>No. 91 Fig preserves</em>.
+            </p>
+          </li>
+
+          <li class="maker">
+            <p class="maker-no prose-numerals">No. 03</p>
+            <h3 class="maker-name">The Hoffmeisters</h3>
+            <p class="maker-place prose-numerals">Shelbyville, Kentucky · 42 mi north</p>
+            <p class="maker-since prose-numerals">With us since 2019</p>
+            <p class="maker-story">
+              Four generations of weavers. They make our
+              kitchen towels on a shuttle loom from 1908.
+              The loom belonged to Anna's great-grandmother.
+              They send us two new patterns a year; we
+              stock four.
+            </p>
+            <p class="maker-on-shelf">
+              On the shelf as: <em>No. 58 Cotton towel</em>,
+              <em>No. 59 Linen towel</em>,
+              <em>No. 132 Striped runner</em>.
+            </p>
+          </li>
+
+          <li class="maker">
+            <p class="maker-no prose-numerals">No. 04</p>
+            <h3 class="maker-name">Limestone Coffee Roasters</h3>
+            <p class="maker-place prose-numerals">Bloomfield, Kentucky · 14 mi east</p>
+            <p class="maker-since prose-numerals">With us since 2018</p>
+            <p class="maker-story">
+              Dylan roasts on a 12kg Probat in a converted
+              feed barn. We pick up the morning of delivery.
+              The single-origin changes quarterly; the
+              blend is permanent.
+            </p>
+            <p class="maker-on-shelf">
+              On the shelf as: <em>No. 12 Single origin</em>,
+              <em>No. 13 House blend</em>,
+              <em>No. 14 Decaf, Swiss water</em>.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================== THE JOURNAL (editorial) =================== -->
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The journal</p>
+          <h2 class="section-title" id="journal-title">
+            From the back room,<br /><em>in print.</em>
+          </h2>
+          <p class="section-sub">
+            We print a journal twice a year. The first copy is
+            free; the rest cost us more to print than we make
+            back. Two recent pieces are below.
+          </p>
+        </header>
+
+        <div class="journal-grid">
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 14 · Spring 2026</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On pouring a candle, slowly.
+            </h3>
+            <p class="journal-byline prose-numerals">By Sarah Holcomb</p>
+
+            <p>
+              We pour the candles on a Tuesday, because that
+              is the day Mary is in the back room with me
+              and we can each watch a thermometer. The wax
+              has to come to one hundred and eighty degrees
+              and not a degree more. Above that, the
+              fragrance burns off. Below, it doesn't bind.
+              This is the kind of thing I learned by getting
+              it wrong for a year.
+            </p>
+            <p>
+              We use a single metal pouring pitcher, a
+              wooden stir stick, and a 12-cup tin that
+              belonged to my grandmother. Each taper
+              takes about ninety seconds. We pour a hundred
+              and forty on a good Tuesday. I never get
+              bored of the smell of hot wax, but Mary says
+              she could live without it.
+            </p>
+            <p>
+              The taper cures for seven days on a wire
+              rack before it ever sees a label. We have
+              lost money selling candles that weren't
+              ready because we needed the cash, and I
+              regret it every time. A candle is a small
+              object. It is the only thing we make that
+              takes a week of patience. It is the part
+              of the shop I am most proud of, and the
+              part that is hardest to explain to a
+              wholesaler.
+            </p>
+          </article>
+
+          <article class="journal-piece hang-punct">
+            <p class="journal-meta prose-numerals">
+              <span class="eyebrow eyebrow--small">No. 13 · Winter 2025</span>
+            </p>
+            <h3 class="journal-title-piece">
+              On curing soap, and on waiting four weeks.
+            </h3>
+            <p class="journal-byline prose-numerals">By Mary Tomlin</p>
+
+            <p>
+              When Tom told me the soap had to cure for four
+              weeks I thought he was joking. I had been
+              making soap in my kitchen for twelve years
+              and using it after two days. I was wrong
+              about two things: it doesn't take two days,
+              and I was using soap that was not as good
+              as it could have been.
+            </p>
+            <p>
+              The four-week cure lets the lye finish its
+              work. The bar gets harder. It lasts longer
+              in the shower. It lathers more predictably.
+              It smells less like the kitchen and more
+              like the soap. None of these things are
+              obvious in the first two weeks. All of them
+              are obvious at four.
+            </p>
+            <p>
+              The hardest part is the inventory. We make
+              a batch every other Tuesday. We have to
+              hold four weeks of stock on the shelf at
+              any given time. That is real money tied up
+              in bars of soap that have no label yet. Tom
+              says it is the cost of doing it right. I
+              think he is right. The bars are noticeably
+              better, and our regulars can tell the
+              difference, even if they can't say what
+              it is.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== VISIT (custom map) =================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">The shop is on the square</p>
+          <h2 class="section-title" id="visit-title">
+            Come visit.<br /><em>Bring a friend.</em>
+          </h2>
+        </header>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <address class="visit-address">
+              <p class="visit-line visit-line--big">
+                115 East Stephen Foster Ave<br />
+                Bardstown, Kentucky 40004
+              </p>
+              <p class="visit-line">
+                On the square,<br />
+                between the diner and the old pharmacy.
+              </p>
+            </address>
+
+            <dl class="visit-hours prose-numerals">
+              <div><dt>Monday</dt><dd>9 to 6</dd></div>
+              <div><dt>Tuesday</dt><dd>9 to 6</dd></div>
+              <div><dt>Wednesday</dt><dd>9 to 6</dd></div>
+              <div><dt>Thursday</dt><dd>9 to 6</dd></div>
+              <div><dt>Friday</dt><dd>9 to 7</dd></div>
+              <div><dt>Saturday</dt><dd>9 to 6</dd></div>
+              <div><dt>Sunday</dt><dd>11 to 4</dd></div>
+            </dl>
+
+            <ul class="visit-contact" role="list">
+              <li>(502) 555-0142</li>
+              <li>hello@yardandlarder.shop</li>
+            </ul>
+          </div>
+
+          <figure class="visit-map" aria-label="A hand-drawn map of downtown Bardstown, with the shop marked">
+            <!-- Custom hand-drawn-feeling SVG map.
+                 Not a Google Maps embed. Made for this page. -->
+            <svg viewBox="0 0 480 360" role="img" aria-labelledby="map-title">
+              <title id="map-title">Downtown Bardstown, the square, with Yard & Larder marked.</title>
+
+              <!-- Paper background -->
+              <rect x="0" y="0" width="480" height="360" fill="#f0e6cf"/>
+
+              <!-- Subtle paper grain -->
+              <defs>
+                <pattern id="map-grain" width="4" height="4" patternUnits="userSpaceOnUse">
+                  <circle cx="1" cy="1" r="0.4" fill="#1a1612" opacity=".07"/>
+                </pattern>
+              </defs>
+
+              <!-- The square (an open rectangle) -->
+              <rect x="120" y="120" width="240" height="120"
+                    fill="none" stroke="#1a1612" stroke-width="1.2" opacity=".7"/>
+              <!-- The courthouse in the middle of the square -->
+              <rect x="220" y="160" width="40" height="40"
+                    fill="none" stroke="#1a1612" stroke-width="1"/>
+              <circle cx="240" cy="178" r="6" fill="none" stroke="#1a1612" stroke-width="1"/>
+              <text x="240" y="218" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="#1a1612" opacity=".7">courthouse</text>
+
+              <!-- Streets -->
+              <line x1="60"  y1="120" x2="420" y2="120" stroke="#1a1612" stroke-width="1" opacity=".4"/>
+              <line x1="60"  y1="240" x2="420" y2="240" stroke="#1a1612" stroke-width="1" opacity=".4"/>
+              <line x1="120" y1="60"  x2="120" y2="300" stroke="#1a1612" stroke-width="1" opacity=".4"/>
+              <line x1="360" y1="60"  x2="360" y2="300" stroke="#1a1612" stroke-width="1" opacity=".4"/>
+
+              <!-- Street names -->
+              <text x="64" y="116" font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="#1a1612" opacity=".55">Stephen Foster Ave</text>
+              <text x="64" y="252" font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="#1a1612" opacity=".55">Flaget Ave</text>
+              <text x="124" y="76" font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="#1a1612" opacity=".55">N 3rd</text>
+              <text x="364" y="76" font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="9" fill="#1a1612" opacity=".55">N 4th</text>
+
+              <!-- The shop block, with mark -->
+              <rect x="124" y="124" width="40" height="40"
+                    fill="#7d2e26" opacity=".12" stroke="#7d2e26" stroke-width="1.2"/>
+              <line x1="144" y1="124" x2="144" y2="164" stroke="#7d2e26" stroke-width=".5" opacity=".4"/>
+              <circle cx="144" cy="144" r="14"
+                      fill="none" stroke="#7d2e26" stroke-width="1.5"/>
+              <text x="144" y="148" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-weight="500"
+                    font-size="11" fill="#7d2e26">Y&amp;L</text>
+
+              <!-- Pin label -->
+              <line x1="158" y1="144" x2="220" y2="100" stroke="#7d2e26" stroke-width="1" stroke-dasharray="2 2"/>
+              <text x="222" y="98" font-family="Fraunces, Georgia, serif" font-style="italic"
+                    font-size="10" fill="#7d2e26">Yard &amp; Larder</text>
+              <text x="222" y="110" font-family="Fraunces, Georgia, serif"
+                    font-size="8" fill="#7d2e26" opacity=".7" letter-spacing="1">115 E. STEPHEN FOSTER</text>
+
+              <!-- Compass -->
+              <g transform="translate(420, 60)">
+                <circle cx="0" cy="0" r="14" fill="none" stroke="#1a1612" stroke-width=".8" opacity=".5"/>
+                <line x1="0" y1="-10" x2="0" y2="10" stroke="#1a1612" stroke-width=".8" opacity=".5"/>
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#1a1612" stroke-width=".8" opacity=".5"/>
+                <text x="0" y="-14" text-anchor="middle"
+                      font-family="Fraunces, Georgia, serif"
+                      font-size="8" fill="#1a1612" opacity=".7">N</text>
+              </g>
+
+              <!-- "to Louisville" arrow -->
+              <g transform="translate(60, 300)" opacity=".55">
+                <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-style="italic"
+                      font-size="9" fill="#1a1612">to Louisville</text>
+                <line x1="60" y1="-3" x2="92" y2="-3" stroke="#1a1612" stroke-width=".8"/>
+                <path d="M88 -7 L94 -3 L88 1" fill="none" stroke="#1a1612" stroke-width=".8"/>
+              </g>
+
+              <!-- Grain overlay -->
+              <rect x="0" y="0" width="480" height="360" fill="url(#map-grain)" opacity=".7"/>
+            </svg>
+            <figcaption class="map-caption">
+              <span class="eyebrow eyebrow--small">A drawing, not a map</span>
+              The shop, on the northwest corner of the square.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <p class="footer-wordmark">Yard &amp; Larder</p>
+          <p class="footer-tagline">
+            Honest goods for the well-kept home.<br />
+            115 East Stephen Foster Ave,<br />
+            Bardstown, Kentucky 40004.
+          </p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The shop</p>
+          <ul role="list">
+            <li><a href="#shelves">The shelves</a></li>
+            <li><a href="#makers">The makers</a></li>
+            <li><a href="#journal">The journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">Visit</p>
+          <ul role="list">
+            <li>M–Sa 9 to 6</li>
+            <li>Su 11 to 4</li>
+            <li>(502) 555-0142</li>
+            <li><a href="mailto:hello@yardandlarder.shop">hello@yardandlarder.shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow eyebrow--small">The journal</p>
+          <ul role="list">
+            <li>No. 14 · Spring 2026</li>
+            <li>No. 13 · Winter 2025</li>
+            <li>No. 12 · Autumn 2025</li>
+            <li><a href="#journal">All issues</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p class="prose-numerals">
+          &copy; 2018–2026 Yard &amp; Larder. Made in Bardstown,
+          printed on a Heidelberg from 1971.
+        </p>
+        <p class="footer-mark">
+          <span class="footer-mark-glyph" aria-hidden="true">Y&amp;L</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

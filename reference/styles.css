@@ -1,0 +1,1131 @@
+/* =====================================================================
+   YARD & LARDER — STYLES
+   The depth pass on top of the brand-wide design language.
+
+   What this file proves (see PRINCIPLES.md for the full list):
+   - Asymmetric layout (8/4, 9/3, 2/1 — never two equal halves)
+   - Typographic depth (variable Fraunces with opsz + SOFT axes,
+     oldstyle numerals in body, tabular in data, real small caps
+     on eyebrows, 1.333 modular scale, display ≠ body settings)
+   - Layout detail (drop cap, pull quote, margin note, hanging
+     punctuation, real captions with credit)
+   - Imagery with intent (no stock photos; made-for-this-page SVGs
+     and a hand-drawn-feeling map)
+   - Material (hairline borders, subtle paper grain; no box-shadows
+     on the page surface)
+   - Voice in copy (specificity throughout; every paragraph has
+     a number, a name, a place, or a date)
+   - Custom detail (custom SVG mark, custom still life, custom map,
+     custom footer glyph)
+   - Single-accent restraint (one oxblood, three roles)
+
+   Sections:
+     1.  Tokens & reset
+     2.  Type
+     3.  Layout primitives & grid
+     4.  Header / nav
+     5.  Hero
+     6.  Pitch (long-form editorial)
+     7.  Shelves (asymmetric product grid)
+     8.  Makers
+     9.  Journal (editorial)
+    10.  Visit (custom map)
+    11.  Footer
+    12.  Reduced motion
+    13.  Responsive
+   ===================================================================== */
+
+
+/* =====================================================================
+   1. TOKENS & RESET
+   ===================================================================== */
+:root {
+  /* Palette — warm cream, deep ink, single oxblood accent */
+  --c-bg:         #f6efe1;   /* warm cream page */
+  --c-bg-elev:    #ede5d3;   /* card surface */
+  --c-bg-deep:    #e0d6c0;   /* deepest cream */
+  --c-surface:    #f0e6cf;   /* paper */
+  --c-ink:        #1a1612;   /* deep warm black */
+  --c-text:       var(--c-ink);
+  --c-text-dim:   #5a4f42;
+  --c-text-mute:  #8a7c6b;
+  --c-line:       #d4c8b1;   /* hairline border */
+  --c-line-soft:  rgba(26, 22, 18, 0.08);
+  --c-line-strong:rgba(26, 22, 18, 0.18);
+
+  /* Single accent, three roles */
+  --c-accent:        #7d2e26;   /* oxblood */
+  --c-accent-hot:    #9d3e2c;   /* brighter */
+  --c-accent-cream:  #e6c4ad;   /* pale wash */
+
+  /* Type — variable display + system sans */
+  --font-display: "Fraunces", "Cormorant Garamond", "Playfair Display",
+                  Georgia, "Times New Roman", serif;
+  --font-body:    -apple-system, BlinkMacSystemFont, "Inter",
+                  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+                  Consolas, monospace;
+
+  /* Modular scale: 1.333 (perfect fourth).
+     Not 1.25. 1.25 is the AI default. */
+  --t-base: 1.0625rem;   /* 17px body */
+  --t-xs:   calc(var(--t-base) / 1.333);   /* ~12.7px */
+  --t-sm:   calc(var(--t-base) * 0.875);   /* ~14.9px */
+  --t-lg:   calc(var(--t-base) * 1.333);   /* ~22.6px */
+  --t-xl:   calc(var(--t-base) * 1.333 * 1.333);   /* ~30.2px */
+  --t-2xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333);   /* ~40.2px */
+  --t-3xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333 * 1.333);   /* ~53.6px */
+  --t-4xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333 * 1.333 * 1.333);   /* ~71.5px */
+
+  /* Spacing — 4pt base, scaled by 1.333 */
+  --s-1:  0.25rem;
+  --s-2:  0.5rem;
+  --s-3:  0.75rem;
+  --s-4:  1rem;
+  --s-5:  1.333rem;
+  --s-6:  1.777rem;
+  --s-7:  2.369rem;
+  --s-8:  3.157rem;
+  --s-9:  4.209rem;
+
+  /* Geometry */
+  --r-sm: 2px;
+  --r-md: 4px;
+  --r-lg: 8px;
+  --r-pill: 999px;
+
+  --max-w-prose:  64rem;
+  --max-w-page:   80rem;
+  --header-h:     72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.6;
+  color: var(--c-text);
+  background: var(--c-bg);
+  /* Subtle paper grain — a hand-built SVG noise, very subtle.
+     A designed material, not box-shadow. */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--c-accent); color: var(--c-bg); }
+
+/* Real focus ring — single-accent, hairline offset */
+:focus-visible {
+  outline: 2px solid var(--c-accent-hot);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--c-accent); color: var(--c-bg);
+  padding: .6em 1em; border-radius: 0 0 var(--r-sm) var(--r-sm);
+  font-weight: 600;
+  z-index: 1000;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+
+/* =====================================================================
+   2. TYPE
+   The depth pass. Variable display, real small caps, oldstyle
+   numerals in running text, tabular in data.
+   ===================================================================== */
+
+/* Display family with optical-size axis.
+   At large sizes we want a more refined, slightly tighter cut.
+   At small sizes we want a more open, more legible cut.
+   The opsz axis on Fraunces does this for us. */
+.display, h1, h2, h3, .journal-title-piece, .maker-name, .shelf-name {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+  margin: 0;
+  color: var(--c-text);
+}
+
+/* Body display settings (when the display face is used at small sizes
+   it should loosen up). */
+.eyebrow, .nav-link, .section-sub, .shelf-cat, .shelf-meta,
+.maker-place, .maker-since, .journal-byline {
+  font-variation-settings: "opsz" 14, "SOFT" 100;
+}
+
+/* Real small caps for eyebrows. Lowercase + smcp is the convention. */
+.eyebrow {
+  font-family: var(--font-body);
+  font-feature-settings: "smcp" 1, "c2sc" 1, "kern" 1;
+  text-transform: lowercase;   /* smcp is uppercase, but display lowercase */
+  letter-spacing: 0.18em;
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--c-accent);
+  margin: 0 0 var(--s-3);
+  display: inline-block;
+}
+.eyebrow--small {
+  font-size: var(--t-xs);
+  letter-spacing: 0.16em;
+  color: var(--c-text-mute);
+}
+.hero-eyebrow {
+  font-size: var(--t-sm);
+  margin-bottom: var(--s-4);
+}
+.eyebrow-sep {
+  display: inline-block;
+  margin: 0 0.4em;
+  color: var(--c-text-mute);
+  font-feature-settings: normal;   /* sep is a real middot, not smcp */
+  letter-spacing: 0;
+}
+
+/* Oldstyle numerals in running text.
+   Proportional widths, oldstyle figures. */
+.prose-numerals, body, .prose, .lead, .hero-lede, .shelf-desc,
+.maker-story, .journal-piece p, .pitch-side, .visit-line, .visit-hours,
+.footer-tagline, .footer-base p {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-feature-settings: "onum" 1, "kern" 1, "liga" 1;
+}
+
+/* Tabular numerals for data — cart, hours, lists. */
+.tabular, .visit-hours, .shelf-grid, .maker-list, dl.prose-numerals div {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+dl.prose-numerals { font-variant-numeric: lining-nums tabular-nums; }
+
+/* Hanging punctuation: opening quotes and dashes sit in the margin. */
+.hang-punct {
+  hanging-punctuation: first last;
+  text-wrap: pretty;
+}
+
+/* Italic — used for emphasis in display copy, and in pull quotes.
+   Fraunces italic is a real italic, not a slanted roman. */
+em {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  color: var(--c-accent);
+  font-weight: 500;
+}
+
+
+/* =====================================================================
+   3. LAYOUT PRIMITIVES & GRID
+   ===================================================================== */
+.container {
+  width: min(100% - 2.5rem, var(--max-w-page));
+  margin-inline: auto;
+}
+
+.section-head {
+  max-width: 720px;
+  margin: 0 0 var(--s-7);
+  text-align: center;
+}
+.section-head--left {
+  text-align: left;
+  margin-inline: 0;
+}
+
+.section-title {
+  font-size: clamp(var(--t-2xl), 4vw + 0.5rem, var(--t-3xl));
+  margin: 0 0 var(--s-4);
+}
+.section-sub {
+  color: var(--c-text-dim);
+  max-width: 60ch;
+  font-size: var(--t-base);
+  margin: 0;
+}
+
+.lead {
+  font-size: var(--t-lg);
+  line-height: 1.5;
+  color: var(--c-text);
+  font-weight: 400;
+}
+
+
+/* =====================================================================
+   4. HEADER / NAV
+   Hairline rule under the nav, hours pill on the right.
+   Sticky on scroll. Scrollspy active state via JS.
+   ===================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-line);
+}
+.nav-row {
+  width: min(100% - 2.5rem, var(--max-w-page));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  height: var(--header-h);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  color: var(--c-text);
+}
+.brand-mark {
+  color: var(--c-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: -0.005em;
+}
+.brand-tag {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+  margin-top: 2px;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+}
+
+.primary-nav { flex: 1; display: flex; justify-content: center; }
+.nav-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  gap: var(--s-6);
+}
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 0;
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  transition: color .2s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 1px;
+  background: var(--c-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .25s ease;
+}
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--c-text);
+}
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+.hours-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.4em 0.85em;
+  font-size: 0.75rem;
+  color: var(--c-text-dim);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  letter-spacing: 0.04em;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+}
+.hours-pill .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  display: inline-block;
+}
+
+.nav-rule {
+  height: 0;
+  border-bottom: 1px solid var(--c-line);
+  opacity: 0.6;
+}
+
+
+/* =====================================================================
+   5. HERO
+   Asymmetric. Text on the left (7/12), custom still-life on the
+   right (5/12). Big editorial type, no stock image, no abstract
+   gradient mesh.
+   ===================================================================== */
+.hero {
+  padding: var(--s-8) 0 var(--s-9);
+  position: relative;
+}
+.hero-grid {
+  width: min(100% - 2.5rem, var(--max-w-page));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(var(--s-5), 4vw, var(--s-8));
+  align-items: center;
+}
+.hero-text { min-width: 0; }
+
+.hero-title {
+  font-size: clamp(var(--t-2xl), 5.5vw + 0.5rem, var(--t-4xl));
+  letter-spacing: -0.018em;
+  line-height: 1.02;
+  margin: 0 0 var(--s-5);
+}
+
+.hero-lede {
+  font-size: var(--t-lg);
+  line-height: 1.45;
+  color: var(--c-text-dim);
+  max-width: 32ch;
+  margin: 0 0 var(--s-6);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--s-3);
+  margin-bottom: var(--s-7);
+}
+
+/* Buttons: a 3-state system using hairline + solid.
+   No box-shadows. The "depth" comes from material on the page, not
+   from shadow on the button. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85em 1.6em;
+  border-radius: var(--r-pill);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition: background .2s ease, color .2s ease,
+              border-color .2s ease, transform .2s ease;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--c-accent);
+  color: var(--c-bg);
+}
+.btn-primary:hover {
+  background: var(--c-accent-hot);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--c-text);
+  border-color: var(--c-line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--c-text);
+  background: var(--c-line-soft);
+}
+
+/* Hero meta: 4 stats, hairline-divided. Tabular numerals. */
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-4);
+  margin: 0;
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line);
+}
+.hero-meta div { margin: 0; }
+.hero-meta dt {
+  font-size: 0.7rem;
+  color: var(--c-text-mute);
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  margin: 0 0 var(--s-1);
+}
+.hero-meta dd {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-2xl);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--c-text);
+  margin: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* The hero still-life: a custom SVG, with a paper grain overlay. */
+.hero-art {
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  padding: var(--s-4);
+  color: var(--c-ink);
+  position: relative;
+}
+.hero-art svg {
+  width: 100%;
+  height: auto;
+}
+
+
+/* =====================================================================
+   6. PITCH (long-form editorial)
+   The depth pass on prose. 8/4 grid, drop cap, pull quote,
+   margin note, hanging punctuation.
+   ===================================================================== */
+.pitch {
+  padding: var(--s-9) 0;
+  background:
+    linear-gradient(180deg, transparent 0, var(--c-bg) 30%),
+    var(--c-bg-elev);
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+}
+
+.prose-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+  gap: clamp(var(--s-5), 5vw, var(--s-8));
+}
+
+.prose {
+  font-size: var(--t-lg);
+  line-height: 1.55;
+  color: var(--c-text);
+  max-width: 38em;   /* ~75ch at body, but tighter than a magazine */
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--s-4);
+}
+.prose > p, .prose > .pullquote, .prose > .margin-note {
+  margin: 0;
+  grid-column: 1;
+}
+
+/* The drop cap. Real baseline alignment, sized to 3 lines of body. */
+.prose > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-size: 4.5em;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  margin: 0.06em 0.1em -0.08em -0.05em;
+  color: var(--c-accent);
+  /* The drop letter sits flush with the cap-height of the body
+     line. Slight negative bottom margin to tuck it under the
+     descender line. */
+}
+
+/* Margin note: lives in the secondary column, smaller, dim.
+   Uses ::before to anchor it visually with a real em-dash. */
+.margin-note {
+  /* Place into the secondary column via the outer prose-grid. */
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  color: var(--c-text-mute);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+  align-self: start;
+  font-style: italic;
+  font-variation-settings: "opsz" 14, "SOFT" 100;
+}
+.margin-note::before {
+  content: "— ";
+  color: var(--c-accent);
+  font-style: normal;
+}
+
+/* Pull quote: breaks out, sits in the dominant column, hairline
+   border on the left, italic display, citation in small caps. */
+.pullquote {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-size: var(--t-xl);
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--c-text);
+  padding: var(--s-3) 0 var(--s-3) var(--s-5);
+  border-left: 1px solid var(--c-accent);
+  margin: var(--s-5) 0;
+  position: relative;
+}
+.pullquote cite {
+  display: block;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: var(--t-sm);
+  letter-spacing: 0.06em;
+  color: var(--c-text-mute);
+  margin-top: var(--s-3);
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+}
+.pullquote cite::before { content: ""; }
+
+/* The side column: by-the-numbers card and a "what's not here" card. */
+.pitch-side { display: flex; flex-direction: column; gap: var(--s-5); }
+.side-card {
+  background: var(--c-bg);
+  border: 1px solid var(--c-line);
+  padding: var(--s-5);
+}
+.side-card--quiet {
+  background: transparent;
+  border-color: var(--c-line-soft);
+}
+.side-card .eyebrow { margin-bottom: var(--s-4); }
+.side-card dl { margin: 0; display: grid; row-gap: var(--s-3); }
+.side-card dl div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-4);
+  border-bottom: 1px dotted var(--c-line);
+  padding-bottom: var(--s-2);
+}
+.side-card dl div:last-child { border-bottom: 0; padding-bottom: 0; }
+.side-card dt {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  margin: 0;
+}
+.side-card dd {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-lg);
+  font-weight: 500;
+  color: var(--c-text);
+  margin: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.side-card p {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+
+
+/* =====================================================================
+   7. SHELVES (asymmetric product grid)
+   Mixed card sizes. One feature card (spans 2 cols, taller), others
+   are uniform. Real product copy, real maker distances.
+   ===================================================================== */
+.shelves { padding: var(--s-9) 0; }
+
+.shelf-grid {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--s-4);
+}
+
+.shelf-item {
+  grid-column: span 2;
+  background: var(--c-bg);
+  border: 1px solid var(--c-line);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  transition: border-color .25s ease, transform .25s ease;
+  position: relative;
+}
+.shelf-item:hover {
+  border-color: var(--c-line-strong);
+  transform: translateY(-2px);
+}
+.shelf-item--feature {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: var(--c-bg-elev);
+}
+.shelf-item--tall {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.shelf-art {
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-ink);
+  padding: var(--s-4);
+  margin-bottom: var(--s-3);
+}
+.shelf-item--feature .shelf-art { aspect-ratio: 1 / 1; }
+.shelf-art svg { width: 70%; height: auto; }
+
+.shelf-cat {
+  font-size: var(--t-xs);
+  color: var(--c-text-mute);
+  letter-spacing: 0.14em;
+  margin: 0;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+}
+.shelf-name {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-lg);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--c-text);
+  margin: 0;
+}
+.shelf-desc {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+.shelf-meta {
+  font-size: var(--t-sm);
+  color: var(--c-text-mute);
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-line-soft);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.shelf-footnote {
+  font-size: var(--t-sm);
+  color: var(--c-text-mute);
+  font-style: italic;
+  margin: var(--s-7) 0 0;
+  max-width: 60ch;
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line);
+}
+
+
+/* =====================================================================
+   8. MAKERS
+   The "lead" maker is wider (2x1); the rest are uniform (1x1).
+   Real names, real places, real on-shelf items.
+   ===================================================================== */
+.makers {
+  padding: var(--s-9) 0;
+  background: var(--c-bg);
+  border-top: 1px solid var(--c-line);
+}
+.maker-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--s-4);
+}
+.maker {
+  grid-column: span 2;
+  border: 1px solid var(--c-line);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  background: var(--c-bg);
+  position: relative;
+}
+.maker--lead {
+  grid-column: span 3;
+  grid-row: span 2;
+  background: var(--c-bg-elev);
+  padding: var(--s-6);
+}
+.maker-no {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-2xl);
+  font-weight: 500;
+  color: var(--c-accent);
+  margin: 0;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.maker-name {
+  font-size: var(--t-xl);
+  line-height: 1.1;
+  margin: 0;
+  color: var(--c-text);
+}
+.maker--lead .maker-name { font-size: var(--t-2xl); }
+.maker-place {
+  font-size: var(--t-sm);
+  color: var(--c-text-mute);
+  margin: 0;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+  letter-spacing: 0.06em;
+}
+.maker-since {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  font-style: italic;
+  margin: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.maker-story {
+  font-size: var(--t-base);
+  line-height: 1.55;
+  color: var(--c-text);
+  margin: var(--s-3) 0 0;
+  flex: 1;
+}
+.maker-on-shelf {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-line);
+}
+.maker-on-shelf em {
+  font-style: italic;
+  color: var(--c-text);
+}
+
+
+/* =====================================================================
+   9. JOURNAL
+   Two long-form pieces, side by side. Drop cap on the first
+   paragraph of each piece. Hanging punctuation.
+   ===================================================================== */
+.journal {
+  padding: var(--s-9) 0;
+  background: var(--c-bg-elev);
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+}
+.journal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(var(--s-5), 5vw, var(--s-8));
+}
+.journal-piece {
+  background: var(--c-bg);
+  border: 1px solid var(--c-line);
+  padding: var(--s-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.journal-meta { margin: 0; }
+.journal-title-piece {
+  font-size: var(--t-2xl);
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.journal-byline {
+  font-size: var(--t-sm);
+  color: var(--c-text-mute);
+  font-style: italic;
+  margin: 0 0 var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+}
+.journal-piece p {
+  font-size: var(--t-base);
+  line-height: 1.65;
+  color: var(--c-text);
+  margin: 0;
+}
+/* Each journal piece gets its own drop cap. */
+.journal-piece p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-size: 3.5em;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  margin: 0.06em 0.1em -0.06em -0.04em;
+  color: var(--c-accent);
+}
+
+
+/* =====================================================================
+   10. VISIT
+   6/6 grid, with the info on the left and a custom hand-drawn-feeling
+   map on the right.
+   ===================================================================== */
+.visit { padding: var(--s-9) 0; }
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(var(--s-5), 5vw, var(--s-8));
+  align-items: start;
+}
+
+.visit-info { display: flex; flex-direction: column; gap: var(--s-6); }
+.visit-address { font-style: normal; }
+.visit-line {
+  font-size: var(--t-base);
+  line-height: 1.5;
+  color: var(--c-text);
+  margin: 0;
+}
+.visit-line--big {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-lg);
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: var(--s-3);
+  color: var(--c-text);
+}
+
+.visit-hours {
+  display: grid;
+  row-gap: var(--s-2);
+  margin: 0;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-line);
+}
+.visit-hours div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dotted var(--c-line);
+  padding-bottom: var(--s-2);
+}
+.visit-hours div:last-child { border-bottom: 0; padding-bottom: 0; }
+.visit-hours dt {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  margin: 0;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+  letter-spacing: 0.06em;
+}
+.visit-hours dd {
+  font-size: var(--t-sm);
+  color: var(--c-text);
+  margin: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.visit-contact {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  font-size: var(--t-base);
+  color: var(--c-text);
+  border-top: 1px solid var(--c-line);
+  padding-top: var(--s-4);
+}
+.visit-contact a {
+  color: var(--c-accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease;
+}
+.visit-contact a:hover { border-bottom-color: var(--c-accent); }
+
+/* The custom map figure. */
+.visit-map {
+  margin: 0;
+  border: 1px solid var(--c-line);
+  background: var(--c-bg);
+}
+.visit-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.map-caption {
+  padding: var(--s-3) var(--s-4);
+  font-size: var(--t-sm);
+  color: var(--c-text-mute);
+  border-top: 1px solid var(--c-line);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+.map-caption .eyebrow { margin: 0; }
+
+
+/* =====================================================================
+   11. FOOTER
+   Restrained. 4 columns. Real specifics in the copyright line.
+   ===================================================================== */
+.site-footer {
+  background: var(--c-ink);
+  color: var(--c-bg);
+  padding: var(--s-9) 0 var(--s-5);
+  margin-top: 0;
+}
+.site-footer .eyebrow {
+  color: var(--c-accent-cream);
+  margin-bottom: var(--s-4);
+}
+.site-footer a {
+  color: var(--c-bg);
+  opacity: 0.78;
+  transition: opacity .2s ease;
+}
+.site-footer a:hover { opacity: 1; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: clamp(var(--s-5), 4vw, var(--s-8));
+  padding-bottom: var(--s-7);
+  border-bottom: 1px solid rgba(246, 239, 225, 0.15);
+}
+.footer-col ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  font-size: var(--t-sm);
+  color: var(--c-bg);
+  opacity: 0.78;
+}
+.footer-wordmark {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-2xl);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--c-bg);
+  margin: 0 0 var(--s-3);
+  line-height: 1;
+}
+.footer-tagline {
+  font-size: var(--t-sm);
+  color: var(--c-bg);
+  opacity: 0.78;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 30ch;
+}
+.footer-base {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: var(--s-5);
+  font-size: var(--t-sm);
+  color: var(--c-bg);
+  opacity: 0.6;
+}
+.footer-base p { margin: 0; }
+.footer-mark { margin: 0; }
+.footer-mark-glyph {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-lg);
+  font-weight: 500;
+  color: var(--c-accent-cream);
+  letter-spacing: 0.05em;
+}
+
+
+/* =====================================================================
+   12. REDUCED MOTION
+   No JS-driven motion in the system, but kill the few CSS
+   transitions for users who prefer reduced motion.
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  .shelf-item:hover { transform: none; }
+  .btn:hover { transform: none; }
+}
+
+
+/* =====================================================================
+   13. RESPONSIVE
+   Asymmetric grids collapse to single column at narrow widths.
+   The hero switches to a 1-col stack. The pitch side column drops
+   below the prose. The journal pieces stack. The visit grid
+   reverses (info on top, map below).
+   ===================================================================== */
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-7);
+  }
+  .hero-art { order: 2; max-width: 28rem; }
+  .prose-grid { grid-template-columns: 1fr; }
+  .pitch-side { margin-top: var(--s-3); }
+  .journal-grid { grid-template-columns: 1fr; }
+  .visit-grid { grid-template-columns: 1fr; }
+  .visit-map { order: 2; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-row { flex-wrap: wrap; height: auto; padding-block: var(--s-3); gap: var(--s-3); }
+  .nav-list { flex-wrap: wrap; gap: var(--s-4); }
+}
+
+@media (max-width: 720px) {
+  .hero { padding-block: var(--s-7); }
+  .hero-meta { grid-template-columns: repeat(2, 1fr); row-gap: var(--s-3); }
+  .shelf-grid { grid-template-columns: repeat(2, 1fr); }
+  .shelf-item, .shelf-item--feature, .shelf-item--tall { grid-column: span 1; grid-row: auto; }
+  .maker-list { grid-template-columns: 1fr; }
+  .maker, .maker--lead { grid-column: span 1; grid-row: auto; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-base { flex-direction: column; gap: var(--s-3); align-items: flex-start; }
+  .section-head--left { margin-inline: 0; }
+  .nav-meta { display: none; }
+  .pitch, .shelves, .makers, .journal, .visit { padding-block: var(--s-7); }
+}
