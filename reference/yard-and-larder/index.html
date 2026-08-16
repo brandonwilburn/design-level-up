@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yard & Larder — honest goods for the well-kept home. Hand-poured candles, milled soap, locally-roasted coffee, and pantry staples from twenty-three makers within a hundred miles of the shop. 115 East Stephen Foster Ave, Bardstown, Kentucky." />
+  <meta name="description" content="Yard & Larder — honest goods for the well-kept home. Hand-poured candles, milled soap, locally-roasted coffee, and pantry staples from twenty-three makers within a hundred miles of the shop. 123 2nd Avenue North, Nashville, Tennessee." />
   <meta name="theme-color" content="#f6efe1" />
-  <title>Yard & Larder — Honest goods for the well-kept home · Bardstown, Kentucky</title>
+  <title>Yard & Larder — Honest goods for the well-kept home · Nashville, Tennessee</title>
 
-  <!-- Preconnect for the one display face (Fraunces) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&display=swap" />
-
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Favicon: hand-cut ink mark, inline -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23f6efe1'/><text x='50%25' y='58%25' font-family='Georgia,serif' font-size='42' font-weight='500' text-anchor='middle' fill='%237d2e26'>Y</text></svg>" />
 
   <meta property="og:title" content="Yard & Larder" />
-  <meta property="og:description" content="Honest goods for the well-kept home. Bardstown, Kentucky." />
+  <meta property="og:description" content="Honest goods for the well-kept home. Nashville, Tennessee." />
   <meta property="og:type" content="website" />
 </head>
 <body>
@@ -29,7 +26,6 @@
     <div class="nav-row">
       <a class="brand" href="#top" aria-label="Yard & Larder, home">
         <span class="brand-mark" aria-hidden="true">
-          <!-- Custom SVG mark: an apothecary jar -->
           <svg viewBox="0 0 36 36" width="32" height="32" role="img" aria-label="Yard & Larder mark">
             <path d="M12 6h12v3l-2 1v3a8 8 0 0 1 6 7v9a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4v-9a8 8 0 0 1 6-7v-3l-2-1z"
                   fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -39,13 +35,14 @@
         </span>
         <span class="brand-text">
           <span class="brand-name">Yard &amp; Larder</span>
-          <span class="brand-tag">Bardstown, Kentucky</span>
+          <span class="brand-tag">Nashville, Tennessee</span>
         </span>
       </a>
 
       <nav class="primary-nav" aria-label="Primary">
         <ul class="nav-list" role="list">
           <li><a href="#shelves" class="nav-link" data-section="shelves">The Shelves</a></li>
+          <li><a href="#loving"  class="nav-link" data-section="loving">Loving</a></li>
           <li><a href="#makers"  class="nav-link" data-section="makers">The Makers</a></li>
           <li><a href="#journal" class="nav-link" data-section="journal">Journal</a></li>
           <li><a href="#visit"   class="nav-link" data-section="visit">Visit</a></li>
@@ -53,9 +50,9 @@
       </nav>
 
       <div class="nav-meta">
-        <span class="hours-pill" aria-label="Open today, 9 to 6">
+        <span class="hours-pill" aria-label="Open today">
           <span class="dot" aria-hidden="true"></span>
-          Open · M–Sa 9–6
+          <span class="hours-text">Open · M–Sa 10–7</span>
         </span>
       </div>
     </div>
@@ -64,14 +61,14 @@
 
   <main id="main">
 
-    <!-- =================== HERO (asymmetric) =================== -->
+    <!-- =================== HERO (asymmetric, with NEW sticker) =================== -->
     <section class="hero" id="top" aria-label="Yard & Larder">
       <div class="hero-grid">
         <div class="hero-text">
           <p class="eyebrow hero-eyebrow">
             <span>Est. 2018</span>
             <span class="eyebrow-sep" aria-hidden="true">·</span>
-            <span>On the square, Bardstown, Kentucky</span>
+            <span>2nd Avenue North, Nashville, Tennessee</span>
           </p>
           <h1 class="hero-title">
             Honest goods for the<br />
@@ -90,88 +87,61 @@
           <dl class="hero-meta prose-numerals" aria-label="At a glance">
             <div><dt>Makers stocked</dt><dd>23</dd></div>
             <div><dt>Mile radius</dt><dd>100</dd></div>
-            <div><dt>Years on the square</dt><dd>7</dd></div>
-            <div><dt>Sarah's candle recipe</dt><dd>unchanged</dd></div>
+            <div><dt>Years on 2nd Ave</dt><dd>7</dd></div>
+            <div><dt>Sarah's recipe</dt><dd>unchanged</dd></div>
           </dl>
         </div>
 
         <aside class="hero-art" aria-label="A small vitrine of items from the shop">
-          <!-- Custom SVG: a styled still life of the shop's signature items.
-               No stock photo. Made for this merchant. -->
-          <svg viewBox="0 0 360 480" role="img" aria-labelledby="hero-art-title">
-            <title id="hero-art-title">A candle, a tin of coffee, a bar of soap, drawn in a single ink line.</title>
-            <defs>
-              <pattern id="grain" width="3" height="3" patternUnits="userSpaceOnUse">
-                <circle cx="1" cy="1" r="0.4" fill="#1a1612" opacity=".06"/>
-              </pattern>
-            </defs>
+          <!-- Sticker overlay: a "NEW THIS WEEK" hand-cut sticker -->
+          <div class="sticker sticker--new" aria-hidden="true">
+            <svg viewBox="0 0 120 120" width="100%" height="100%">
+              <defs>
+                <path id="star-burst" d="M60,4 L68,22 L86,16 L82,34 L100,38 L86,50 L100,62 L82,66 L86,84 L68,78 L60,96 L52,78 L34,84 L38,66 L20,62 L34,50 L20,38 L38,34 L34,16 L52,22 Z"/>
+              </defs>
+              <use href="#star-burst" fill="#7d2e26"/>
+              <text x="60" y="48" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-weight="500"
+                    font-size="13" fill="#f6efe1" letter-spacing="0.5">NEW</text>
+              <text x="60" y="66" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-weight="500"
+                    font-size="13" fill="#f6efe1" letter-spacing="0.5">THIS</text>
+              <text x="60" y="84" text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif" font-weight="500"
+                    font-size="13" fill="#f6efe1" letter-spacing="0.5">WEEK</text>
+            </svg>
+          </div>
 
-            <!-- shelf line -->
-            <line x1="20" y1="380" x2="340" y2="380" stroke="currentColor" stroke-width="1" opacity=".4"/>
-            <line x1="20" y1="60"  x2="340" y2="60"  stroke="currentColor" stroke-width="1" opacity=".25"/>
-
-            <!-- The candle (left) -->
-            <g transform="translate(78, 180)">
-              <rect x="0" y="0" width="48" height="180" rx="3"
-                    fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <line x1="0"  y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="1"/>
-              <line x1="24" y1="0"  x2="24" y2="-12" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M22 -12 Q24 -22 26 -12" fill="none" stroke="currentColor" stroke-width="1"/>
-              <text x="24" y="98" text-anchor="middle"
-                    font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="currentColor" opacity=".7">No. 3</text>
-            </g>
-
-            <!-- The coffee tin (center) -->
-            <g transform="translate(160, 200)">
-              <ellipse cx="36" cy="6"  rx="36" ry="6"
-                       fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M0 6 L0 156 a36 6 0 0 0 72 0 L72 6"
-                    fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <ellipse cx="36" cy="6" rx="36" ry="6"
-                       fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <line x1="0" y1="40" x2="72" y2="40" stroke="currentColor" stroke-width="1" opacity=".5"/>
-              <line x1="0" y1="100" x2="72" y2="100" stroke="currentColor" stroke-width="1" opacity=".5"/>
-              <text x="36" y="76" text-anchor="middle"
-                    font-family="Fraunces, Georgia, serif"
-                    font-size="11" fill="currentColor">Limestone</text>
-              <text x="36" y="92" text-anchor="middle"
-                    font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="currentColor" opacity=".7">single origin</text>
-            </g>
-
-            <!-- The bar of soap (right) -->
-            <g transform="translate(260, 280)">
-              <rect x="0" y="0" width="70" height="44" rx="3"
-                    fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <line x1="6" y1="14" x2="64" y2="14" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-              <line x1="6" y1="30" x2="64" y2="30" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-              <text x="35" y="26" text-anchor="middle"
-                    font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="currentColor" opacity=".7">castile · 5oz</text>
-            </g>
-
-            <!-- Caption / credit under the still life -->
-            <text x="180" y="450" text-anchor="middle"
-                  font-family="Fraunces, Georgia, serif" font-style="italic"
-                  font-size="11" fill="currentColor" opacity=".6">
-              A still life of three items from the shelf.
-            </text>
-            <text x="180" y="466" text-anchor="middle"
-                  font-family="Fraunces, Georgia, serif"
-                  font-size="9" fill="currentColor" opacity=".45"
-                  letter-spacing="1.2">
-              DRAWN FOR THIS PAGE · AUG 2026
-            </text>
-
-            <!-- Paper grain overlay -->
-            <rect x="0" y="0" width="360" height="480" fill="url(#grain)" opacity=".5"/>
-          </svg>
+          <!-- Hero photograph placeholder (real photo goes here) -->
+          <figure class="hero-photo">
+            <img src="img/hero-storefront.jpg"
+                 alt="The Yard & Larder storefront on 2nd Avenue North, with a hand-painted sign and seasonal window display."
+                 loading="eager" decoding="async" />
+            <figcaption>
+              <span class="eyebrow eyebrow--small">The shop, on 2nd Ave</span>
+              Tuesday morning, before the doors open.
+            </figcaption>
+          </figure>
         </aside>
+      </div>
+
+      <!-- A "things we don't do" rail under the hero — a designed contradiction,
+           delivered in a single line of marginalia. -->
+      <div class="hero-rail">
+        <span class="rail-label"><span class="eyebrow eyebrow--small">We don't</span></span>
+        <span class="rail-item">do Black Friday.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">sell candles from a factory.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">have a loyalty program.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">run a TikTok.</span>
+        <span class="rail-dot" aria-hidden="true">·</span>
+        <span class="rail-item">ship internationally.</span>
       </div>
     </section>
 
-    <!-- =================== THE PITCH (long-form, editorial) =================== -->
+    <!-- =================== THE PITCH (long-form, more personality) =================== -->
     <section class="pitch" id="pitch" aria-labelledby="pitch-title">
       <div class="container">
         <header class="section-head section-head--left">
@@ -194,31 +164,33 @@
             </p>
 
             <aside class="margin-note">
-              Bardstown's been on the bourbon map since 1775.
-              We opened on the square in 2018, the same year a
-              new distillery did. Felt right.
+              Nashville's been on the map since 1779. We
+              opened on 2nd Avenue in 2018, the same year
+              the old bus depot across the street became
+              a pinball bar. Felt right.
             </aside>
 
             <p>
-              We started with eleven items. Seven years later we
-              stock two hundred and forty, sourced from
+              We started with eleven items. Seven years later
+              we stock two hundred and forty, sourced from
               twenty-three makers. The list grew because the
-              people on the team kept finding things they liked,
-              and the makers kept getting better. The Hoffmeisters
-              in Shelbyville, who weave our kitchen towels on a
-              shuttle loom from 1908, started sending us two
-              patterns a year. We now stock four.
+              people on the team kept finding things they
+              liked, and the makers kept getting better. The
+              Hoffmeisters in Shelbyville, who weave our
+              kitchen towels on a shuttle loom from 1908,
+              started sending us two patterns a year. We now
+              stock four.
             </p>
 
             <p>
               The list did not grow because we took meetings
               with sales reps. It grew because Mary, who
               works Saturdays, found a Mennonite family in
-              Bloomfield putting up the best pickled okra she'd
-              eaten since her grandmother's. She brought a
-              jar to the next team meeting. We called the
-              family that afternoon. That jar is now No. 87
-              on the shelf.
+              Franklin putting up the best pickled okra
+              she'd eaten since her grandmother's. She
+              brought a jar to the next team meeting. We
+              called the family that afternoon. That jar
+              is now No. 87 on the shelf.
             </p>
 
             <blockquote class="pullquote">
@@ -236,39 +208,47 @@
               more to print than we make back. We are open
               six days a week, we pour the candles ourselves,
               and we know the names of most of our regulars.
-              If you come in on a Saturday, Mary will probably
-              be the one to hand you your bag.
+              If you come in on a Saturday, Mary will
+              probably be the one to hand you your bag.
+            </p>
+
+            <p class="post-script">
+              <strong>P.S.</strong> &mdash; Yes, we close the
+              shop on the first Wednesday of every month.
+              The whole team goes for a walk. The pinball
+              bar knows us by name. The walk is not
+              optional.
             </p>
           </article>
 
-          <aside class="pitch-side" aria-label="Quick facts">
+          <aside class="pitch-side" aria-label="Quick facts and quirks">
             <div class="side-card">
               <p class="eyebrow eyebrow--small">By the numbers</p>
               <dl class="prose-numerals">
                 <div><dt>Items in stock</dt><dd>240</dd></div>
                 <div><dt>Makers stocked</dt><dd>23</dd></div>
-                <div><dt>Mean distance to maker</dt><dd>42 mi</dd></div>
+                <div><dt>Mean distance to maker</dt><dd>38 mi</dd></div>
                 <div><dt>Candles poured in-house</dt><dd>1,140 / yr</dd></div>
                 <div><dt>Years Sarah has worked the counter</dt><dd>7</dd></div>
                 <div><dt>Hours open, weekly</dt><dd>54</dd></div>
               </dl>
             </div>
             <div class="side-card side-card--quiet">
-              <p class="eyebrow eyebrow--small">What's not here</p>
-              <p>
-                No candles from a factory. No coffee that has
-                traveled more than a hundred miles to reach
-                us. No soap with a fragrance you can't
-                pronounce. No kitchen tool we wouldn't use
-                ourselves. No gift sets.
-              </p>
+              <p class="eyebrow eyebrow--small">A few quirks</p>
+              <ul class="quirk-list" role="list">
+                <li>Closed the first Wednesday of every month.</li>
+                <li>The candle section is smell-tested by Sarah and Mary. You can ask.</li>
+                <li>We will hand-wrap anything. Even if it doesn't need it.</li>
+                <li>We don't have a phone tree. The phone is the phone.</li>
+                <li>The espresso bar in the back is free on Saturdays. (Regulars only. You'll know.)</li>
+              </ul>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- =================== THE SHELVES (asymmetric product grid) =================== -->
+    <!-- =================== THE SHELVES (asymmetric, with Sarah's pick stickers) =================== -->
     <section class="shelves" id="shelves" aria-labelledby="shelves-title">
       <div class="container">
         <header class="section-head section-head--left">
@@ -285,14 +265,8 @@
         <ul class="shelf-grid" role="list">
 
           <li class="shelf-item shelf-item--feature">
-            <div class="shelf-art shelf-art--candle" aria-hidden="true">
-              <svg viewBox="0 0 100 140" role="img" aria-label="Hand-poured candle">
-                <rect x="32" y="30" width="36" height="100" rx="2"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="32" y1="40" x2="68" y2="40" stroke="currentColor" stroke-width="1"/>
-                <line x1="50" y1="30" x2="50" y2="22" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M48 22 Q50 14 52 22" fill="none" stroke="currentColor" stroke-width="1"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/candle.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 03 · Apothecary</p>
             <h3 class="shelf-name">Beeswax taper, pair</h3>
@@ -302,77 +276,60 @@
               Unscented, because the wax has its own smell.
             </p>
             <p class="shelf-meta prose-numerals">$14 · made in-house</p>
+            <div class="sticker sticker--pick" aria-label="Sarah's pick this week">
+              <span class="sticker-text">Sarah's<br />pick</span>
+            </div>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--tin" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Coffee tin">
-                <ellipse cx="50" cy="14" rx="34" ry="6"
-                         fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M16 14 L16 86 a34 6 0 0 0 68 0 L84 14"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="16" y1="40" x2="84" y2="40" stroke="currentColor" stroke-width=".6" opacity=".4"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/coffee.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 12 · Pantry</p>
             <h3 class="shelf-name">Limestone coffee, 12oz</h3>
             <p class="shelf-desc">
               Roasted Tuesday and Friday at Limestone Coffee,
-              14 miles east. Single-origin from a farm we've
-              visited twice. Brews a clean, low-acid cup.
+              18 miles north in Hendersonville. Single-origin
+              from a farm we've visited twice. Brews a clean,
+              low-acid cup.
             </p>
-            <p class="shelf-meta prose-numerals">$18 · Bloomfield, 14 mi</p>
+            <p class="shelf-meta prose-numerals">$18 · Hendersonville, 18 mi</p>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--soap" aria-hidden="true">
-              <svg viewBox="0 0 100 70" role="img" aria-label="Bar of soap">
-                <rect x="14" y="14" width="72" height="42" rx="2"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="18" y1="24" x2="82" y2="24" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-                <line x1="18" y1="46" x2="82" y2="46" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/soap.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 27 · Apothecary</p>
             <h3 class="shelf-name">Castile bar soap, 5oz</h3>
             <p class="shelf-desc">
               Olive oil, coconut oil, lye, water. That's the
               list. Cut in 5oz bars and cured four weeks at
-              Tom's Pantry.
+              Tom's Pantry, south of us in Franklin.
             </p>
-            <p class="shelf-meta prose-numerals">$9 · Bloomfield, 18 mi</p>
+            <p class="shelf-meta prose-numerals">$9 · Franklin, 22 mi</p>
           </li>
 
           <li class="shelf-item shelf-item--tall">
-            <div class="shelf-art shelf-art--iron" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Cast iron skillet">
-                <ellipse cx="50" cy="50" rx="32" ry="32"
-                         fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <ellipse cx="50" cy="50" rx="22" ry="22"
-                         fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
-                <line x1="82" y1="50" x2="98" y2="50" stroke="currentColor" stroke-width="2"/>
-                <line x1="14" y1="50" x2="18" y2="50" stroke="currentColor" stroke-width="2"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/skillet.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 41 · Kitchen</p>
             <h3 class="shelf-name">Cast iron skillet, 10"</h3>
             <p class="shelf-desc">
-              Vintage Griswold, found in an estate sale outside
+              Vintage griswold, found in an estate sale outside
               Lebanon. Restored in our basement — wire-wheeled,
               re-seasoned three times, ready to cook on.
             </p>
             <p class="shelf-meta prose-numerals">$48 · restored in-house</p>
+            <div class="sticker sticker--limited" aria-label="Only two left">
+              <span class="sticker-text">2<br />left</span>
+            </div>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--towel" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Woven kitchen towel">
-                <rect x="20" y="20" width="60" height="60"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="20" y1="32" x2="80" y2="32" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-                <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-                <line x1="20" y1="68" x2="80" y2="68" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/towel.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 58 · Linens</p>
             <h3 class="shelf-name">Cotton kitchen towel</h3>
@@ -382,38 +339,26 @@
               with every wash. We've been using ours for three
               years.
             </p>
-            <p class="shelf-meta prose-numerals">$22 · Shelbyville, 42 mi</p>
+            <p class="shelf-meta prose-numerals">$22 · Shelbyville, 55 mi</p>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--jar" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Jar of pickled okra">
-                <rect x="32" y="20" width="36" height="68" rx="2"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="28" y="14" width="44" height="10" rx="1"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="36" y1="50" x2="64" y2="50" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-                <line x1="36" y1="68" x2="64" y2="68" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/okra.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 87 · Pantry</p>
             <h3 class="shelf-name">Pickled okra, 16oz</h3>
             <p class="shelf-desc">
-              From a Mennonite family in Bloomfield, 18 miles
-              east. Garlic, dill, three-day brine. Mary found
+              From a Mennonite family in Franklin, 22 miles
+              south. Garlic, dill, three-day brine. Mary found
               them at a yard sale. Best okra we'd eaten.
             </p>
-            <p class="shelf-meta prose-numerals">$11 · Bloomfield, 18 mi</p>
+            <p class="shelf-meta prose-numerals">$11 · Franklin, 22 mi</p>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--wrap" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Beeswax wraps">
-                <rect x="20" y="20" width="60" height="60" rx="2"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="32" y="32" width="36" height="36" rx="1"
-                      fill="none" stroke="currentColor" stroke-width="1" opacity=".6"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/wraps.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 92 · Kitchen</p>
             <h3 class="shelf-name">Beeswax wrap, set of 3</h3>
@@ -423,36 +368,26 @@
               cool water, hang to dry. Lasts twelve months
               with normal use.
             </p>
-            <p class="shelf-meta prose-numerals">$24 · Bardstown, in-house</p>
+            <p class="shelf-meta prose-numerals">$24 · Nashville, in-house</p>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--honey" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Comb honey">
-                <path d="M30 30 L70 30 L70 80 L50 90 L30 80 Z"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="34" y1="46" x2="66" y2="46" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-                <line x1="34" y1="62" x2="66" y2="62" stroke="currentColor" stroke-width=".5" opacity=".4"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/honey.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 103 · Pantry</p>
             <h3 class="shelf-name">Hand-cut comb honey, 8oz</h3>
             <p class="shelf-desc">
-              From hives behind the Baptist church on 3rd. The
+              From hives behind a house on Gallatin Ave. The
               beekeeper is a regular; she brings us comb in
               the cutest hex-section jars.
             </p>
-            <p class="shelf-meta prose-numerals">$16 · Bardstown, 0.7 mi</p>
+            <p class="shelf-meta prose-numerals">$16 · Nashville, 1.4 mi</p>
           </li>
 
           <li class="shelf-item">
-            <div class="shelf-art shelf-art--candle-small" aria-hidden="true">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Small lavender candle">
-                <rect x="36" y="34" width="28" height="50" rx="2"
-                      fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="50" y1="34" x2="50" y2="28" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M48 28 Q50 22 52 28" fill="none" stroke="currentColor" stroke-width="1"/>
-              </svg>
+            <div class="shelf-art shelf-art--photo" aria-hidden="true">
+              <img src="img/lavender.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <p class="shelf-cat">No. 118 · Apothecary</p>
             <h3 class="shelf-name">Lavender votive, 3oz</h3>
@@ -469,12 +404,82 @@
         <p class="shelf-footnote prose-numerals">
           These are nine of the two hundred and forty. The full
           shelf is on the floor and online. We add roughly two
-          new items a month and retire about the same.
+          new items a month and retire about the same. &mdash;
+          <em>P.P.S.</em> Mary snuck a fig-and-black-pepper jam
+          onto the shelf this week. It is excellent on toast.
         </p>
       </div>
     </section>
 
-    <!-- =================== THE MAKERS (asymmetric) =================== -->
+    <!-- =================== WHAT WE'RE LOVING THIS WEEK (NEW, fun) =================== -->
+    <section class="loving" id="loving" aria-labelledby="loving-title">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <p class="eyebrow">A rotating shelf, by the people who work here</p>
+          <h2 class="section-title" id="loving-title">
+            What we're<br /><em>loving this week.</em>
+          </h2>
+          <p class="section-sub">
+            Four picks from the four-person team. Refreshes
+            every Wednesday morning. The only rule: it has to
+            be something we'd buy for a friend.
+          </p>
+        </header>
+
+        <ul class="loving-grid" role="list">
+          <li class="loving-card">
+            <p class="loving-by prose-numerals">— Sarah's pick</p>
+            <h3 class="loving-title-piece">No. 122, the cedar &amp; moss votive</h3>
+            <p class="loving-note">
+              "I wasn't going to put it on the shelf because
+              cedar smells like a bathroom product to most
+              people. Then Mary brought one home and the
+              whole apartment smelled like a forest. It's
+              on the shelf now. It's the best thing we
+              make."
+            </p>
+            <p class="loving-price prose-numerals">$12</p>
+          </li>
+          <li class="loving-card">
+            <p class="loving-by prose-numerals">— Mary's pick</p>
+            <h3 class="loving-title-piece">No. 144, the salted honey tin</h3>
+            <p class="loving-note">
+              "Two tablespoons in hot water, squeeze of
+              lemon, sip it like a tea when you have a cold.
+              I have done this every Tuesday since October.
+              The bees behind the Baptist church made it."
+            </p>
+            <p class="loving-price prose-numerals">$14</p>
+          </li>
+          <li class="loving-card">
+            <p class="loving-by prose-numerals">— Devon's pick</p>
+            <h3 class="loving-title-piece">No. 13, the house blend coffee</h3>
+            <p class="loving-note">
+              "I drink the single-origin when I want to
+              taste the beans. I drink the house blend when
+              I want to think. It is, somehow, both. Dylan
+              roasts it in Hendersonville. I trust Dylan
+              with my morning."
+            </p>
+            <p class="loving-price prose-numerals">$16</p>
+          </li>
+          <li class="loving-card">
+            <p class="loving-by prose-numerals">— Jess's pick</p>
+            <h3 class="loving-title-piece">No. 178, the linen apron</h3>
+            <p class="loving-note">
+              "I have spilled on this apron twelve times
+              this month. Twelve. It washes out every time.
+              It was the second thing I bought when I
+              started here. It is the only apron I wear
+              at home now."
+            </p>
+            <p class="loving-price prose-numerals">$48</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================== THE MAKERS (with Sarah's pick callouts) =================== -->
     <section class="makers" id="makers" aria-labelledby="makers-title">
       <div class="container">
         <header class="section-head section-head--left">
@@ -494,7 +499,7 @@
           <li class="maker maker--lead">
             <p class="maker-no prose-numerals">No. 01</p>
             <h3 class="maker-name">Sarah Holcomb</h3>
-            <p class="maker-place prose-numerals">Bardstown, Kentucky · 0.2 mi</p>
+            <p class="maker-place prose-numerals">Nashville, Tennessee · 0.2 mi</p>
             <p class="maker-since prose-numerals">With us since 2018</p>
             <p class="maker-story">
               Pouring candles and working the counter since
@@ -502,25 +507,33 @@
               wicks. Sarah trained with a perfumer in
               Louisville for a winter before she joined us.
               The candles are hers; the shop is partly hers.
+              She refuses to make a "holiday scent" and we
+              love her for it.
             </p>
             <p class="maker-on-shelf">
               On the shelf as: <em>No. 03 Beeswax taper</em>,
               <em>No. 118 Lavender votive</em>,
               <em>No. 122 Cedar &amp; moss votive</em>.
             </p>
+            <blockquote class="maker-quote">
+              "If I can smell it from across the room,
+              it doesn't ship."
+              <cite>— Sarah, on scent strength</cite>
+            </blockquote>
           </li>
 
           <li class="maker">
             <p class="maker-no prose-numerals">No. 02</p>
             <h3 class="maker-name">Tom, Mary &amp; the boys at Tom's Pantry</h3>
-            <p class="maker-place prose-numerals">Bloomfield, Kentucky · 18 mi east</p>
+            <p class="maker-place prose-numerals">Franklin, Tennessee · 22 mi south</p>
             <p class="maker-since prose-numerals">With us since 2019</p>
             <p class="maker-story">
               Pressing olive oil, milling soap, putting up
               preserves. The soap cure is four weeks; we
               wait. Mary hand-cuts every bar. The boys are
               in high school now and they still deliver on
-              Saturdays.
+              Saturdays in a 1998 Ford Ranger with a
+              wooden bed.
             </p>
             <p class="maker-on-shelf">
               On the shelf as: <em>No. 27 Castile soap</em>,
@@ -532,14 +545,16 @@
           <li class="maker">
             <p class="maker-no prose-numerals">No. 03</p>
             <h3 class="maker-name">The Hoffmeisters</h3>
-            <p class="maker-place prose-numerals">Shelbyville, Kentucky · 42 mi north</p>
+            <p class="maker-place prose-numerals">Shelbyville, Tennessee · 55 mi south</p>
             <p class="maker-since prose-numerals">With us since 2019</p>
             <p class="maker-story">
               Four generations of weavers. They make our
               kitchen towels on a shuttle loom from 1908.
               The loom belonged to Anna's great-grandmother.
               They send us two new patterns a year; we
-              stock four.
+              stock four. Anna refuses to sell to anyone
+              who doesn't visit the loom. We have visited
+              four times.
             </p>
             <p class="maker-on-shelf">
               On the shelf as: <em>No. 58 Cotton towel</em>,
@@ -551,13 +566,16 @@
           <li class="maker">
             <p class="maker-no prose-numerals">No. 04</p>
             <h3 class="maker-name">Limestone Coffee Roasters</h3>
-            <p class="maker-place prose-numerals">Bloomfield, Kentucky · 14 mi east</p>
+            <p class="maker-place prose-numerals">Hendersonville, Tennessee · 18 mi north</p>
             <p class="maker-since prose-numerals">With us since 2018</p>
             <p class="maker-story">
               Dylan roasts on a 12kg Probat in a converted
               feed barn. We pick up the morning of delivery.
               The single-origin changes quarterly; the
-              blend is permanent.
+              blend is permanent. Dylan once sent us back
+              a bag of his own roast because he didn't
+              like the way it cupped. We like that about
+              him.
             </p>
             <p class="maker-on-shelf">
               On the shelf as: <em>No. 12 Single origin</em>,
@@ -569,7 +587,7 @@
       </div>
     </section>
 
-    <!-- =================== THE JOURNAL (editorial) =================== -->
+    <!-- =================== THE JOURNAL (editorial, with P.P.S. notes) =================== -->
     <section class="journal" id="journal" aria-labelledby="journal-title">
       <div class="container">
         <header class="section-head section-head--left">
@@ -625,6 +643,11 @@
               part that is hardest to explain to a
               wholesaler.
             </p>
+            <p class="post-script">
+              <strong>P.P.S.</strong> &mdash; If you visit
+              on a Tuesday morning, you can watch us
+              pour. We start at 9. Bring coffee.
+            </p>
           </article>
 
           <article class="journal-piece hang-punct">
@@ -666,16 +689,22 @@
               difference, even if they can't say what
               it is.
             </p>
+            <p class="post-script">
+              <strong>P.P.S.</strong> &mdash; If you have
+              a soap that you made at home, leave it on
+              the bar for four weeks before you use it.
+              I promise you can tell.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =================== VISIT (custom map) =================== -->
+    <!-- =================== VISIT (Google Maps embed) =================== -->
     <section class="visit" id="visit" aria-labelledby="visit-title">
       <div class="container">
         <header class="section-head section-head--left">
-          <p class="eyebrow">The shop is on the square</p>
+          <p class="eyebrow">The shop, in real life</p>
           <h2 class="section-title" id="visit-title">
             Come visit.<br /><em>Bring a friend.</em>
           </h2>
@@ -685,115 +714,59 @@
           <div class="visit-info">
             <address class="visit-address">
               <p class="visit-line visit-line--big">
-                115 East Stephen Foster Ave<br />
-                Bardstown, Kentucky 40004
+                123 2nd Avenue North<br />
+                Nashville, Tennessee 37201
               </p>
               <p class="visit-line">
-                On the square,<br />
-                between the diner and the old pharmacy.
+                Two doors down from the old bus depot,<br />
+                across the street from the pinball bar.
               </p>
             </address>
 
             <dl class="visit-hours prose-numerals">
-              <div><dt>Monday</dt><dd>9 to 6</dd></div>
-              <div><dt>Tuesday</dt><dd>9 to 6</dd></div>
-              <div><dt>Wednesday</dt><dd>9 to 6</dd></div>
-              <div><dt>Thursday</dt><dd>9 to 6</dd></div>
-              <div><dt>Friday</dt><dd>9 to 7</dd></div>
-              <div><dt>Saturday</dt><dd>9 to 6</dd></div>
-              <div><dt>Sunday</dt><dd>11 to 4</dd></div>
+              <div><dt>Monday</dt><dd>10 to 7</dd></div>
+              <div><dt>Tuesday</dt><dd>10 to 7</dd></div>
+              <div><dt>Wednesday</dt><dd>10 to 7</dd></div>
+              <div><dt>Thursday</dt><dd>10 to 7</dd></div>
+              <div><dt>Friday</dt><dd>10 to 8</dd></div>
+              <div><dt>Saturday</dt><dd>10 to 8</dd></div>
+              <div><dt>Sunday</dt><dd>12 to 5</dd></div>
             </dl>
 
             <ul class="visit-contact" role="list">
-              <li>(502) 555-0142</li>
-              <li>hello@yardandlarder.shop</li>
+              <li>(615) 555-0142</li>
+              <li><a href="mailto:hello@yardandlarder.shop">hello@yardandlarder.shop</a></li>
             </ul>
+
+            <p class="visit-quirk">
+              <span class="eyebrow eyebrow--small">A note</span>
+              We're closed the first Wednesday of every month.
+              The whole team goes for a walk. The walk is not
+              optional.
+            </p>
+
+            <p class="visit-postscript">
+              <strong>P.S.</strong> &mdash; Walk to the river
+              after. The cobbler at the diner on Broadway is
+              also not optional.
+            </p>
           </div>
 
-          <figure class="visit-map" aria-label="A hand-drawn map of downtown Bardstown, with the shop marked">
-            <!-- Custom hand-drawn-feeling SVG map.
-                 Not a Google Maps embed. Made for this page. -->
-            <svg viewBox="0 0 480 360" role="img" aria-labelledby="map-title">
-              <title id="map-title">Downtown Bardstown, the square, with Yard & Larder marked.</title>
-
-              <!-- Paper background -->
-              <rect x="0" y="0" width="480" height="360" fill="#f0e6cf"/>
-
-              <!-- Subtle paper grain -->
-              <defs>
-                <pattern id="map-grain" width="4" height="4" patternUnits="userSpaceOnUse">
-                  <circle cx="1" cy="1" r="0.4" fill="#1a1612" opacity=".07"/>
-                </pattern>
-              </defs>
-
-              <!-- The square (an open rectangle) -->
-              <rect x="120" y="120" width="240" height="120"
-                    fill="none" stroke="#1a1612" stroke-width="1.2" opacity=".7"/>
-              <!-- The courthouse in the middle of the square -->
-              <rect x="220" y="160" width="40" height="40"
-                    fill="none" stroke="#1a1612" stroke-width="1"/>
-              <circle cx="240" cy="178" r="6" fill="none" stroke="#1a1612" stroke-width="1"/>
-              <text x="240" y="218" text-anchor="middle"
-                    font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="#1a1612" opacity=".7">courthouse</text>
-
-              <!-- Streets -->
-              <line x1="60"  y1="120" x2="420" y2="120" stroke="#1a1612" stroke-width="1" opacity=".4"/>
-              <line x1="60"  y1="240" x2="420" y2="240" stroke="#1a1612" stroke-width="1" opacity=".4"/>
-              <line x1="120" y1="60"  x2="120" y2="300" stroke="#1a1612" stroke-width="1" opacity=".4"/>
-              <line x1="360" y1="60"  x2="360" y2="300" stroke="#1a1612" stroke-width="1" opacity=".4"/>
-
-              <!-- Street names -->
-              <text x="64" y="116" font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="#1a1612" opacity=".55">Stephen Foster Ave</text>
-              <text x="64" y="252" font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="#1a1612" opacity=".55">Flaget Ave</text>
-              <text x="124" y="76" font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="#1a1612" opacity=".55">N 3rd</text>
-              <text x="364" y="76" font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="9" fill="#1a1612" opacity=".55">N 4th</text>
-
-              <!-- The shop block, with mark -->
-              <rect x="124" y="124" width="40" height="40"
-                    fill="#7d2e26" opacity=".12" stroke="#7d2e26" stroke-width="1.2"/>
-              <line x1="144" y1="124" x2="144" y2="164" stroke="#7d2e26" stroke-width=".5" opacity=".4"/>
-              <circle cx="144" cy="144" r="14"
-                      fill="none" stroke="#7d2e26" stroke-width="1.5"/>
-              <text x="144" y="148" text-anchor="middle"
-                    font-family="Fraunces, Georgia, serif" font-weight="500"
-                    font-size="11" fill="#7d2e26">Y&amp;L</text>
-
-              <!-- Pin label -->
-              <line x1="158" y1="144" x2="220" y2="100" stroke="#7d2e26" stroke-width="1" stroke-dasharray="2 2"/>
-              <text x="222" y="98" font-family="Fraunces, Georgia, serif" font-style="italic"
-                    font-size="10" fill="#7d2e26">Yard &amp; Larder</text>
-              <text x="222" y="110" font-family="Fraunces, Georgia, serif"
-                    font-size="8" fill="#7d2e26" opacity=".7" letter-spacing="1">115 E. STEPHEN FOSTER</text>
-
-              <!-- Compass -->
-              <g transform="translate(420, 60)">
-                <circle cx="0" cy="0" r="14" fill="none" stroke="#1a1612" stroke-width=".8" opacity=".5"/>
-                <line x1="0" y1="-10" x2="0" y2="10" stroke="#1a1612" stroke-width=".8" opacity=".5"/>
-                <line x1="-10" y1="0" x2="10" y2="0" stroke="#1a1612" stroke-width=".8" opacity=".5"/>
-                <text x="0" y="-14" text-anchor="middle"
-                      font-family="Fraunces, Georgia, serif"
-                      font-size="8" fill="#1a1612" opacity=".7">N</text>
-              </g>
-
-              <!-- "to Louisville" arrow -->
-              <g transform="translate(60, 300)" opacity=".55">
-                <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-style="italic"
-                      font-size="9" fill="#1a1612">to Louisville</text>
-                <line x1="60" y1="-3" x2="92" y2="-3" stroke="#1a1612" stroke-width=".8"/>
-                <path d="M88 -7 L94 -3 L88 1" fill="none" stroke="#1a1612" stroke-width=".8"/>
-              </g>
-
-              <!-- Grain overlay -->
-              <rect x="0" y="0" width="480" height="360" fill="url(#map-grain)" opacity=".7"/>
-            </svg>
+          <figure class="visit-map" aria-label="Yard & Larder on Google Maps, 123 2nd Avenue North, Nashville, Tennessee 37201">
+            <!-- Real Google Maps embed — no API key required. -->
+            <iframe
+              src="https://www.google.com/maps?q=123+2nd+Avenue+North,+Nashville,+TN+37201&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Yard &amp; Larder on Google Maps"></iframe>
             <figcaption class="map-caption">
-              <span class="eyebrow eyebrow--small">A drawing, not a map</span>
-              The shop, on the northwest corner of the square.
+              <span class="eyebrow eyebrow--small">The shop, in maps</span>
+              123 2nd Avenue North, between Church and Commerce.
+              Street parking is a guess. The lot behind the
+              pinball bar is reliable.
             </figcaption>
           </figure>
         </div>
@@ -802,7 +775,7 @@
 
   </main>
 
-  <!-- =================== FOOTER =================== -->
+  <!-- =================== FOOTER (with personality) =================== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
@@ -810,14 +783,20 @@
           <p class="footer-wordmark">Yard &amp; Larder</p>
           <p class="footer-tagline">
             Honest goods for the well-kept home.<br />
-            115 East Stephen Foster Ave,<br />
-            Bardstown, Kentucky 40004.
+            123 2nd Avenue North,<br />
+            Nashville, Tennessee 37201.
+          </p>
+          <p class="footer-quirk">
+            <em>P.S.</em> We don't have a marketing team. We
+            have a four-person team that runs the shop and
+            also, sometimes, the website.
           </p>
         </div>
         <div class="footer-col">
           <p class="eyebrow eyebrow--small">The shop</p>
           <ul role="list">
             <li><a href="#shelves">The shelves</a></li>
+            <li><a href="#loving">What we're loving</a></li>
             <li><a href="#makers">The makers</a></li>
             <li><a href="#journal">The journal</a></li>
           </ul>
@@ -825,9 +804,10 @@
         <div class="footer-col">
           <p class="eyebrow eyebrow--small">Visit</p>
           <ul role="list">
-            <li>M–Sa 9 to 6</li>
-            <li>Su 11 to 4</li>
-            <li>(502) 555-0142</li>
+            <li>M–Th 10 to 7</li>
+            <li>F–Sa 10 to 8</li>
+            <li>Su 12 to 5</li>
+            <li>(615) 555-0142</li>
             <li><a href="mailto:hello@yardandlarder.shop">hello@yardandlarder.shop</a></li>
           </ul>
         </div>
@@ -843,7 +823,7 @@
       </div>
       <div class="footer-base">
         <p class="prose-numerals">
-          &copy; 2018–2026 Yard &amp; Larder. Made in Bardstown,
+          &copy; 2018–2026 Yard &amp; Larder. Made in Nashville,
           printed on a Heidelberg from 1971.
         </p>
         <p class="footer-mark">

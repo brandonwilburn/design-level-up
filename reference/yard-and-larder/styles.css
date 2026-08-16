@@ -9,14 +9,15 @@
      on eyebrows, 1.333 modular scale, display ≠ body settings)
    - Layout detail (drop cap, pull quote, margin note, hanging
      punctuation, real captions with credit)
-   - Imagery with intent (no stock photos; made-for-this-page SVGs
-     and a hand-drawn-feeling map)
+   - Imagery with intent (real photographs in product grid and
+     hero; no stock abstractions)
    - Material (hairline borders, subtle paper grain; no box-shadows
      on the page surface)
-   - Voice in copy (specificity throughout; every paragraph has
-     a number, a name, a place, or a date)
-   - Custom detail (custom SVG mark, custom still life, custom map,
-     custom footer glyph)
+   - Voice in copy (specificity throughout; P.S. and P.P.S. for
+     personal asides; every paragraph has a number, a name, a
+     place, or a date)
+   - Custom detail (stickers for "NEW" / "Sarah's pick" / "2 left";
+     custom SVG mark, custom footer glyph)
    - Single-accent restraint (one oxblood, three roles)
 
    Sections:
@@ -24,15 +25,16 @@
      2.  Type
      3.  Layout primitives & grid
      4.  Header / nav
-     5.  Hero
-     6.  Pitch (long-form editorial)
-     7.  Shelves (asymmetric product grid)
-     8.  Makers
-     9.  Journal (editorial)
-    10.  Visit (custom map)
-    11.  Footer
-    12.  Reduced motion
-    13.  Responsive
+     5.  Hero (with NEW sticker, "we don't" rail, real photo)
+     6.  Pitch (long-form editorial, P.S., quirks sidebar)
+     7.  Shelves (asymmetric product grid, real photos, stickers)
+     8.  What we're loving this week (NEW section)
+     9.  Makers (with maker pull-quote)
+    10.  Journal (editorial, P.P.S.)
+    11.  Visit (Google Maps embed)
+    12.  Footer (with P.S. personality)
+    13.  Reduced motion
+    14.  Responsive
    ===================================================================== */
 
 
@@ -66,16 +68,15 @@
   --font-mono:    ui-monospace, SFMono-Regular, "SF Mono", Menlo,
                   Consolas, monospace;
 
-  /* Modular scale: 1.333 (perfect fourth).
-     Not 1.25. 1.25 is the AI default. */
-  --t-base: 1.0625rem;   /* 17px body */
-  --t-xs:   calc(var(--t-base) / 1.333);   /* ~12.7px */
-  --t-sm:   calc(var(--t-base) * 0.875);   /* ~14.9px */
-  --t-lg:   calc(var(--t-base) * 1.333);   /* ~22.6px */
-  --t-xl:   calc(var(--t-base) * 1.333 * 1.333);   /* ~30.2px */
-  --t-2xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333);   /* ~40.2px */
-  --t-3xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333 * 1.333);   /* ~53.6px */
-  --t-4xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333 * 1.333 * 1.333);   /* ~71.5px */
+  /* Modular scale: 1.333 (perfect fourth). */
+  --t-base: 1.0625rem;
+  --t-xs:   calc(var(--t-base) / 1.333);
+  --t-sm:   calc(var(--t-base) * 0.875);
+  --t-lg:   calc(var(--t-base) * 1.333);
+  --t-xl:   calc(var(--t-base) * 1.333 * 1.333);
+  --t-2xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333);
+  --t-3xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333 * 1.333);
+  --t-4xl:  calc(var(--t-base) * 1.333 * 1.333 * 1.333 * 1.333 * 1.333);
 
   /* Spacing — 4pt base, scaled by 1.333 */
   --s-1:  0.25rem;
@@ -108,8 +109,6 @@ body {
   line-height: 1.6;
   color: var(--c-text);
   background: var(--c-bg);
-  /* Subtle paper grain — a hand-built SVG noise, very subtle.
-     A designed material, not box-shadow. */
   background-image:
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   background-size: 160px 160px;
@@ -125,7 +124,6 @@ a { color: inherit; text-decoration: none; }
 
 ::selection { background: var(--c-accent); color: var(--c-bg); }
 
-/* Real focus ring — single-accent, hairline offset */
 :focus-visible {
   outline: 2px solid var(--c-accent-hot);
   outline-offset: 3px;
@@ -152,15 +150,9 @@ a { color: inherit; text-decoration: none; }
 
 /* =====================================================================
    2. TYPE
-   The depth pass. Variable display, real small caps, oldstyle
-   numerals in running text, tabular in data.
    ===================================================================== */
-
-/* Display family with optical-size axis.
-   At large sizes we want a more refined, slightly tighter cut.
-   At small sizes we want a more open, more legible cut.
-   The opsz axis on Fraunces does this for us. */
-.display, h1, h2, h3, .journal-title-piece, .maker-name, .shelf-name {
+.display, h1, h2, h3, .journal-title-piece, .maker-name, .shelf-name,
+.loving-title-piece, .loving-by {
   font-family: var(--font-display);
   font-variation-settings: "opsz" 144, "SOFT" 50;
   font-weight: 500;
@@ -170,18 +162,17 @@ a { color: inherit; text-decoration: none; }
   color: var(--c-text);
 }
 
-/* Body display settings (when the display face is used at small sizes
-   it should loosen up). */
 .eyebrow, .nav-link, .section-sub, .shelf-cat, .shelf-meta,
-.maker-place, .maker-since, .journal-byline {
+.maker-place, .maker-since, .journal-byline, .loving-by,
+.loving-price, .visit-line, .visit-hours, .footer-tagline,
+.footer-base p, .hero-rail {
   font-variation-settings: "opsz" 14, "SOFT" 100;
 }
 
-/* Real small caps for eyebrows. Lowercase + smcp is the convention. */
 .eyebrow {
   font-family: var(--font-body);
   font-feature-settings: "smcp" 1, "c2sc" 1, "kern" 1;
-  text-transform: lowercase;   /* smcp is uppercase, but display lowercase */
+  text-transform: lowercase;
   letter-spacing: 0.18em;
   font-size: var(--t-sm);
   font-weight: 500;
@@ -202,33 +193,29 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
   margin: 0 0.4em;
   color: var(--c-text-mute);
-  font-feature-settings: normal;   /* sep is a real middot, not smcp */
+  font-feature-settings: normal;
   letter-spacing: 0;
 }
 
-/* Oldstyle numerals in running text.
-   Proportional widths, oldstyle figures. */
 .prose-numerals, body, .prose, .lead, .hero-lede, .shelf-desc,
 .maker-story, .journal-piece p, .pitch-side, .visit-line, .visit-hours,
-.footer-tagline, .footer-base p {
+.footer-tagline, .footer-base p, .loving-note, .post-script, .quirk-list,
+.visit-quirk, .visit-postscript, .footer-quirk, .hero-rail {
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-feature-settings: "onum" 1, "kern" 1, "liga" 1;
 }
 
-/* Tabular numerals for data — cart, hours, lists. */
-.tabular, .visit-hours, .shelf-grid, .maker-list, dl.prose-numerals div {
+.tabular, .visit-hours, .shelf-grid, .maker-list, .loving-grid,
+dl.prose-numerals div {
   font-variant-numeric: lining-nums tabular-nums;
 }
 dl.prose-numerals { font-variant-numeric: lining-nums tabular-nums; }
 
-/* Hanging punctuation: opening quotes and dashes sit in the margin. */
 .hang-punct {
   hanging-punctuation: first last;
   text-wrap: pretty;
 }
 
-/* Italic — used for emphasis in display copy, and in pull quotes.
-   Fraunces italic is a real italic, not a slanted roman. */
 em {
   font-style: italic;
   font-variation-settings: "opsz" 144, "SOFT" 30;
@@ -276,8 +263,6 @@ em {
 
 /* =====================================================================
    4. HEADER / NAV
-   Hairline rule under the nav, hours pill on the right.
-   Sticky on scroll. Scrollspy active state via JS.
    ===================================================================== */
 .site-header {
   position: sticky;
@@ -397,12 +382,11 @@ em {
 
 /* =====================================================================
    5. HERO
-   Asymmetric. Text on the left (7/12), custom still-life on the
-   right (5/12). Big editorial type, no stock image, no abstract
-   gradient mesh.
+   Now: real photograph (not SVG) + a "NEW THIS WEEK" starburst
+   sticker + a "we don't" rail under the lede.
    ===================================================================== */
 .hero {
-  padding: var(--s-8) 0 var(--s-9);
+  padding: var(--s-8) 0 var(--s-7);
   position: relative;
 }
 .hero-grid {
@@ -436,9 +420,6 @@ em {
   margin-bottom: var(--s-7);
 }
 
-/* Buttons: a 3-state system using hairline + solid.
-   No box-shadows. The "depth" comes from material on the page, not
-   from shadow on the button. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -471,7 +452,6 @@ em {
   background: var(--c-line-soft);
 }
 
-/* Hero meta: 4 stats, hairline-divided. Tabular numerals. */
 .hero-meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -500,24 +480,84 @@ em {
   font-variant-numeric: lining-nums tabular-nums;
 }
 
-/* The hero still-life: a custom SVG, with a paper grain overlay. */
+/* Hero photograph: real image, with the NEW THIS WEEK sticker
+   overlaid in the corner. */
 .hero-art {
+  position: relative;
   border: 1px solid var(--c-line);
-  background: var(--c-surface);
-  padding: var(--s-4);
-  color: var(--c-ink);
+  background: var(--c-bg);
+  padding: 0;
+  overflow: visible;
+}
+.hero-photo {
+  margin: 0;
   position: relative;
 }
-.hero-art svg {
+.hero-photo img {
   width: 100%;
   height: auto;
+  display: block;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+}
+.hero-photo figcaption {
+  padding: var(--s-3) var(--s-4);
+  font-size: var(--t-sm);
+  color: var(--c-text-mute);
+  border-top: 1px solid var(--c-line);
+  background: var(--c-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+.hero-photo figcaption .eyebrow { margin: 0; }
+
+/* The "NEW THIS WEEK" starburst sticker: positioned absolute on
+   the hero photo, rotated -8deg for a hand-cut feel. */
+.sticker {
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+}
+.sticker--new {
+  top: -22px;
+  right: -22px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+  transform: rotate(-8deg);
+  filter: drop-shadow(0 4px 12px rgba(26, 22, 18, 0.18));
+}
+.sticker--new svg { width: 100%; height: 100%; }
+
+/* The "we don't" rail: a single line of marginalia under the hero,
+   in tabular numerals. Sits between hero and the first section. */
+.hero-rail {
+  width: min(100% - 2.5rem, var(--max-w-page));
+  margin: var(--s-7) auto 0;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-3);
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  line-height: 1.5;
+}
+.rail-label .eyebrow { margin: 0; }
+.rail-item {
+  color: var(--c-text);
+}
+.rail-dot {
+  color: var(--c-text-mute);
 }
 
 
 /* =====================================================================
    6. PITCH (long-form editorial)
-   The depth pass on prose. 8/4 grid, drop cap, pull quote,
-   margin note, hanging punctuation.
+   Now: a P.S. paragraph at the end, a "few quirks" sidebar,
+   and a quirky-list component.
    ===================================================================== */
 .pitch {
   padding: var(--s-9) 0;
@@ -538,17 +578,16 @@ em {
   font-size: var(--t-lg);
   line-height: 1.55;
   color: var(--c-text);
-  max-width: 38em;   /* ~75ch at body, but tighter than a magazine */
+  max-width: 38em;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--s-4);
 }
-.prose > p, .prose > .pullquote, .prose > .margin-note {
+.prose > p, .prose > .pullquote, .prose > .margin-note, .prose > .post-script {
   margin: 0;
   grid-column: 1;
 }
 
-/* The drop cap. Real baseline alignment, sized to 3 lines of body. */
 .prose > p:first-of-type::first-letter {
   font-family: var(--font-display);
   font-variation-settings: "opsz" 144, "SOFT" 30;
@@ -558,15 +597,9 @@ em {
   line-height: 0.85;
   margin: 0.06em 0.1em -0.08em -0.05em;
   color: var(--c-accent);
-  /* The drop letter sits flush with the cap-height of the body
-     line. Slight negative bottom margin to tuck it under the
-     descender line. */
 }
 
-/* Margin note: lives in the secondary column, smaller, dim.
-   Uses ::before to anchor it visually with a real em-dash. */
 .margin-note {
-  /* Place into the secondary column via the outer prose-grid. */
   font-size: var(--t-sm);
   line-height: 1.5;
   color: var(--c-text-mute);
@@ -583,8 +616,6 @@ em {
   font-style: normal;
 }
 
-/* Pull quote: breaks out, sits in the dominant column, hairline
-   border on the left, italic display, citation in small caps. */
 .pullquote {
   font-family: var(--font-display);
   font-variation-settings: "opsz" 144, "SOFT" 30;
@@ -596,7 +627,6 @@ em {
   padding: var(--s-3) 0 var(--s-3) var(--s-5);
   border-left: 1px solid var(--c-accent);
   margin: var(--s-5) 0;
-  position: relative;
 }
 .pullquote cite {
   display: block;
@@ -609,9 +639,27 @@ em {
   font-feature-settings: "smcp" 1, "c2sc" 1;
   text-transform: lowercase;
 }
-.pullquote cite::before { content: ""; }
 
-/* The side column: by-the-numbers card and a "what's not here" card. */
+/* The P.S. paragraph: a small aside in a slightly different style.
+   Sits at the end of a prose block as a personal voice moment. */
+.post-script {
+  font-size: var(--t-base);
+  line-height: 1.5;
+  color: var(--c-text-dim);
+  padding: var(--s-4) 0 0;
+  border-top: 1px dotted var(--c-line);
+  margin-top: var(--s-4);
+}
+.post-script strong {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--c-accent);
+  font-size: 1.1em;
+  margin-right: 0.4em;
+}
+
 .pitch-side { display: flex; flex-direction: column; gap: var(--s-5); }
 .side-card {
   background: var(--c-bg);
@@ -654,11 +702,35 @@ em {
   margin: 0;
 }
 
+/* The "few quirks" list: a list of small, specific, real things. */
+.quirk-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  line-height: 1.5;
+}
+.quirk-list li {
+  padding-left: var(--s-4);
+  position: relative;
+}
+.quirk-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--c-accent);
+  font-weight: 600;
+}
+
 
 /* =====================================================================
-   7. SHELVES (asymmetric product grid)
-   Mixed card sizes. One feature card (spans 2 cols, taller), others
-   are uniform. Real product copy, real maker distances.
+   7. SHELVES
+   Now: real product photos in the art box, plus 3 sticker variants
+   (NEW / Sarah's pick / "2 left"). One product gets the "2 left"
+   sticker, one gets the "Sarah's pick" sticker.
    ===================================================================== */
 .shelves { padding: var(--s-9) 0; }
 
@@ -680,6 +752,7 @@ em {
   gap: var(--s-3);
   transition: border-color .25s ease, transform .25s ease;
   position: relative;
+  overflow: visible;
 }
 .shelf-item:hover {
   border-color: var(--c-line-strong);
@@ -705,9 +778,18 @@ em {
   color: var(--c-ink);
   padding: var(--s-4);
   margin-bottom: var(--s-3);
+  overflow: hidden;
 }
-.shelf-item--feature .shelf-art { aspect-ratio: 1 / 1; }
-.shelf-art svg { width: 70%; height: auto; }
+.shelf-item--feature .shelf-art { aspect-ratio: 1 / 1; padding: 0; }
+.shelf-art--photo {
+  padding: 0;
+}
+.shelf-art--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .shelf-cat {
   font-size: var(--t-xs);
@@ -743,6 +825,45 @@ em {
   font-variant-numeric: lining-nums tabular-nums;
 }
 
+/* Stickers on product cards. Smaller than the hero sticker. */
+.sticker--pick,
+.sticker--limited {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  font-size: 0.65rem;
+  line-height: 1.05;
+  text-align: center;
+  font-weight: 600;
+  color: var(--c-bg);
+  background: var(--c-accent);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(26, 22, 18, 0.15);
+  pointer-events: none;
+}
+.sticker--pick {
+  top: -14px;
+  right: -14px;
+  transform: rotate(8deg);
+}
+.sticker--limited {
+  top: -14px;
+  right: -14px;
+  transform: rotate(-6deg);
+  background: var(--c-ink);
+}
+.sticker-text {
+  display: block;
+}
+
 .shelf-footnote {
   font-size: var(--t-sm);
   color: var(--c-text-mute);
@@ -755,9 +876,72 @@ em {
 
 
 /* =====================================================================
-   8. MAKERS
-   The "lead" maker is wider (2x1); the rest are uniform (1x1).
-   Real names, real places, real on-shelf items.
+   8. WHAT WE'RE LOVING THIS WEEK
+   A new section between Shelves and Makers. Four staff picks,
+   each with a quote, a price, and a "by" attribution.
+   ===================================================================== */
+.loving {
+  padding: var(--s-9) 0;
+  background: var(--c-bg);
+  border-top: 1px solid var(--c-line);
+}
+.loving-grid {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-4);
+}
+.loving-card {
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-line);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  position: relative;
+}
+.loving-by {
+  font-size: var(--t-xs);
+  color: var(--c-accent);
+  letter-spacing: 0.14em;
+  margin: 0;
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+}
+.loving-title-piece {
+  font-size: var(--t-lg);
+  line-height: 1.15;
+  margin: 0;
+  color: var(--c-text);
+  font-weight: 500;
+}
+.loving-note {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  line-height: 1.55;
+  margin: 0;
+  font-style: italic;
+  flex: 1;
+}
+.loving-price {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: var(--t-xl);
+  font-weight: 500;
+  color: var(--c-text);
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-line);
+  font-variant-numeric: lining-nums tabular-nums;
+  align-self: flex-start;
+}
+
+
+/* =====================================================================
+   9. MAKERS
+   Now: each maker has a pull-quote in their card. The lead maker
+   has a full pullquote, the smaller ones are uniform.
    ===================================================================== */
 .makers {
   padding: var(--s-9) 0;
@@ -779,7 +963,6 @@ em {
   flex-direction: column;
   gap: var(--s-3);
   background: var(--c-bg);
-  position: relative;
 }
 .maker--lead {
   grid-column: span 3;
@@ -838,11 +1021,34 @@ em {
   color: var(--c-text);
 }
 
+/* Maker pull-quote: a small italicized voice within the maker card. */
+.maker-quote {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-size: var(--t-lg);
+  line-height: 1.25;
+  font-style: italic;
+  color: var(--c-text);
+  margin: var(--s-3) 0 0;
+  padding: var(--s-3) 0 var(--s-3) var(--s-4);
+  border-left: 1px solid var(--c-accent);
+}
+.maker-quote cite {
+  display: block;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: var(--t-xs);
+  letter-spacing: 0.08em;
+  color: var(--c-text-mute);
+  margin-top: var(--s-2);
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  text-transform: lowercase;
+}
+
 
 /* =====================================================================
-   9. JOURNAL
-   Two long-form pieces, side by side. Drop cap on the first
-   paragraph of each piece. Hanging punctuation.
+   10. JOURNAL
+   Now: each piece has a P.P.S. at the end. Drop cap, hanging punct.
    ===================================================================== */
 .journal {
   padding: var(--s-9) 0;
@@ -884,7 +1090,6 @@ em {
   color: var(--c-text);
   margin: 0;
 }
-/* Each journal piece gets its own drop cap. */
 .journal-piece p:first-of-type::first-letter {
   font-family: var(--font-display);
   font-variation-settings: "opsz" 144, "SOFT" 30;
@@ -898,9 +1103,9 @@ em {
 
 
 /* =====================================================================
-   10. VISIT
-   6/6 grid, with the info on the left and a custom hand-drawn-feeling
-   map on the right.
+   11. VISIT
+   Now: real Google Maps embed (iframe), with a "P.S." walk-to-the-river
+   aside and a small "we're closed the first Wednesday" note.
    ===================================================================== */
 .visit { padding: var(--s-9) 0; }
 
@@ -911,7 +1116,7 @@ em {
   align-items: start;
 }
 
-.visit-info { display: flex; flex-direction: column; gap: var(--s-6); }
+.visit-info { display: flex; flex-direction: column; gap: var(--s-5); }
 .visit-address { font-style: normal; }
 .visit-line {
   font-size: var(--t-base);
@@ -977,16 +1182,55 @@ em {
 }
 .visit-contact a:hover { border-bottom-color: var(--c-accent); }
 
-/* The custom map figure. */
+/* "A note" callout in the visit info. */
+.visit-quirk {
+  font-size: var(--t-sm);
+  color: var(--c-text-dim);
+  line-height: 1.5;
+  margin: 0;
+  padding: var(--s-4);
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-line-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.visit-quirk .eyebrow { margin: 0; }
+
+/* The P.S. about the cobbler. */
+.visit-postscript {
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  color: var(--c-text-dim);
+  margin: 0;
+  padding: var(--s-3) 0;
+  border-top: 1px dotted var(--c-line);
+}
+.visit-postscript strong {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--c-accent);
+  font-size: 1.1em;
+  margin-right: 0.4em;
+}
+
+/* The map figure: a real Google Maps iframe. */
 .visit-map {
   margin: 0;
   border: 1px solid var(--c-line);
   background: var(--c-bg);
+  overflow: hidden;
 }
-.visit-map svg {
-  width: 100%;
-  height: auto;
+.visit-map iframe {
   display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+  /* Subtle desaturation to match the rest of the page. The Google Maps
+     default is a bit too vibrant. */
+  filter: saturate(0.7) contrast(0.95);
 }
 .map-caption {
   padding: var(--s-3) var(--s-4);
@@ -996,13 +1240,14 @@ em {
   display: flex;
   flex-direction: column;
   gap: var(--s-1);
+  background: var(--c-bg);
 }
 .map-caption .eyebrow { margin: 0; }
 
 
 /* =====================================================================
-   11. FOOTER
-   Restrained. 4 columns. Real specifics in the copyright line.
+   12. FOOTER
+   Now: a P.S. about the team in the brand column.
    ===================================================================== */
 .site-footer {
   background: var(--c-ink);
@@ -1052,8 +1297,21 @@ em {
   color: var(--c-bg);
   opacity: 0.78;
   line-height: 1.55;
-  margin: 0;
+  margin: 0 0 var(--s-4);
   max-width: 30ch;
+}
+.footer-quirk {
+  font-size: var(--t-sm);
+  color: var(--c-accent-cream);
+  line-height: 1.55;
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid rgba(246, 239, 225, 0.2);
+  max-width: 30ch;
+}
+.footer-quirk em {
+  font-style: italic;
+  color: var(--c-accent-cream);
 }
 .footer-base {
   display: flex;
@@ -1077,9 +1335,7 @@ em {
 
 
 /* =====================================================================
-   12. REDUCED MOTION
-   No JS-driven motion in the system, but kill the few CSS
-   transitions for users who prefer reduced motion.
+   13. REDUCED MOTION
    ===================================================================== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1094,20 +1350,19 @@ em {
 
 
 /* =====================================================================
-   13. RESPONSIVE
-   Asymmetric grids collapse to single column at narrow widths.
-   The hero switches to a 1-col stack. The pitch side column drops
-   below the prose. The journal pieces stack. The visit grid
-   reverses (info on top, map below).
+   14. RESPONSIVE
    ===================================================================== */
 @media (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: var(--s-7);
   }
-  .hero-art { order: 2; max-width: 28rem; }
+  .hero-art { order: 2; max-width: 32rem; margin-inline: auto; }
+  .hero-photo img { aspect-ratio: 4 / 3; }
+  .hero-meta { grid-template-columns: repeat(2, 1fr); row-gap: var(--s-3); }
   .prose-grid { grid-template-columns: 1fr; }
   .pitch-side { margin-top: var(--s-3); }
+  .loving-grid { grid-template-columns: repeat(2, 1fr); }
   .journal-grid { grid-template-columns: 1fr; }
   .visit-grid { grid-template-columns: 1fr; }
   .visit-map { order: 2; }
@@ -1118,14 +1373,16 @@ em {
 
 @media (max-width: 720px) {
   .hero { padding-block: var(--s-7); }
-  .hero-meta { grid-template-columns: repeat(2, 1fr); row-gap: var(--s-3); }
   .shelf-grid { grid-template-columns: repeat(2, 1fr); }
   .shelf-item, .shelf-item--feature, .shelf-item--tall { grid-column: span 1; grid-row: auto; }
   .maker-list { grid-template-columns: 1fr; }
   .maker, .maker--lead { grid-column: span 1; grid-row: auto; }
+  .loving-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-base { flex-direction: column; gap: var(--s-3); align-items: flex-start; }
   .section-head--left { margin-inline: 0; }
   .nav-meta { display: none; }
-  .pitch, .shelves, .makers, .journal, .visit { padding-block: var(--s-7); }
+  .pitch, .shelves, .loving, .makers, .journal, .visit { padding-block: var(--s-7); }
+  .sticker--new { width: 90px; height: 90px; top: -16px; right: -16px; }
+  .sticker--pick, .sticker--limited { width: 56px; height: 56px; top: -10px; right: -10px; font-size: 0.6rem; }
 }
