@@ -1,9 +1,14 @@
-# OS / editor cruft — this repo is plain HTML/CSS/JS, no build artifacts.
+# Build artifacts and cleanup (not tracked)
+_site_cleanup/
+screenshots/test-OLD.png
+screenshots/desktop/
+screenshots/mobile/
+**/img/_unused/
+
+# OS / editor cruft
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# Editors
 .vscode/
 .idea/
 *.swp

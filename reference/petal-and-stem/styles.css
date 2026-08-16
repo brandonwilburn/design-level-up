@@ -28,23 +28,25 @@
    1. TOKENS & RESET
    ===================================================================== */
 :root {
-  /* Palette — paper white, deep ink, single sage accent + blush */
-  --c-bg:         #faf7f0;   /* paper white */
-  --c-bg-elev:    #f0ebdd;   /* slightly darker */
-  --c-bg-deep:    #e6dfc9;
-  --c-surface:    #f0ebdd;
-  --c-ink:        #1a2a18;   /* deep forest ink */
+  /* Palette — paper white, DEEP PLUM ink, BRIGHT CORAL accent.
+     (was sage + blush; now plum + coral — a more distinctive,
+     florist-alive combination) */
+  --c-bg:         #f8f4ec;   /* paper white, slightly warmer */
+  --c-bg-elev:    #f0e8da;
+  --c-bg-deep:    #e2d4c0;
+  --c-surface:    #f0e8da;
+  --c-ink:        #3a1f3a;   /* deep plum — a richer dark than sage */
   --c-text:       var(--c-ink);
-  --c-text-dim:   #4a5a44;
-  --c-text-mute:  #8a9580;
-  --c-line:       #c9c2a8;
-  --c-line-soft:  rgba(26, 42, 24, 0.08);
-  --c-line-strong:rgba(26, 42, 24, 0.18);
+  --c-text-dim:   #5a3f5a;
+  --c-text-mute:  #8a7590;
+  --c-line:       #c9b8b0;
+  --c-line-soft:  rgba(58, 31, 58, 0.08);
+  --c-line-strong:rgba(58, 31, 58, 0.18);
 
-  /* Accents — sage + blush */
-  --c-accent:        #7d8a6b;   /* sage */
-  --c-accent-hot:    #95a483;   /* lighter sage */
-  --c-accent-cream:  #e8b4a8;   /* blush */
+  /* Accent — BRIGHT CORAL (was blush) */
+  --c-accent:        #e85a4a;   /* coral — bright, alive */
+  --c-accent-hot:    #ff7060;
+  --c-accent-cream:  #ffc4b8;
 
   /* Type — variable display + system sans */
   --font-display: "Fraunces", "Cormorant Garamond", "Playfair Display",

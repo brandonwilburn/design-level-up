@@ -29,23 +29,25 @@
    1. TOKENS & RESET
    ===================================================================== */
 :root {
-  /* Palette — charcoal, cream, single burnt-orange accent */
-  --c-bg:         #1a1815;   /* charcoal */
-  --c-bg-elev:    #221f1b;   /* slightly lighter */
-  --c-bg-deep:    #0f0e0c;
-  --c-surface:    #28231d;   /* card surface */
-  --c-ink:        #e8e0d0;   /* warm cream */
+  /* Palette — near-black, cream, ELECTRIC MAGENTA accent.
+     (was burnt orange; now electric magenta — a more club-flyer,
+     electronic, saturated color. Detroit techno, but make it rave.) */
+  --c-bg:         #0a0a12;   /* near-black with a hint of blue */
+  --c-bg-elev:    #14141e;
+  --c-bg-deep:    #04040a;
+  --c-surface:    #1a1a26;
+  --c-ink:        #e8e0d0;   /* warm cream — keep */
   --c-text:       var(--c-ink);
-  --c-text-dim:   #a89e8a;
-  --c-text-mute:  #6a6359;
-  --c-line:       #3a352d;   /* hairline on dark */
-  --c-line-soft:  rgba(232, 224, 208, 0.08);
-  --c-line-strong:rgba(232, 224, 208, 0.18);
+  --c-text-dim:   #a89eb0;
+  --c-text-mute:  #6a6270;
+  --c-line:       #2a2a36;
+  --c-line-soft:  rgba(232, 224, 208, 0.10);
+  --c-line-strong:rgba(232, 224, 208, 0.20);
 
-  /* Single accent — burnt orange */
-  --c-accent:        #d4652a;
-  --c-accent-hot:    #e87a3e;
-  --c-accent-cream:  #f0d8b0;
+  /* Single accent — ELECTRIC MAGENTA (was burnt orange) */
+  --c-accent:        #ff2e7e;   /* hot magenta — electric, club */
+  --c-accent-hot:    #ff5a96;
+  --c-accent-cream:  #ffb4d0;
 
   --font-display: "Fraunces", "Cormorant Garamond", "Playfair Display",
                   Georgia, "Times New Roman", serif;

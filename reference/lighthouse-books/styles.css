@@ -28,20 +28,22 @@
    1. TOKENS & RESET
    ===================================================================== */
 :root {
-  /* Palette — paper white, deep navy, single gold accent */
-  --c-bg:         #f7f3e8;
-  --c-bg-elev:    #ede5d3;
-  --c-bg-deep:    #dcd4bd;
-  --c-surface:    #ede5d3;
-  --c-ink:        #1a2a44;
+  /* Palette — paper white, DEEP BURGUNDY ink, single gold accent.
+     (was navy; now burgundy — a richer, more academic color that
+     reads as "leather binding" / "library wood") */
+  --c-bg:         #f4eee0;
+  --c-bg-elev:    #e8dcc4;
+  --c-bg-deep:    #d6c8a8;
+  --c-surface:    #e8dcc4;
+  --c-ink:        #5a1f2e;   /* deep burgundy — more academic than navy */
   --c-text:       var(--c-ink);
-  --c-text-dim:   #4a5a72;
-  --c-text-mute:  #8a93a4;
-  --c-line:       #c9c2a8;
-  --c-line-soft:  rgba(26, 42, 68, 0.08);
-  --c-line-strong:rgba(26, 42, 68, 0.18);
+  --c-text-dim:   #7a3f4e;
+  --c-text-mute:  #9a6a78;
+  --c-line:       #c9b8a8;
+  --c-line-soft:  rgba(90, 31, 46, 0.08);
+  --c-line-strong:rgba(90, 31, 46, 0.18);
 
-  /* Single accent — gold */
+  /* Single accent — gold (kept) */
   --c-accent:        #b8924a;
   --c-accent-hot:    #d4a85a;
   --c-accent-cream:  #e8d8a8;
@@ -643,6 +645,23 @@ em {
   text-transform: lowercase;
   font-feature-settings: "smcp" 1, "c2sc" 1;
   margin: 0;
+}
+.pick-art {
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--s-3);
+  overflow: hidden;
+  position: relative;
+}
+.pick-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .pick-title {
   font-size: var(--t-xl);

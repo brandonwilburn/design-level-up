@@ -29,11 +29,13 @@
    1. TOKENS & RESET
    ===================================================================== */
 :root {
-  /* Palette — warm beige, deep brown, single amber accent */
-  --c-bg:         #f4ead8;   /* warm beige page */
-  --c-bg-elev:    #ebdfc8;   /* slightly darker beige */
-  --c-bg-deep:    #d8c8a8;
-  --c-surface:    #ebdfc8;
+  /* Palette — warm beige, deep brown, BRIGHT TERRACOTTA accent
+     (was amber; now more red-orange for a stronger morning-warmth
+     vibe — the color of a sunrise on a coffee cup) */
+  --c-bg:         #f6ecd6;   /* warm beige, slightly more saturated */
+  --c-bg-elev:    #ecdfc4;
+  --c-bg-deep:    #d6c4a0;
+  --c-surface:    #ecdfc4;
   --c-ink:        #2d1f14;   /* deep warm brown */
   --c-text:       var(--c-ink);
   --c-text-dim:   #5a4836;
@@ -42,10 +44,10 @@
   --c-line-soft:  rgba(45, 31, 20, 0.08);
   --c-line-strong:rgba(45, 31, 20, 0.18);
 
-  /* Single accent — amber */
-  --c-accent:        #c87434;
-  --c-accent-hot:    #d8893a;
-  --c-accent-cream:  #e8c89a;
+  /* Single accent — TERRACOTTA (more red than amber) */
+  --c-accent:        #c8542a;   /* terracotta — sunrise, brick */
+  --c-accent-hot:    #e26a3a;
+  --c-accent-cream:  #f0c4a0;
 
   /* Type — variable display + system sans + handwritten */
   --font-display: "Fraunces", "Cormorant Garamond", "Playfair Display",
